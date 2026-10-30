@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bold.asset-index/1",
+  "title": "BOLD asset index",
+  "description": "Índice técnico de assets (R8). DERIVADO e descartável: o filesystem é a fonte da verdade. Identidade = caminho canônico NFC (nome de arquivo NÃO é identidade). Metadado ausente = null (nunca inventado).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "engine", "classifier_version", "generated_at", "root", "hash_policy", "hash_rules", "probe", "incremental", "stats", "changes", "assets", "skipped"],
+  "properties": {
+    "schema": { "const": "bold.asset-index/1" },
+    "engine": { "type": "string" },
+    "classifier_version": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "root": { "type": "object", "additionalProperties": false, "required": ["path", "name"], "properties": { "path": { "type": "string" }, "name": { "type": "string" } } },
+    "hash_policy": { "enum": ["auto", "none", "full"] },
+    "hash_rules": { "type": "object" },
+    "probe": { "type": "object", "required": ["tool", "available", "enabled"] },
+    "incremental": { "type": "object", "required": ["previous_used", "previous_generated_at"] },
+    "stats": { "type": "object", "required": ["files", "bytes", "reused", "read", "errors", "by_type"] },
+    "changes": {
+      "anyOf": [
+        { "type": "null" },
+        { "type": "object", "additionalProperties": false, "required": ["added", "changed", "removed"],
+          "properties": { "added": { "type": "array", "items": { "type": "string" } }, "changed": { "type": "array", "items": { "type": "string" } }, "removed": { "type": "array", "items": { "type": "string" } } } }
+      ]
+    },
+    "assets": { "type": "array", "items": { "$ref": "#/$defs/asset" } },
+    "skipped": { "type": "array", "items": { "type": "object", "required": ["rel_path", "reason"] } }
+  },
+  "$defs": {
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "path", "rel_path", "name", "ext", "type", "tags", "size", "mtime", "mtime_ms", "ino", "fingerprint", "width", "height", "orientation", "alpha", "alpha_source",
+        "duration", "fps", "fps_float", "codec", "pix_fmt", "sample_rate", "channels", "audio_streams", "font_family", "dates", "media", "image", "font", "motion_master", "probe", "sources"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^a_[0-9a-f]{16}$" },
+        "path": { "type": "string" },
+        "rel_path": { "type": "string" },
+        "name": { "type": "string" },
+        "ext": { "type": "string" },
+        "type": { "enum": ["VIDEO", "AUDIO", "IMAGE", "VECTOR", "DOCUMENT", "FONT", "MOTION_MASTER", "UNKNOWN"] },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "size": { "type": "integer", "minimum": 0 },
+        "mtime": { "type": "string" },
+        "mtime_ms": { "type": "number" },
+        "ino": { "type": "number" },
+        "identity_collision": { "const": true },
+        "fingerprint": {
+          "type": "object", "additionalProperties": false, "required": ["meta", "quick", "sha256"],
+          "properties": { "meta": { "type": "string" }, "quick": { "type": ["string", "null"] }, "sha256": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" } }
+        },
+        "width": { "type": ["integer", "null"] },
+        "height": { "type": ["integer", "null"] },
+        "orientation": { "enum": ["horizontal", "vertical", "square", null] },
+        "alpha": { "type": ["boolean", "null"] },
+        "alpha_source": { "type": ["string", "null"] },
+        "duration": { "type": ["number", "null"] },
+        "fps": { "type": ["string", "null"], "pattern": "^\\d+/\\d+$" },
+        "fps_float": { "type": ["number", "null"] },
+        "codec": { "type": ["string", "null"] },
+        "pix_fmt": { "type": ["string", "null"] },
+        "sample_rate": { "type": ["number", "null"] },
+        "channels": { "type": ["number", "null"] },
+        "audio_streams": { "type": "integer", "minimum": 0 },
+        "font_family": { "type": ["string", "null"] },
+        "dates": { "type": "object", "required": ["mtime", "birthtime", "creation_time", "creation_time_source"] },
+        "media": { "type": ["object", "null"] },
+        "image": { "type": ["object", "null"] },
+        "font": { "type": ["object", "null"] },
+        "motion_master": { "type": ["object", "null"] },
+        "probe": { "type": "object", "required": ["status", "tool"], "properties": { "status": { "enum": ["OK", "PARTIAL", "FAILED", "UNAVAILABLE", "SKIPPED", "NOT_APPLICABLE"] } } },
+        "sources": { "type": "object", "required": ["type", "identity", "dates", "metadata"] }
+      }
+    }
+  }
+}

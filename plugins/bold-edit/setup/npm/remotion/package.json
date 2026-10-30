@@ -1,0 +1,14 @@
+{
+  "name": "bold-managed-remotion",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Instalação gerenciada pelo BOLD Setup Manager (remotion) — não editar",
+  "dependencies": {
+    "remotion": "4.0.290",
+    "@remotion/bundler": "4.0.290",
+    "@remotion/renderer": "4.0.290",
+    "@remotion/cli": "4.0.290",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
+}

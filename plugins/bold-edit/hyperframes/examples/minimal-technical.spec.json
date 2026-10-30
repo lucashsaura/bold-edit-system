@@ -1,0 +1,24 @@
+{
+  "schema": "bold.motion.spec/0", "id": "hf-minimal-technical",
+  "brief": { "goal": "Leitura técnica neutra: rótulo datilografado por caractere (alternativa OpenType ss04), linhas de dados monoespaçadas, eixo ligado às métricas.", "kind": "explainer", "duration_frames": 96, "fps": 24, "alpha": true },
+  "tokens": "minimal-technical.tokens.json",
+  "decision": { "backend": "hyperframes", "rationale": "monoespaçada; relações tipográficas exatas" },
+  "composition": {
+    "width": 1920, "height": 1080, "seed": 7, "font_manifest": "fonts.manifest.json", "safe_area": 0.08,
+    "grid": { "columns": 16, "rows": 8, "gutter": "space.1" },
+    "layers": [
+      { "id": "label", "pattern": "TYPE_CASCADE", "region": { "col": 9, "row": 1, "span": 7 }, "anchor": "right",
+        "content": { "text": "SYS/04 — SIGNAL" }, "style": { "font": "font.display", "size": "type.1", "color": "color.accent", "tracking": 0.3, "features": { "ss04": 1 } },
+        "motion": { "enter": "1f", "stagger": "1f", "ease": "linear", "from": { "y": 0, "scale": 1, "opacity": 0 } } },
+      { "id": "data", "pattern": "TYPE_MASK_LINES", "region": { "col": 9, "row": 2, "span": 7, "rows": 4 }, "anchor": "right",
+        "content": { "lines": ["latency   12.0 ms", "jitter     0.4 ms", "loss       0.0 %"] }, "style": { "font": "font.display", "size": "type.2", "line_height": 1.5 },
+        "motion": { "delay": 0.4, "enter": "motion.base", "direction": "down", "fade": true } },
+      { "id": "node", "pattern": "TYPE_LOCKUP", "region": { "col": 1, "row": 5, "span": 6, "rows": 2 }, "anchor": "bottom-left",
+        "content": { "lines": ["NODE 7"] }, "style": { "font": "font.display", "size": "type.3", "weight": 400 },
+        "motion": { "delay": 1.0, "enter": "motion.base", "text": "up", "shape_stagger": 0.12 },
+        "shapes": [
+          { "id": "axis", "kind": "line", "x1": { "ref": "node.advance.left" }, "x2": { "ref": "data.ink.right" }, "y1": { "ref": "node.baseline", "offset": "0.35em" }, "y2": { "ref": "node.baseline", "offset": "0.35em" }, "thickness": "stroke.hair", "color": "color.muted" },
+          { "id": "tick", "kind": "circle", "center": { "ref": "node.char.5.center", "offset": [0, "-0.95em"] }, "r": 0.5, "color": "color.accent" } ] }
+    ]
+  }
+}

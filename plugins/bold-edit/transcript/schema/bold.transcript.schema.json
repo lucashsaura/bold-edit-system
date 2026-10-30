@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bold.transcript/1",
+  "title": "BOLD canonical transcript",
+  "description": "Formato canônico do Transcript Engine (R8). Independente de fornecedor. Tempos em SEGUNDOS desde o início da origem; frames só quando o fps é da origem (DaVinci) ou informado pelo usuário. Nada é inventado: sem timing por palavra → words = [] e granularity = SEGMENT; sem confidence → null; sem speaker → null.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "source", "language", "language_source", "duration", "duration_source", "time_base", "timing", "speakers", "segments", "warnings"],
+  "properties": {
+    "schema": { "const": "bold.transcript/1" },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["format", "name", "sha256", "provider"],
+      "properties": {
+        "format": { "enum": ["srt", "vtt", "whisper-cpp-json", "segments-json", "davinci-subtitles"] },
+        "name": { "type": ["string", "null"], "description": "basename do arquivo de entrada (nunca o caminho absoluto)" },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "provider": { "type": ["string", "null"] },
+        "davinci": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["project", "timeline", "timeline_unique_id", "track", "duration_frames"],
+          "properties": {
+            "project": { "type": ["string", "null"] }, "timeline": { "type": "string" }, "timeline_unique_id": { "type": ["string", "null"] },
+            "track": { "type": "integer", "minimum": 1 }, "duration_frames": { "type": ["integer", "null"] }
+          }
+        }
+      }
+    },
+    "language": { "type": ["string", "null"] },
+    "language_source": { "enum": ["source", "user", null] },
+    "duration": { "type": "number", "minimum": 0 },
+    "duration_source": { "enum": ["last_segment_end", "timeline"] },
+    "time_base": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fps", "fps_float", "drop_frame", "fps_source", "origin_frame", "origin_tc", "frames"],
+      "properties": {
+        "fps": { "type": ["string", "null"], "pattern": "^\\d+/\\d+$", "description": "fração exata (24000/1001), nunca assumida" },
+        "fps_float": { "type": ["number", "null"] },
+        "drop_frame": { "type": ["boolean", "null"] },
+        "fps_source": { "enum": ["source", "user", null] },
+        "origin_frame": { "type": ["integer", "null"], "description": "frame absoluto do início da timeline (DaVinci)" },
+        "origin_tc": { "type": ["string", "null"] },
+        "frames": { "enum": ["source", "derived", null], "description": "source = frames vieram da origem; derived = calculados do fps do usuário" }
+      }
+    },
+    "timing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unit", "granularity", "word_timing_origin", "confidence", "speakers"],
+      "properties": {
+        "unit": { "const": "seconds" },
+        "granularity": { "enum": ["WORD", "SEGMENT", "MIXED"] },
+        "word_timing_origin": { "type": ["string", "null"] },
+        "confidence": { "enum": ["source", "partial", "none"] },
+        "speakers": { "enum": ["source", "none"] }
+      }
+    },
+    "speakers": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "segments": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/segment" } },
+    "warnings": { "type": "array", "items": { "type": "object" } }
+  },
+  "$defs": {
+    "segment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "start", "end", "text", "speaker", "confidence", "granularity", "words"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^s\\d{4,}$" },
+        "start": { "type": "number", "minimum": 0 },
+        "end": { "type": "number", "minimum": 0 },
+        "start_frame": { "type": "integer", "minimum": 0 },
+        "end_frame": { "type": "integer", "minimum": 0 },
+        "tl_in_tc": { "type": "string" },
+        "text": { "type": "string", "minLength": 1 },
+        "speaker": { "type": ["string", "null"] },
+        "confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "granularity": { "enum": ["WORD", "SEGMENT"] },
+        "words": { "type": "array", "items": { "$ref": "#/$defs/word" } }
+      }
+    },
+    "word": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end", "text", "confidence"],
+      "properties": {
+        "start": { "type": "number", "minimum": 0 },
+        "end": { "type": "number", "minimum": 0 },
+        "text": { "type": "string", "minLength": 1 },
+        "confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "speaker": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bold.project/1",
+  "title": "bold.project.json — configuração por projeto (em PROJECT_ROOT)",
+  "description": "Metadados do projeto + overrides opcionais de config em 'config'. Overrides de policy só podem endurecer.",
+  "type": "object",
+  "required": ["schema", "project_id", "name"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": { "const": "bold.project/1" },
+    "project_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{1,63}$" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 200 },
+    "media_root": {
+      "type": "array",
+      "description": "Raízes de mídia (somente leitura; mídia é referenciada, nunca copiada para a Skill).",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "fps": { "type": "number", "exclusiveMinimum": 0, "maximum": 240 },
+    "resolution": {
+      "type": "object",
+      "required": ["width", "height"],
+      "additionalProperties": false,
+      "properties": {
+        "width": { "type": "integer", "minimum": 16, "maximum": 16384 },
+        "height": { "type": "integer", "minimum": 16, "maximum": 16384 }
+      }
+    },
+    "safe_area": { "type": "number", "minimum": 0, "maximum": 0.5 },
+    "delivery_profile": { "enum": ["alpha-4444-bt709", "opaque-4444-bt709", "opaque-hq-bt709"] },
+    "davinci": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "project_name": { "type": "string", "minLength": 1 },
+        "timelines": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+      }
+    },
+    "fonts_required": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          { "type": "string", "minLength": 1 },
+          {
+            "type": "object",
+            "required": ["file"],
+            "additionalProperties": false,
+            "properties": {
+              "file": { "type": "string", "minLength": 1 },
+              "family": { "type": "string" },
+              "weight": { "type": ["string", "number"] },
+              "license_note": { "type": "string" }
+            }
+          }
+        ]
+      }
+    },
+    "tokens": { "type": "string", "description": "Caminho (relativo ao PROJECT_ROOT) do tokens.json." },
+    "transcript": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "language": { "type": "string", "pattern": "^[a-z]{2,3}(-[A-Za-z]{2,4})?$" },
+        "speakers": { "type": "array", "items": { "type": "string" } },
+        "prompt": { "type": "string" }
+      }
+    },
+    "asset_index": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "vocabulary": { "type": "string" }
+      }
+    },
+    "protected_paths": {
+      "type": "array",
+      "description": "Caminhos que nunca podem ser apagados/movidos por automação.",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "config": {
+      "type": "object",
+      "description": "Overrides parciais de bold.config (mesmo formato, sem 'schema'). Validado contra bold.config.schema.json."
+    }
+  }
+}

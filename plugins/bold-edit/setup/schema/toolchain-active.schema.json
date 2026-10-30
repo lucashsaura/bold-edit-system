@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "bold.toolchain-active/1 — ponteiros das versões ativas do toolchain gerenciado",
+  "type": "object",
+  "required": ["schema", "platform", "tools"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": { "const": "bold.toolchain-active/1" },
+    "platform": { "$ref": "#/$defs/platform" },
+    "updated_at": { "type": "string" },
+    "tools": {
+      "type": "object",
+      "patternProperties": { "^[a-z][a-z0-9-]*$": { "$ref": "#/$defs/tool" } },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "platform": { "enum": ["darwin-arm64", "darwin-x64", "win32-x64"] },
+    "codesign": {"anyOf":[{"type":"object","required":["policy","team_id","bins","verified_at"],"additionalProperties":false,"properties":{"policy":{"const":"REQUIRED"},"team_id":{"type":"string","pattern":"^[A-Z0-9]{10}$"},"authority":{"const":"Developer ID Application"},"hardened_runtime":{"type":"boolean"},"bins":{"type":"object","patternProperties":{"^[a-z][a-z0-9-]*$":{"type":"object","required":["path"],"additionalProperties":false,"properties":{"identifier":{"anyOf":[{"type":"null"},{"type":"string","minLength":1}]},"path":{"type":"string","minLength":1}}}},"additionalProperties":false},"verified_at":{"type":"string"},"migrated":{"type":"boolean"}}},{"type":"object","required":["policy","approved","macho","verified_at"],"additionalProperties":false,"properties":{"policy":{"const":"ADHOC_PINNED"},"approved":{"type":"string","minLength":1},"macho":{"type":"object","patternProperties":{"^[A-Za-z0-9._+@-]+(/[A-Za-z0-9._+@-]+)*$":{"type":"object","required":["cdhash"],"additionalProperties":false,"properties":{"cdhash":{"type":"string","pattern":"^[0-9a-f]{40}$"},"sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},"phase":{"enum":["extract","post_install"]}}}},"additionalProperties":false},"verified_at":{"type":"string"},"migrated":{"type":"boolean"}}},{"type":"object","required":["policy","approved","lockfile_sha256","native","verified_at"],"additionalProperties":false,"properties":{"policy":{"const":"NPM_NATIVE_PINNED"},"approved":{"type":"string","minLength":1},"lockfile_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},"native":{"type":"object","patternProperties":{"^node_modules/[A-Za-z0-9._@+/-]+$":{"type":"object","required":["package","version","sha256","cdhash"],"additionalProperties":false,"properties":{"package":{"type":"string","pattern":"^(@[a-z0-9._-]+/)?[a-z0-9._-]+$"},"version":{"type":"string","minLength":1},"sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},"cdhash":{"type":"string","pattern":"^[0-9a-f]{40}$"}}}},"additionalProperties":false},"verified_at":{"type":"string"},"migrated":{"type":"boolean"}}}]},
+    "version": { "type": "object", "required": ["version", "dir", "bins", "tree_sha256"], "additionalProperties": false,
+      "properties": {
+        "version": { "type": "string", "minLength": 1 },
+        "dir": { "type": "string", "minLength": 1 },
+        "bins": { "type": "object", "patternProperties": { "^[a-z][a-z0-9-]*$": { "type": "string", "minLength": 1 } }, "additionalProperties": false },
+        "tree_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "activated_at": { "type": "string" },
+        "paths": { "type": "object", "patternProperties": { "^[a-z][a-z0-9-]*$": { "type": "string", "minLength": 1 } }, "additionalProperties": false },
+        "codesign": { "$ref": "#/$defs/codesign" }
+      } },
+    "tool": { "type": "object", "required": ["version", "dir", "bins", "tree_sha256"], "additionalProperties": false,
+      "properties": {
+        "version": { "type": "string", "minLength": 1 },
+        "dir": { "type": "string", "minLength": 1 },
+        "bins": { "type": "object", "patternProperties": { "^[a-z][a-z0-9-]*$": { "type": "string", "minLength": 1 } }, "additionalProperties": false },
+        "tree_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "activated_at": { "type": "string" },
+        "paths": { "type": "object", "patternProperties": { "^[a-z][a-z0-9-]*$": { "type": "string", "minLength": 1 } }, "additionalProperties": false },
+        "codesign": { "$ref": "#/$defs/codesign" },
+        "previous": { "anyOf": [{ "type": "null" }, { "$ref": "#/$defs/version" }] }
+      } }
+  }
+}

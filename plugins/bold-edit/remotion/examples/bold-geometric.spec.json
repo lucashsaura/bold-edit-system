@@ -1,0 +1,25 @@
+{
+  "schema": "bold.motion.spec/0", "id": "bold-geometric", "brief": { "goal": "B — bold geometric", "kind": "opening", "duration_frames": 72, "fps": 24 },
+  "tokens": "bold-geometric.tokens.json", "decision": { "backend": "remotion", "rationale": "formas + contador + tipografia por caractere; fallback: HyperFrames" },
+  "composition": {
+    "width": 1920, "height": 1080, "seed": 21, "background": { "type": "solid", "color": "color.background" }, "safe_area": 0.07,
+    "grid": { "columns": 6, "rows": 4, "gutter": "space.1" },
+    "camera": { "keys": [ { "at": 0, "zoom": 1.08, "rotate": -1.5 }, { "at": 1.2, "zoom": 1.0, "rotate": 0, "ease": "out" } ] },
+    "layers": [
+      { "id": "disc", "pattern": "SHAPE", "in": 0, "out": 3, "depth": 0.6, "region": { "col": 3, "row": 0, "span": 3, "rows": 4 }, "content": { "shape": "circle" },
+        "style": { "color": "color.accent" }, "motion": { "reveal": "scale", "enter": "motion.slow", "exit": "motion.fast", "ease": "snap" } },
+      { "id": "bar", "pattern": "SHAPE", "in": 0.25, "out": 3, "depth": 0.9, "region": { "col": 0, "row": 3, "span": 3, "rows": 1 }, "content": { "shape": "rect" },
+        "style": { "color": "color.deep" }, "motion": { "reveal": "left", "enter": "motion.base", "exit": "motion.fast", "ease": "snap" } },
+      { "id": "title", "pattern": "TITLE_REVEAL", "in": 0.15, "out": 3, "region": { "col": 0, "row": 0, "span": 4, "rows": 3 }, "anchor": "left",
+        "content": { "title": ["BOLD", "SHAPES"] },
+        "style": { "font_title": "font.display", "size_title": "type.5", "color": "color.ink", "case": "upper", "tracking": -0.04, "tracking_from": 0.2, "line_height": 0.86 },
+        "motion": { "split": "char", "reveal": "up", "enter": "motion.base", "stagger": "1f", "exit": "motion.fast" } },
+      { "id": "stat", "pattern": "STAT_COUNTER", "in": 0.6, "out": 3, "region": { "col": 0, "row": 3, "span": 3, "rows": 1 }, "anchor": "left",
+        "content": { "value": 248, "suffix": "%", "label": "MORE CONTRAST" },
+        "style": { "size_value": "type.3", "size_label": "type.0", "color": "color.ink", "color_label": "color.soft" },
+        "motion": { "spring": true, "reveal": "fade", "enter": "motion.base", "exit": "motion.fast" } },
+      { "id": "out", "pattern": "SECTION_TRANSITION", "in": 2.55, "out": 3, "depth": 0, "region": "full", "style": { "color": "color.accent", "color_2": "color.deep" },
+        "motion": { "reveal": "up", "enter": 0.3, "stagger": "2f", "exit": 0.01, "ease": "snap" } }
+    ]
+  }
+}

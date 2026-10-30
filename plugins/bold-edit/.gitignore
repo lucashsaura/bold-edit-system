@@ -1,0 +1,87 @@
+# ── Dependências e caches ─────────────────────────────
+node_modules/
+.npm/
+.cache/
+cache/
+*.cache
+__pycache__/
+*.pyc
+.remotion/
+
+# ── Renders, temporários e mídia (nunca versionar) ────
+renders/
+out/
+temp/
+tmp/
+frames/
+media/
+# R10: davinci/media é o pacote Python da DaVinci Bridge V1 (código, não mídia); estava escondido por engano desde a R7
+!davinci/media/
+footage/
+*.mov
+*.mp4
+*.m4v
+*.mxf
+*.avi
+*.mkv
+*.webm
+*.wav
+*.mp3
+*.aif
+*.aiff
+*.m4a
+*.flac
+*.exr
+*.dpx
+
+# ── Fontes do usuário (comerciais ou não redistribuíveis) ─
+fonts/
+*.otf
+*.ttf
+*.ttc
+*.woff
+*.woff2
+*.dfont
+
+# ── Modelos (Whisper e afins) ─────────────────────────
+models/
+*.bin
+*.gguf
+*.ggml
+*.pt
+*.onnx
+*.safetensors
+
+# ── Dados de projeto do DaVinci Resolve ───────────────
+*.drp
+*.drt
+*.dra
+*.db
+*.drx
+*.cube
+*.3dl
+
+# ── Config local, segredos e estado ───────────────────
+.env
+.env.*
+bold.config.json
+bold.project.local.json
+.bold/
+*.local.json
+
+# Denylist local com nomes de cliente (NUNCA versionar)
+tests/leak-scan.local.denylist
+*.local.denylist
+
+# ── Logs locais ───────────────────────────────────────
+logs/
+*.log
+authorizations.jsonl
+
+# ── Sistema ───────────────────────────────────────────
+.DS_Store
+._*
+Thumbs.db
+
+# ── Builds de distribuição (R11; reconstruíveis) ──────
+/dist/

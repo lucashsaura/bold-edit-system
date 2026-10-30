@@ -1,0 +1,21 @@
+{
+  "schema": "bold.product/1",
+  "product": "BOLD EDIT SYSTEM",
+  "version_source": "package.json",
+  "notes": "Versão do PRODUTO (semver, em package.json). As versões dos componentes são internas e independentes (V1 = primeira versão congelada/pronta).",
+  "platforms": { "darwin": "SUPPORTED", "win32": "EXPERIMENTAL", "linux": "DEVELOPMENT_ONLY" },
+  "components": [
+    { "id": "remotion_core", "name": "Remotion Core", "version": "V1", "status": "FROZEN", "path": "remotion/", "round": "R5.6.1" },
+    { "id": "hyperframes_core", "name": "HyperFrames Core", "version": "V1", "status": "FROZEN", "path": "hyperframes/", "round": "R6.2" },
+    { "id": "davinci_bridge", "name": "DaVinci Bridge", "version": "V1", "status": "READY_FOR_PRODUCTION_PILOT", "path": "davinci/", "round": "R7" },
+    { "id": "transcript_engine", "name": "Transcript Engine", "version": "V1", "status": "READY", "path": "transcript/", "round": "R8" },
+    { "id": "asset_index", "name": "Asset Index", "version": "V1", "status": "READY", "path": "asset-index/", "round": "R8" },
+    { "id": "project_context", "name": "Project Context", "version": "V1", "status": "READY", "path": "core/context/", "round": "R8" },
+    { "id": "editorial_engine", "name": "Editorial Engine", "version": "V1", "status": "READY", "path": "editorial/", "round": "R9" },
+    { "id": "motion_router", "name": "Motion Router", "version": "V1", "status": "READY", "path": "editorial/src/router.mjs", "round": "R9" },
+    { "id": "claude_skill", "name": "Claude Code Skill (bold-edit)", "version": "V1", "status": "READY", "path": "skills/edit/", "round": "R10" },
+    { "id": "installer", "name": "Installer", "version": "V1", "status": "READY", "path": "install/", "round": "R10" },
+    { "id": "setup_manager", "name": "Setup Manager", "version": "R12.4", "status": "PREVIEW_LOCAL", "path": "setup/", "round": "R12.4" },
+    { "id": "sound_design", "name": "Sound Design (SFX Kit · Openverse · Earshot)", "version": "V1", "status": "PREVIEW_LOCAL", "path": "audio/", "round": "R13" }
+  ]
+}

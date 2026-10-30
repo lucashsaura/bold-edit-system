@@ -1,0 +1,24 @@
+{
+  "schema": "bold.motion.spec/0", "id": "hf-editorial",
+  "brief": { "goal": "Abertura editorial neutra: kicker com tracking, título em linhas mascaradas, legenda com régua.", "kind": "lettering", "duration_frames": 120, "fps": 24, "alpha": true },
+  "tokens": "editorial.tokens.json",
+  "decision": { "backend": "hyperframes", "rationale": "tipografia é o elemento: baseline, máscaras por linha e tracking" },
+  "composition": {
+    "width": 1920, "height": 1080, "seed": 11, "font_manifest": "fonts.manifest.json",
+    "grid": { "columns": 12, "rows": 6, "gutter": "space.1" },
+    "layers": [
+      { "id": "kicker", "pattern": "TYPE_TRACK", "region": { "col": 1, "row": 0, "span": 8 }, "anchor": "bottom-left",
+        "content": { "text": "CHAPTER ONE" }, "style": { "font": "font.body", "size": "type.0", "weight": 500, "color": "color.accent" },
+        "motion": { "enter": "motion.slow", "tracking_from": 0.7, "tracking_to": 0.24 } },
+      { "id": "title", "pattern": "TYPE_MASK_LINES", "region": { "col": 1, "row": 1, "span": 10, "rows": 3 }, "anchor": "left",
+        "content": { "lines": ["The shape", "of quiet type"] }, "style": { "font": "font.display", "size": { "fit": "width", "max": "type.4" }, "line_height": 1.04 },
+        "motion": { "delay": 0.25, "enter": "motion.base" },
+        "responsive": { "portrait": { "region": { "col": 0, "row": 1, "span": 12, "rows": 3 }, "lines": ["The", "shape of", "quiet type"] } } },
+      { "id": "caption", "pattern": "TYPE_LOCKUP", "region": { "col": 1, "row": 4, "span": 8, "rows": 2 }, "anchor": "top-left",
+        "content": { "lines": ["Notes on rhythm, space and the measure"] }, "style": { "font": "font.body", "size": "type.1", "color": "color.muted" },
+        "motion": { "delay": 0.9, "enter": "motion.base", "text": "up", "shape_delay": 0.1 },
+        "shapes": [ { "id": "rule", "kind": "line", "x1": { "ref": "title.ink.left" }, "x2": { "ref": "title.ink.right" }, "y1": { "ref": "caption.ink.top", "offset": "-0.9em" }, "y2": { "ref": "caption.ink.top", "offset": "-0.9em" }, "thickness": "stroke.base", "color": "color.accent" } ],
+        "responsive": { "portrait": { "region": { "col": 0, "row": 4, "span": 12, "rows": 2 }, "lines": ["Notes on rhythm, space", "and the measure"] } } }
+    ]
+  }
+}

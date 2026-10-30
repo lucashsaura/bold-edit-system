@@ -1,0 +1,21 @@
+{
+  "name": "bold-edit-system",
+  "version": "0.8.0-beta.1",
+  "description": "BOLD Edit System — portable skill foundation (motion for video, DaVinci Resolve assistance, transcript, asset index).",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "bin": {
+    "bold": "bin/bold.mjs"
+  },
+  "scripts": {
+    "test": "node --test \"tests/**/*.test.mjs\"",
+    "doctor": "node bin/bold.mjs doctor",
+    "audit-leaks": "node bin/bold.mjs audit-leaks"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

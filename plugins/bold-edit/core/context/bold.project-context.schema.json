@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bold.project-context/1",
+  "title": "BOLD project context",
+  "description": "Retrato DESCRITIVO e derivado (R8): asset index + transcrições (+ anotações) + DaVinci somente leitura, com as relações por File Path. Cache reconstruível; nunca fonte única da verdade. Não contém decisões editoriais (R9).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "generated_at", "read_only", "nature", "components", "assets", "asset_root", "transcripts", "relations"],
+  "properties": {
+    "schema": { "const": "bold.project-context/1" },
+    "generated_at": { "type": "string" },
+    "read_only": { "const": true },
+    "nature": { "type": "string" },
+    "components": {
+      "type": "object", "additionalProperties": false, "required": ["asset_index", "transcripts", "davinci"],
+      "properties": {
+        "asset_index": { "type": ["object", "null"] },
+        "transcripts": { "type": "array", "items": { "type": "object", "required": ["id", "sha256", "timeline", "format", "segments", "granularity"] } },
+        "davinci": { "type": "object", "required": ["available"], "properties": { "available": { "type": "boolean" } } }
+      }
+    },
+    "assets": { "type": "array", "items": { "type": "object", "required": ["id", "path", "rel_path", "type"] } },
+    "asset_root": { "type": ["string", "null"] },
+    "transcripts": { "type": "array", "items": { "type": "object", "required": ["id", "sha256", "doc", "annotations"], "properties": { "doc": { "type": "object", "properties": { "schema": { "const": "bold.transcript/1" } } } } } },
+    "relations": {
+      "type": "object", "additionalProperties": false, "required": ["media_pool", "asset_usage", "summary", "transcript_timeline"],
+      "properties": {
+        "media_pool": { "type": "array", "items": { "type": "object", "required": ["name", "file_path", "asset_id", "exists_on_disk"] } },
+        "asset_usage": { "type": "array", "items": { "type": "object", "required": ["timeline", "track_type", "track", "file_path", "asset_id", "tl_in", "tl_out"] } },
+        "summary": { "type": ["object", "null"] },
+        "transcript_timeline": { "type": "array" }
+      }
+    }
+  }
+}

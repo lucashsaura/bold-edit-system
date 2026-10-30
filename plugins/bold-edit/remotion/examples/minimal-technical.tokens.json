@@ -1,0 +1,7 @@
+{
+  "schema": "bold.tokens/0", "name": "minimal-technical",
+  "color": { "background": "#0B0C0E", "ink": "#D9DDE3", "muted": "#5E6570", "accent": "#4CC9F0", "plate": "#15181D" },
+  "typography": { "families": { "display": { "family": "Menlo", "weight": 500 }, "body": { "family": "Menlo", "weight": 400 } }, "scale": [1.4, 1.9, 2.6, 4, 6] },
+  "spacing": { "unit": 1.6 }, "radius": { "card": 0.2 }, "stroke": { "hair": 0.08, "base": 0.14 },
+  "motion": { "duration": { "fast": 0.25, "base": 0.6, "slow": 1.6 }, "stagger": 0.05, "ease": { "out": [0.25, 1, 0.5, 1] } }
+}

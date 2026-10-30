@@ -1,0 +1,8 @@
+{
+  "schema": "bold.tokens/0", "name": "editorial-clean",
+  "color": { "background": "#F2F3F5", "ink": "#1B1D21", "muted": "#6B7280", "accent": "#2F5D8A", "plate": "#FFFFFF", "line": "#D5D8DE", "warm": "#C9B8A3" },
+  "typography": { "families": { "display": { "family": "Georgia", "weight": 400 }, "body": { "family": "Noto Sans", "weight": 400 } }, "scale": [1.6, 2.2, 3.2, 5.2, 9.5] },
+  "spacing": { "unit": 2.2 }, "radius": { "card": 0.4 }, "stroke": { "hair": 0.08, "base": 0.16 },
+  "shadow": { "lift": { "x": 0, "y": 0.5, "blur": 1.6, "color": "#1B1D21", "opacity": 0.12 } },
+  "motion": { "duration": { "fast": 0.35, "base": 0.9, "slow": 1.4 }, "stagger": 0.11, "ease": { "out": [0.22, 1, 0.36, 1] } }
+}

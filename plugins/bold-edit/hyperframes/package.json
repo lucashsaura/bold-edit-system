@@ -1,0 +1,8 @@
+{
+  "name": "bold-hyperframes-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "BOLD HyperFrames backend (compilador motion.spec → bold.hyperframes.spec/0 + gerador HTML + adapter). HyperFrames é dependência EXTERNA; nada é empacotado.",
+  "license": "UNLICENSED"
+}

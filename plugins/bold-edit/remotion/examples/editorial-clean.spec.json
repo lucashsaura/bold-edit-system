@@ -1,0 +1,22 @@
+{
+  "schema": "bold.motion.spec/0", "id": "editorial-clean", "brief": { "goal": "A — editorial clean", "kind": "explainer", "duration_frames": 96, "fps": 24 },
+  "tokens": "editorial-clean.tokens.json", "decision": { "backend": "remotion", "rationale": "layout em grid, cards; fallback: HyperFrames" },
+  "composition": {
+    "width": 1920, "height": 1080, "seed": 3, "background": { "type": "solid", "color": "color.background" }, "safe_area": 0.09,
+    "grid": { "columns": 12, "rows": 8, "gutter": "space.1" },
+    "layers": [
+      { "id": "title", "pattern": "TITLE_REVEAL", "in": 0, "out": 4, "region": { "col": 0, "row": 0, "span": 6, "rows": 5 }, "anchor": "top-left",
+        "content": { "kicker": "Chapter one", "title": ["Clarity is", "a system."], "subtitle": "Rules travel; layouts do not." },
+        "style": { "font_title": "font.display", "size_title": "type.4", "size_body": "type.2", "size_kicker": "type.0", "color": "color.ink", "color_body": "color.muted", "accent": "color.accent", "rule": "under", "line_height": 1.05 },
+        "motion": { "split": "line", "reveal": "up", "enter": "motion.base", "stagger": 0.16, "exit": "motion.fast" } },
+      { "id": "image", "pattern": "IMAGE_REVEAL", "in": 0.4, "out": 4, "region": { "col": 7, "row": 0, "span": 5, "rows": 5 },
+        "content": { "src": "procedural:gradient", "caption": "Fig. 1 — procedural plate" },
+        "style": { "from": "color.warm", "to": "color.plate", "radius": "radius.card", "shadow": "shadow.lift", "zoom_from": 1.06, "zoom_to": 1.0, "size_caption": "type.0", "color": "color.muted" },
+        "motion": { "reveal": "down", "enter": "motion.slow", "exit": "motion.fast" } },
+      { "id": "cards", "pattern": "CARD_BUILD", "in": 1.1, "out": 4, "region": { "col": 0, "row": 6, "span": 12, "rows": 2 },
+        "content": { "items": [ { "title": "Tokens", "body": "Color, type, space, motion." }, { "title": "Patterns", "body": "Behaviour, not templates." }, { "title": "Spec", "body": "One description, many outputs." } ] },
+        "style": { "plate": "color.plate", "stroke": "color.line", "stroke_width": "stroke.hair", "radius": "radius.card", "size_title": "type.2", "size_body": "type.0", "color": "color.ink", "color_body": "color.muted", "accent": "color.accent", "font": "font.display" },
+        "motion": { "reveal": "up", "enter": "motion.base", "stagger": 0.08, "exit": "motion.fast" } }
+    ]
+  }
+}

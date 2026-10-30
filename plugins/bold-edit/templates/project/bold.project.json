@@ -1,0 +1,15 @@
+{
+  "schema": "bold.project/1",
+  "project_id": "exemplo-projeto",
+  "name": "Projeto de exemplo",
+  "media_root": [],
+  "fps": 24,
+  "resolution": { "width": 1920, "height": 1080 },
+  "safe_area": 0.1,
+  "delivery_profile": "alpha-4444-bt709",
+  "davinci": { "project_name": "EXEMPLO", "timelines": [] },
+  "fonts_required": [],
+  "tokens": "tokens.json",
+  "transcript": { "language": "pt", "speakers": [], "prompt": "" },
+  "protected_paths": []
+}

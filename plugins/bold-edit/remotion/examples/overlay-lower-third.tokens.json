@@ -1,0 +1,7 @@
+{
+  "schema": "bold.tokens/0", "name": "overlay-neutral",
+  "color": { "ink": "#FFFFFF", "muted": "#C8CDD5", "accent": "#E8B04A", "plate": "#111418D9" },
+  "typography": { "families": { "display": { "family": "Noto Sans", "weight": 700 }, "body": { "family": "Noto Sans", "weight": 400 } }, "scale": [1.8, 2.4, 3.6] },
+  "radius": { "card": 0.6 }, "stroke": { "base": 0.3 },
+  "motion": { "duration": { "fast": 0.3, "base": 0.6 }, "stagger": 0.06 }
+}

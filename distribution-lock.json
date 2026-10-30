@@ -1,0 +1,2483 @@
+{
+  "schema": "bold.distribution-lock/1",
+  "product": "BOLD EDIT SYSTEM",
+  "version": "0.8.0-beta.1",
+  "marketplace": {
+    "name": "bold-edit-system",
+    "plugin": "bold-edit",
+    "plugin_dir": "plugins/bold-edit"
+  },
+  "plugin": {
+    "name": "bold-edit",
+    "version": "0.8.0-beta.1"
+  },
+  "source": {
+    "commit": "9b7ba97a8d70281d066f806f990d6ef8c835f64c",
+    "tracked_files": 405,
+    "classes": {
+      "INCLUDE": 270,
+      "DEVELOPMENT_ONLY": 135,
+      "EXCLUDE": 0
+    },
+    "manifest": "distribution-manifest.json"
+  },
+  "totals": {
+    "files": 273,
+    "bytes": 1991705
+  },
+  "content_sha256": "d772595c41ac7b2c948d676ac20b4fb048e86e6ed86d6679c1d13440266bae55",
+  "note": "Inventário exato da distribuição (exceto este arquivo). Sem timestamps: o mesmo commit gera bytes idênticos.",
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "size": 763,
+      "sha256": "36ac78079596eab41cf456742c33a0d5e0848cd3757bc34ff20b34233a7ccf1e",
+      "mode": "0644",
+      "origin": "generated:distribution/marketplace.template.json"
+    },
+    {
+      "path": "LICENSE",
+      "size": 3366,
+      "sha256": "10c6da3574abae43e2a5fcfeee4668dd2eb1885e7589cb393393e56056975c0a",
+      "mode": "0644",
+      "origin": "generated:LICENSE"
+    },
+    {
+      "path": "README.md",
+      "size": 4613,
+      "sha256": "7b20399c35b4b824811c3b658df13442bc627c5f95378e66248f399b14f3ef1f",
+      "mode": "0644",
+      "origin": "generated:distribution/README.md"
+    },
+    {
+      "path": "plugins/bold-edit/.claude-plugin/plugin.json",
+      "size": 770,
+      "sha256": "28f215a6aa11bd678f40261e5ea1e66fd4165b0c7d8cedc0e8548c5672d2153f",
+      "mode": "0644",
+      "origin": "source:.claude-plugin/plugin.json",
+      "class": "INCLUDE",
+      "rule": ".claude-plugin/**"
+    },
+    {
+      "path": "plugins/bold-edit/.gitignore",
+      "size": 1673,
+      "sha256": "da96578e35ebd259b3d9699fafdeb782ac41d32103236647e495b7c12240b2df",
+      "mode": "0644",
+      "origin": "source:.gitignore",
+      "class": "INCLUDE",
+      "rule": "{LICENSE,install.sh,install.cmd,INSTALL.md,DISTRIBUTION.md,README.md,RELEASE_NOTES.md,SKILL.md,THIRD_PARTY.md,package.json,bold.config.example.json,distribution-manifest.json,.gitignore}"
+    },
+    {
+      "path": "plugins/bold-edit/DISTRIBUTION.md",
+      "size": 3365,
+      "sha256": "c4cc1ba4ade902ce4ba33ed687e3f3ecc7788a83a4f8ed33638820e1a2253f5a",
+      "mode": "0644",
+      "origin": "source:DISTRIBUTION.md",
+      "class": "INCLUDE",
+      "rule": "{LICENSE,install.sh,install.cmd,INSTALL.md,DISTRIBUTION.md,README.md,RELEASE_NOTES.md,SKILL.md,THIRD_PARTY.md,package.json,bold.config.example.json,distribution-manifest.json,.gitignore}"
+    },
+    {
+      "path": "plugins/bold-edit/INSTALL.md",
+      "size": 7201,
+      "sha256": "307811c5a370b893c13149e14ccf62366507c78dec485b937ca0c076909a57f5",
+      "mode": "0644",
+      "origin": "source:INSTALL.md",
+      "class": "INCLUDE",
+      "rule": "{LICENSE,install.sh,install.cmd,INSTALL.md,DISTRIBUTION.md,README.md,RELEASE_NOTES.md,SKILL.md,THIRD_PARTY.md,package.json,bold.config.example.json,distribution-manifest.json,.gitignore}"
+    },
+    {
+      "path": "plugins/bold-edit/LICENSE",
+      "size": 3366,
+      "sha256": "10c6da3574abae43e2a5fcfeee4668dd2eb1885e7589cb393393e56056975c0a",
+      "mode": "0644",
+      "origin": "source:LICENSE",
+      "class": "INCLUDE",
+      "rule": "{LICENSE,install.sh,install.cmd,INSTALL.md,DISTRIBUTION.md,README.md,RELEASE_NOTES.md,SKILL.md,THIRD_PARTY.md,package.json,bold.config.example.json,distribution-manifest.json,.gitignore}"
+    },
+    {
+      "path": "plugins/bold-edit/README.md",
+      "size": 7430,
+      "sha256": "74c887643cb3c70c1d23fcc8b234f9027a4f3fd94b1813389d6cfa536ff859a6",
+      "mode": "0644",
+      "origin": "source:README.md",
+      "class": "INCLUDE",
+      "rule": "{LICENSE,install.sh,install.cmd,INSTALL.md,DISTRIBUTION.md,README.md,RELEASE_NOTES.md,SKILL.md,THIRD_PARTY.md,package.json,bold.config.example.json,distribution-manifest.json,.gitignore}"
+    },
+    {
+      "path": "plugins/bold-edit/RELEASE_NOTES.md",
+      "size": 9227,
+      "sha256": "5e30057c057a53720f9f2d67685f0675ab58001f010ce7f072c78c7e06648cbd",
+      "mode": "0644",
+      "origin": "source:RELEASE_NOTES.md",
+      "class": "INCLUDE",
+      "rule": "{LICENSE,install.sh,install.cmd,INSTALL.md,DISTRIBUTION.md,README.md,RELEASE_NOTES.md,SKILL.md,THIRD_PARTY.md,package.json,bold.config.example.json,distribution-manifest.json,.gitignore}"
+    },
+    {
+      "path": "plugins/bold-edit/SKILL.md",
+      "size": 10302,
+      "sha256": "cb77105ac592138dde8d983c4e825bc2ab33989ad706c7937e38d6a638760459",
+      "mode": "0644",
+      "origin": "source:SKILL.md",
+      "class": "INCLUDE",
+      "rule": "{LICENSE,install.sh,install.cmd,INSTALL.md,DISTRIBUTION.md,README.md,RELEASE_NOTES.md,SKILL.md,THIRD_PARTY.md,package.json,bold.config.example.json,distribution-manifest.json,.gitignore}"
+    },
+    {
+      "path": "plugins/bold-edit/THIRD_PARTY.md",
+      "size": 4027,
+      "sha256": "a975338e0474c0891e27c482e4fc9c9d416787f0610c69cc14226d8f35a4e728",
+      "mode": "0644",
+      "origin": "source:THIRD_PARTY.md",
+      "class": "INCLUDE",
+      "rule": "{LICENSE,install.sh,install.cmd,INSTALL.md,DISTRIBUTION.md,README.md,RELEASE_NOTES.md,SKILL.md,THIRD_PARTY.md,package.json,bold.config.example.json,distribution-manifest.json,.gitignore}"
+    },
+    {
+      "path": "plugins/bold-edit/asset-index/README.md",
+      "size": 499,
+      "sha256": "a0986cfc97733d1308d598e9825875ba769cd2f24b4e27726808a5530dee9ce3",
+      "mode": "0644",
+      "origin": "source:asset-index/README.md",
+      "class": "INCLUDE",
+      "rule": "asset-index/**"
+    },
+    {
+      "path": "plugins/bold-edit/asset-index/schema/bold.asset-index.schema.json",
+      "size": 4733,
+      "sha256": "e5ba5b982b17f4d1352a0ad2bcd845b16adf6628250d616439ac9f72a53414b2",
+      "mode": "0644",
+      "origin": "source:asset-index/schema/bold.asset-index.schema.json",
+      "class": "INCLUDE",
+      "rule": "asset-index/**"
+    },
+    {
+      "path": "plugins/bold-edit/asset-index/src/classify.mjs",
+      "size": 2408,
+      "sha256": "cc50c9fe5c91a0ce0db880d682e263d2d904731a3a68a603b558d3b067bae9f6",
+      "mode": "0644",
+      "origin": "source:asset-index/src/classify.mjs",
+      "class": "INCLUDE",
+      "rule": "asset-index/**"
+    },
+    {
+      "path": "plugins/bold-edit/asset-index/src/headers.mjs",
+      "size": 6330,
+      "sha256": "714b60668f29da13cad668e30cd9a16eceff658faa41412db3f532d6c241fba1",
+      "mode": "0644",
+      "origin": "source:asset-index/src/headers.mjs",
+      "class": "INCLUDE",
+      "rule": "asset-index/**"
+    },
+    {
+      "path": "plugins/bold-edit/asset-index/src/probe.mjs",
+      "size": 4687,
+      "sha256": "624ca4665083d294323492c97fde68fa70abb0761a7f6fb6ea71c83e2d916330",
+      "mode": "0644",
+      "origin": "source:asset-index/src/probe.mjs",
+      "class": "INCLUDE",
+      "rule": "asset-index/**"
+    },
+    {
+      "path": "plugins/bold-edit/asset-index/src/query.mjs",
+      "size": 5396,
+      "sha256": "7531afe6f9f3f3877dc521314a24a6159140a7ef4ef8a33d3bbaaad1210c7bdc",
+      "mode": "0644",
+      "origin": "source:asset-index/src/query.mjs",
+      "class": "INCLUDE",
+      "rule": "asset-index/**"
+    },
+    {
+      "path": "plugins/bold-edit/asset-index/src/scan.mjs",
+      "size": 13233,
+      "sha256": "0fec9d2f6035e8b4b6a811dbb23d1fdf6a07b9a12c79066a7e9e3563429c7d8f",
+      "mode": "0644",
+      "origin": "source:asset-index/src/scan.mjs",
+      "class": "INCLUDE",
+      "rule": "asset-index/**"
+    },
+    {
+      "path": "plugins/bold-edit/asset-index/src/store.mjs",
+      "size": 3228,
+      "sha256": "82e9fa0272fbdcbca6e5d6ba5ec9e53f2118b4f307792ed9364b83f49c5ad2ac",
+      "mode": "0644",
+      "origin": "source:asset-index/src/store.mjs",
+      "class": "INCLUDE",
+      "rule": "asset-index/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/earshot-0.4.0.lock.txt",
+      "size": 170526,
+      "sha256": "ece2935a8a8fba29a8afaea580a6e43f226fae089abad48ad9eb489a24cd2646",
+      "mode": "0644",
+      "origin": "source:audio/earshot-0.4.0.lock.txt",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/sfx-kit.lock.json",
+      "size": 1121,
+      "sha256": "39b6de01d9bdb439ec33e572267644e4e613d9ba903c6a89855dc9dc2e5767ae",
+      "mode": "0644",
+      "origin": "source:audio/sfx-kit.lock.json",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/src/credits.mjs",
+      "size": 2951,
+      "sha256": "54b54a30e4fc105e9cfbb8beaad892794811c092fde4ae19c88729d57354411a",
+      "mode": "0644",
+      "origin": "source:audio/src/credits.mjs",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/src/earshot.mjs",
+      "size": 5784,
+      "sha256": "3ab2f51aa74111ce600895b5f702facc1c385ffc5085ad172f8ed0f48882ae3e",
+      "mode": "0644",
+      "origin": "source:audio/src/earshot.mjs",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/src/errors.mjs",
+      "size": 282,
+      "sha256": "9818c3d22fccbd0e5ec4d7373a82af50547cecfed4afbf0dab52d2bac069c9d4",
+      "mode": "0644",
+      "origin": "source:audio/src/errors.mjs",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/src/events.mjs",
+      "size": 10523,
+      "sha256": "e9b244db75f8d686db0f4abbb01660d87c1b3df54f3cb4bd0e51de234048d054",
+      "mode": "0644",
+      "origin": "source:audio/src/events.mjs",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/src/export.mjs",
+      "size": 3943,
+      "sha256": "4cb40e58228b622dc7f220c1af44767e7cfba1541a699c1cb3ef51b2269d4de2",
+      "mode": "0644",
+      "origin": "source:audio/src/export.mjs",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/src/library-install.mjs",
+      "size": 4613,
+      "sha256": "04bc64824c1a3703156796993bbd76ac31c684ba423da0f05a9ac6308f02f646",
+      "mode": "0644",
+      "origin": "source:audio/src/library-install.mjs",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/src/locate.mjs",
+      "size": 5345,
+      "sha256": "71608a18431b571531d921c2169b9f4160d837ef33f882a81e8007239832df42",
+      "mode": "0644",
+      "origin": "source:audio/src/locate.mjs",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/src/measure.mjs",
+      "size": 7119,
+      "sha256": "5c262cf38905ca3a2b22804b17b474fd178722c01cf1829acbe88c1971d37656",
+      "mode": "0644",
+      "origin": "source:audio/src/measure.mjs",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/src/openverse.mjs",
+      "size": 14256,
+      "sha256": "2b80632b0ceeeba983dece12cc68eda5fdeb79f9bb1aa0654d90691c7f6e9630",
+      "mode": "0644",
+      "origin": "source:audio/src/openverse.mjs",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/src/plan.mjs",
+      "size": 7290,
+      "sha256": "4c4509e4c6898e4d974e1e7510b7e7eddf1a637a4c13de833bccee129e16f37a",
+      "mode": "0644",
+      "origin": "source:audio/src/plan.mjs",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/src/render.mjs",
+      "size": 8455,
+      "sha256": "6893e0087e76a2de2f02ff238f62e397fc272a8ee6ae033e89e4ea3b5087f2d6",
+      "mode": "0644",
+      "origin": "source:audio/src/render.mjs",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/src/select.mjs",
+      "size": 10560,
+      "sha256": "4a6e12e8b29e4f5725eb3044456f360e5cf4aad937cc8efd84b3c91281a75aaf",
+      "mode": "0644",
+      "origin": "source:audio/src/select.mjs",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/src/sfxkit.mjs",
+      "size": 5206,
+      "sha256": "1572c969bf9fa0572238abf9a917eef9e32d7f4a7102917ea0785f50f7d3b2d3",
+      "mode": "0644",
+      "origin": "source:audio/src/sfxkit.mjs",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/audio/src/storage.mjs",
+      "size": 12654,
+      "sha256": "5858619b234eb599a722aaca906a79ca6bdfedfb45e076bff4bdb16f9ed9cbe9",
+      "mode": "0644",
+      "origin": "source:audio/src/storage.mjs",
+      "class": "INCLUDE",
+      "rule": "audio/**"
+    },
+    {
+      "path": "plugins/bold-edit/bin/bold",
+      "size": 1082,
+      "sha256": "7e70ead70b224a32b6c1619911a0605cc935ece9dd179677e258c2b6595a6478",
+      "mode": "0755",
+      "origin": "source:bin/bold",
+      "class": "INCLUDE",
+      "rule": "bin/**"
+    },
+    {
+      "path": "plugins/bold-edit/bin/bold.cmd",
+      "size": 619,
+      "sha256": "4f80686d1edea2880069ccb584b5019987286a80565dcd3b4be6f45c60b98165",
+      "mode": "0644",
+      "origin": "source:bin/bold.cmd",
+      "class": "INCLUDE",
+      "rule": "bin/**"
+    },
+    {
+      "path": "plugins/bold-edit/bin/bold.mjs",
+      "size": 18427,
+      "sha256": "470a7e65f306097e037065ecbac0628c2670c08eeb4553d9caee205ae82225a1",
+      "mode": "0755",
+      "origin": "source:bin/bold.mjs",
+      "class": "INCLUDE",
+      "rule": "bin/**"
+    },
+    {
+      "path": "plugins/bold-edit/bin/commands/assets.mjs",
+      "size": 8188,
+      "sha256": "24d48978c2b57cdbc144f6a1b310ccf0b17ca94c9988355718844c8f5c067577",
+      "mode": "0644",
+      "origin": "source:bin/commands/assets.mjs",
+      "class": "INCLUDE",
+      "rule": "bin/**"
+    },
+    {
+      "path": "plugins/bold-edit/bin/commands/audio.mjs",
+      "size": 31163,
+      "sha256": "c2dedf4d54dfab20991cccd103dda5df59eb302ba35ad2e54e5086241ef0199b",
+      "mode": "0644",
+      "origin": "source:bin/commands/audio.mjs",
+      "class": "INCLUDE",
+      "rule": "bin/**"
+    },
+    {
+      "path": "plugins/bold-edit/bin/commands/context.mjs",
+      "size": 6988,
+      "sha256": "6ba8a8e70b92cbbb89edc6cbc919e3293856c41a1f348b4bb84df85084537457",
+      "mode": "0644",
+      "origin": "source:bin/commands/context.mjs",
+      "class": "INCLUDE",
+      "rule": "bin/**"
+    },
+    {
+      "path": "plugins/bold-edit/bin/commands/davinci.mjs",
+      "size": 11796,
+      "sha256": "5e13168eee3a2a6254314f354c63b27ec41508abd1ffaa8bbb15797a320017d3",
+      "mode": "0644",
+      "origin": "source:bin/commands/davinci.mjs",
+      "class": "INCLUDE",
+      "rule": "bin/**"
+    },
+    {
+      "path": "plugins/bold-edit/bin/commands/dist.mjs",
+      "size": 3262,
+      "sha256": "1fd8d4a17f95f911af528e3a27f8782be7a79c91f2ea374cf27645a97077878f",
+      "mode": "0644",
+      "origin": "source:bin/commands/dist.mjs",
+      "class": "INCLUDE",
+      "rule": "bin/**"
+    },
+    {
+      "path": "plugins/bold-edit/bin/commands/editorial.mjs",
+      "size": 11831,
+      "sha256": "38494dbd2c22f80ed9391b53affd1af1b2f6097d382e7c0700ced1066a22204b",
+      "mode": "0644",
+      "origin": "source:bin/commands/editorial.mjs",
+      "class": "INCLUDE",
+      "rule": "bin/**"
+    },
+    {
+      "path": "plugins/bold-edit/bin/commands/media.mjs",
+      "size": 16623,
+      "sha256": "f6bd66f3d286af64deefcf5cfdcbbb9d1e5dbe01164199316953e6db9699d536",
+      "mode": "0644",
+      "origin": "source:bin/commands/media.mjs",
+      "class": "INCLUDE",
+      "rule": "bin/**"
+    },
+    {
+      "path": "plugins/bold-edit/bin/commands/motion.mjs",
+      "size": 8046,
+      "sha256": "57393d197515b8d6aad3ad90c086213f5a1e3c33e1d291ead2cc3c1820f05f39",
+      "mode": "0644",
+      "origin": "source:bin/commands/motion.mjs",
+      "class": "INCLUDE",
+      "rule": "bin/**"
+    },
+    {
+      "path": "plugins/bold-edit/bin/commands/setup.mjs",
+      "size": 15339,
+      "sha256": "eb7e240de693b346979ce6659c971616b52478af55e3f69af23b2e943a9cea88",
+      "mode": "0644",
+      "origin": "source:bin/commands/setup.mjs",
+      "class": "INCLUDE",
+      "rule": "bin/**"
+    },
+    {
+      "path": "plugins/bold-edit/bin/commands/transcript.mjs",
+      "size": 7911,
+      "sha256": "42c7d1afaf82fb07f20c5bcba92ce2d5fb43ec04b4d6ea8a7dbc9fd48f90dd5b",
+      "mode": "0644",
+      "origin": "source:bin/commands/transcript.mjs",
+      "class": "INCLUDE",
+      "rule": "bin/**"
+    },
+    {
+      "path": "plugins/bold-edit/bold.config.example.json",
+      "size": 712,
+      "sha256": "4f7375e23cf4bc89f621fc6d32972427ea4060b76a07d1188bbea0f5f5e987d1",
+      "mode": "0644",
+      "origin": "source:bold.config.example.json",
+      "class": "INCLUDE",
+      "rule": "{LICENSE,install.sh,install.cmd,INSTALL.md,DISTRIBUTION.md,README.md,RELEASE_NOTES.md,SKILL.md,THIRD_PARTY.md,package.json,bold.config.example.json,distribution-manifest.json,.gitignore}"
+    },
+    {
+      "path": "plugins/bold-edit/bootstrap/README.md",
+      "size": 2580,
+      "sha256": "f9e32185522e868c3b73bc966c386af3d2f4674edbe326b1210f090c7a595366",
+      "mode": "0644",
+      "origin": "source:bootstrap/README.md",
+      "class": "INCLUDE",
+      "rule": "bootstrap/**"
+    },
+    {
+      "path": "plugins/bold-edit/bootstrap/bootstrap.ps1",
+      "size": 9333,
+      "sha256": "293797953b1525e0dc8e1cedc425a99a00e01eeb37606d918dabee0da2a17c82",
+      "mode": "0644",
+      "origin": "source:bootstrap/bootstrap.ps1",
+      "class": "INCLUDE",
+      "rule": "bootstrap/**"
+    },
+    {
+      "path": "plugins/bold-edit/bootstrap/bootstrap.sh",
+      "size": 13344,
+      "sha256": "8225c8dd60a521f35bce637f9eefb64c4d4f3c00c226e7c0ce09c6408f4e4306",
+      "mode": "0755",
+      "origin": "source:bootstrap/bootstrap.sh",
+      "class": "INCLUDE",
+      "rule": "bootstrap/**"
+    },
+    {
+      "path": "plugins/bold-edit/config/defaults.json",
+      "size": 2672,
+      "sha256": "f1d47d920bf6dde573fa92dbcf73dcee9f17b77cc46e3c6de9fab9a66c4b2068",
+      "mode": "0644",
+      "origin": "source:config/defaults.json",
+      "class": "INCLUDE",
+      "rule": "config/**"
+    },
+    {
+      "path": "plugins/bold-edit/config/product.json",
+      "size": 2054,
+      "sha256": "26a7c26806f9c82c7c32bd04ebf8db1123beab60e8d6c298716776a2ae438710",
+      "mode": "0644",
+      "origin": "source:config/product.json",
+      "class": "INCLUDE",
+      "rule": "config/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/config/README.md",
+      "size": 269,
+      "sha256": "9df3afb2d35f76b011448796af5f3368ee12e9e15f3155fb1954c9548a94441b",
+      "mode": "0644",
+      "origin": "source:core/config/README.md",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/config/aux-python.mjs",
+      "size": 1378,
+      "sha256": "40bfb06f8a7a0e036e91a279d0dc779e69b59190ed03b1e08074018a74057d86",
+      "mode": "0644",
+      "origin": "source:core/config/aux-python.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/config/bold.config.schema.json",
+      "size": 4003,
+      "sha256": "957082a932ac7f176195583473e258c41bd629e357da1ae052dc21b5ff1f45ca",
+      "mode": "0644",
+      "origin": "source:core/config/bold.config.schema.json",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/config/bold.project.schema.json",
+      "size": 3155,
+      "sha256": "740fbe0f4e7a905c04ceb2e42cb552bf3681626d79953449552fd2a0b6d23736",
+      "mode": "0644",
+      "origin": "source:core/config/bold.project.schema.json",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/config/child-env.mjs",
+      "size": 1399,
+      "sha256": "e459f1293998606651a7fd3df6da5ea6051f4ea1305a1b5a2d4d48a596c479d0",
+      "mode": "0644",
+      "origin": "source:core/config/child-env.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/config/load.mjs",
+      "size": 10268,
+      "sha256": "3280649c6a226648541d07998ab9734af33f95eed13f6a34ff7ed16330a1e8c7",
+      "mode": "0644",
+      "origin": "source:core/config/load.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/config/paths.mjs",
+      "size": 3068,
+      "sha256": "b419fb404e5a84608fa55b14fcdb7d46f50495a875c92cd13a93292e1d80a734",
+      "mode": "0644",
+      "origin": "source:core/config/paths.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/config/toolchain.mjs",
+      "size": 9024,
+      "sha256": "75b93921943189c8ec053d3ee43b6f0be5961ffc859485dfd2a391feb705a2df",
+      "mode": "0644",
+      "origin": "source:core/config/toolchain.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/context/bold.project-context.schema.json",
+      "size": 2251,
+      "sha256": "9fe273b291cfe67ce389d442db109d549a8c71cf0084b833316bcc52a4d48d07",
+      "mode": "0644",
+      "origin": "source:core/context/bold.project-context.schema.json",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/context/context.mjs",
+      "size": 6808,
+      "sha256": "320ca8e3811f93af18e960d2468e6eca272c5ae0428dba8c3544c2c10a54efdf",
+      "mode": "0644",
+      "origin": "source:core/context/context.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/context/davinci-read.mjs",
+      "size": 2385,
+      "sha256": "8d16527b5ce4cf2c380491978e685834d7a103124624cad866855a3a4a618d9e",
+      "mode": "0644",
+      "origin": "source:core/context/davinci-read.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/context/link.mjs",
+      "size": 2381,
+      "sha256": "e0320fbba1df79db6bf060694b2581bdd0a9f8d976c0d1fc6f4cd83949f0550e",
+      "mode": "0644",
+      "origin": "source:core/context/link.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/davinci/authorize.mjs",
+      "size": 3628,
+      "sha256": "48751734763375775e4f22407049f4b555788dc8695e15b845ed517e326e20e5",
+      "mode": "0644",
+      "origin": "source:core/davinci/authorize.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/davinci/bridge.mjs",
+      "size": 4720,
+      "sha256": "178cd806cb5cc298ce9cde75c4e0c7c85f8d403117064c8fb2c568090b3ba1eb",
+      "mode": "0644",
+      "origin": "source:core/davinci/bridge.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/delivery/README.md",
+      "size": 968,
+      "sha256": "fc93b40b4e82dc10c42dedbd1f0116627455f6458095f11b3f97737ac7423ba1",
+      "mode": "0644",
+      "origin": "source:core/delivery/README.md",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/delivery/authorize.mjs",
+      "size": 1363,
+      "sha256": "1ff00013aa8fe26b70893eb489397144becae915673ab9d525f5a4804437d21c",
+      "mode": "0644",
+      "origin": "source:core/delivery/authorize.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/delivery/blur.mjs",
+      "size": 5060,
+      "sha256": "b88eca645583d767746f471a828782e4e83885d5d750ccf3bc585766cd4f4a89",
+      "mode": "0644",
+      "origin": "source:core/delivery/blur.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/delivery/encode.mjs",
+      "size": 4444,
+      "sha256": "0caecc39b3f2e7b9f678ea75372621a1a372efa01ab9b159b63a823a643c0190",
+      "mode": "0644",
+      "origin": "source:core/delivery/encode.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/delivery/ffprobe.mjs",
+      "size": 3122,
+      "sha256": "8f0aedd17efe7aa1acea1721a0b0d906a518a31765afebfe62a81c0068516793",
+      "mode": "0644",
+      "origin": "source:core/delivery/ffprobe.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/delivery/fixcolor.mjs",
+      "size": 9765,
+      "sha256": "1b7b56a76be0b3cbcdc4d2bd0cffade827ef42b7021101fd7d7683b6d9fb24cf",
+      "mode": "0644",
+      "origin": "source:core/delivery/fixcolor.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/delivery/manifest.mjs",
+      "size": 2989,
+      "sha256": "49328877e285cf736b7e98cc4393d1915a412714c430f8f0fc1c59b95b0f6a8d",
+      "mode": "0644",
+      "origin": "source:core/delivery/manifest.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/delivery/profiles.json",
+      "size": 1787,
+      "sha256": "59e3506f33ea246d61425af2b959358ac9a6e7f4c34d73592a2076610f7fb129",
+      "mode": "0644",
+      "origin": "source:core/delivery/profiles.json",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/delivery/profiles.mjs",
+      "size": 2549,
+      "sha256": "da72542939324d3bbcb2eda6bbd451e8453adcc8436ea3ccf6c74ffc8ef145c7",
+      "mode": "0644",
+      "origin": "source:core/delivery/profiles.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/delivery/sequence.mjs",
+      "size": 1837,
+      "sha256": "800db6ce6d2784bb6097c85e62e2a2e60caf104260d172a16aeac8e1ced38502",
+      "mode": "0644",
+      "origin": "source:core/delivery/sequence.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/delivery/tools.mjs",
+      "size": 1691,
+      "sha256": "5458697e763642e0de92df7a6c672263989050b90eb82e383c8c37894b39728d",
+      "mode": "0644",
+      "origin": "source:core/delivery/tools.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/delivery/validate.mjs",
+      "size": 4794,
+      "sha256": "0807efa7c19bd48618ba55278952b70229337a681fb407fa3bf34dc1aea012d8",
+      "mode": "0644",
+      "origin": "source:core/delivery/validate.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/doctor/audio-checks.mjs",
+      "size": 4832,
+      "sha256": "a91fd239bd46f7f0c5be45940bd5214e52f5c27eab7616ece3d6a6b3707911d9",
+      "mode": "0644",
+      "origin": "source:core/doctor/audio-checks.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/doctor/checks.mjs",
+      "size": 30866,
+      "sha256": "34600f6155c5c2778edda3a4b76be2543de1c77c89b05ca234cb3d32f3ff17ea",
+      "mode": "0644",
+      "origin": "source:core/doctor/checks.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/doctor/doctor.mjs",
+      "size": 2881,
+      "sha256": "480fb3659bf3eda540dbcf85924d4539b785371bf86cfa79852562c536801318",
+      "mode": "0644",
+      "origin": "source:core/doctor/doctor.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/doctor/probe.mjs",
+      "size": 3649,
+      "sha256": "15d19737b878673982403e72b9150bd6ee0f03035b5eeb4d83c179f017f42165",
+      "mode": "0644",
+      "origin": "source:core/doctor/probe.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/doctor/toolchain-checks.mjs",
+      "size": 5769,
+      "sha256": "bfdcf73e79a3396344057947c9ebc7c43eb85cf6a749a9d314988216fa7c84ec",
+      "mode": "0644",
+      "origin": "source:core/doctor/toolchain-checks.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/leak/README.md",
+      "size": 300,
+      "sha256": "d4eade3c66a7890c1b07c4a719d74b2563f7ebf07bfae275be3ef04caf700f37",
+      "mode": "0644",
+      "origin": "source:core/leak/README.md",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/leak/allowlist.json",
+      "size": 533,
+      "sha256": "4b9ce37c68eefd92c3792fed5596ac434197ee107680d304cbccb63e921b6917",
+      "mode": "0644",
+      "origin": "source:core/leak/allowlist.json",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/leak/generic.denylist.json",
+      "size": 2741,
+      "sha256": "ab3c5dd4ee52cf0657ce97fe27e850b471c757e2b88b070ae03457fbd427f350",
+      "mode": "0644",
+      "origin": "source:core/leak/generic.denylist.json",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/leak/scan.mjs",
+      "size": 8037,
+      "sha256": "a788e0cf84ff98c2d0b70e031c3bb76989aa49801e29d06607c69f1fafc27760",
+      "mode": "0644",
+      "origin": "source:core/leak/scan.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/log/README.md",
+      "size": 205,
+      "sha256": "06f2d5de945d540b8f7c5481961ba7360d0619af7068141d173a4e512b6fb496",
+      "mode": "0644",
+      "origin": "source:core/log/README.md",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/log/authorization-log.mjs",
+      "size": 1464,
+      "sha256": "bf2f4bf37f58236263daa927ed9ce06b3e93be0a55760b16d30afc46af3c1a33",
+      "mode": "0644",
+      "origin": "source:core/log/authorization-log.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/policy/README.md",
+      "size": 1122,
+      "sha256": "667ddf829989f01289cebccc9772ddf4b7b5a4982135befae048e57c2d923c90",
+      "mode": "0644",
+      "origin": "source:core/policy/README.md",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/policy/authorization-language.mjs",
+      "size": 3175,
+      "sha256": "24643370ee3895622e8e4ac5934e12d9ea2897975991fd0259e30b87a42de105",
+      "mode": "0644",
+      "origin": "source:core/policy/authorization-language.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/policy/gate.mjs",
+      "size": 6030,
+      "sha256": "78e4e2b8472c6315b92be8e1ac81b99f5a2f8068f864cb6f10992d63da1f660e",
+      "mode": "0644",
+      "origin": "source:core/policy/gate.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/policy/invariants.mjs",
+      "size": 2258,
+      "sha256": "28f45b3fdfe613e3bd96af6200f471b3c5a3cef16e385a9222f6c5345456252d",
+      "mode": "0644",
+      "origin": "source:core/policy/invariants.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/product.mjs",
+      "size": 1317,
+      "sha256": "e892f1061fc8ee04fc1080caf9fd5f314a404bb419d0cb86ac66014936e6ab1b",
+      "mode": "0644",
+      "origin": "source:core/product.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/qc/README.md",
+      "size": 367,
+      "sha256": "f534cec90614537fc5c674c8041f859b92ce3347bff9219fe1d0193273bae64a",
+      "mode": "0644",
+      "origin": "source:core/qc/README.md",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/qc/alpha.mjs",
+      "size": 5654,
+      "sha256": "e7832372439926911f6aef5c5e263b1a6b2aceb56cf86ec5319d7245fa24266a",
+      "mode": "0644",
+      "origin": "source:core/qc/alpha.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/qc/composite.mjs",
+      "size": 2862,
+      "sha256": "d1970249eb0783a043ba49acf6280eea6aff05e19c42f6ed52473db668fa33d8",
+      "mode": "0644",
+      "origin": "source:core/qc/composite.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/qc/frames.mjs",
+      "size": 1509,
+      "sha256": "f93c0cd4314251fce671fb660514f14fd238a03cde3fd488fb45eaf65f90d3c5",
+      "mode": "0644",
+      "origin": "source:core/qc/frames.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/qc/png.mjs",
+      "size": 3083,
+      "sha256": "139c0e86c7a69992210d3d7710b195660688c1933e581478e60ef3cf7a7cc20f",
+      "mode": "0644",
+      "origin": "source:core/qc/png.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/qc/qc.mjs",
+      "size": 5562,
+      "sha256": "d381cda75d4c8ad3a2fdbf78e3375462f551eac71bf176b2e803fa0fca2a3ab8",
+      "mode": "0644",
+      "origin": "source:core/qc/qc.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/qc/sequence.mjs",
+      "size": 4243,
+      "sha256": "cf229e13d69dc9527feeeac789c1e3653887f741153773a53845a383fd699161",
+      "mode": "0644",
+      "origin": "source:core/qc/sequence.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/qc/stills.mjs",
+      "size": 3735,
+      "sha256": "13f6ade088099139d1becab692bbba3c1eaee228127dd735bb1c425a79f9a115",
+      "mode": "0644",
+      "origin": "source:core/qc/stills.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/render/render.mjs",
+      "size": 12853,
+      "sha256": "03e705d98827e3afa8a4ac91678428fdf5ec9e386b8209a2347f2467d3442332",
+      "mode": "0644",
+      "origin": "source:core/render/render.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/render/server-cleanup.mjs",
+      "size": 3684,
+      "sha256": "3dd7afde2203bcf49a24550d620e16b1c57364b341d30e791f9204f76e5dadd4",
+      "mode": "0644",
+      "origin": "source:core/render/server-cleanup.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/core/schema/validate.mjs",
+      "size": 4733,
+      "sha256": "829813b4996a41a80f854d3258ce82310353dad43b55019df529e083fc87fb75",
+      "mode": "0644",
+      "origin": "source:core/schema/validate.mjs",
+      "class": "INCLUDE",
+      "rule": "core/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/README.md",
+      "size": 750,
+      "sha256": "61be7e35f5c57f88f1696ca181004ca72d9e9657948c93681f403056bfe7fed9",
+      "mode": "0644",
+      "origin": "source:davinci/README.md",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644",
+      "origin": "source:davinci/__init__.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/api/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644",
+      "origin": "source:davinci/api/__init__.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/api/connect.py",
+      "size": 2623,
+      "sha256": "51e5b7fe5e12c82faf9e43a0cf0d325f5cb82189c6cad8bb5d1d98ccffaba403",
+      "mode": "0644",
+      "origin": "source:davinci/api/connect.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/bridge/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644",
+      "origin": "source:davinci/bridge/__init__.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/bridge/cli.py",
+      "size": 1557,
+      "sha256": "8567aaaa03c9a48a4b831477237462dd3bf5a61c103c1b2b5c7cf4793ffcaaf3",
+      "mode": "0644",
+      "origin": "source:davinci/bridge/cli.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/bridge/ops.py",
+      "size": 19236,
+      "sha256": "70ec0344a336ab465072e4381974747e60550487e4690b87a57f28ecb749940e",
+      "mode": "0644",
+      "origin": "source:davinci/bridge/ops.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/checkpoint/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644",
+      "origin": "source:davinci/checkpoint/__init__.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/checkpoint/checkpoint.py",
+      "size": 4193,
+      "sha256": "395a166db2b79f892580ebb6884f03ee0c97c729db327e8c17e5ccb5f2c3a589",
+      "mode": "0644",
+      "origin": "source:davinci/checkpoint/checkpoint.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/fusion/README.md",
+      "size": 250,
+      "sha256": "21212ab95d421ec6f27bb106cf61a1fe10213dddcec60da7caf9c375fd9d2c82",
+      "mode": "0644",
+      "origin": "source:davinci/fusion/README.md",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/media/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644",
+      "origin": "source:davinci/media/__init__.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/media/media.py",
+      "size": 2986,
+      "sha256": "7bf115fe5d2c668d4b216afd8cd4105d7857c6e6f31bffeeeb4bfee16274432c",
+      "mode": "0644",
+      "origin": "source:davinci/media/media.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/safety/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644",
+      "origin": "source:davinci/safety/__init__.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/safety/guards.py",
+      "size": 4637,
+      "sha256": "75f8100a2c57024e13e019b605fb47e46414bb0d8bedcb9df22f57479f73e60d",
+      "mode": "0644",
+      "origin": "source:davinci/safety/guards.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/safety/intents.py",
+      "size": 1421,
+      "sha256": "646c4039414ae1b1606fd86a435e4d16d21f3bddbb32284067f3a5c7ade04829",
+      "mode": "0644",
+      "origin": "source:davinci/safety/intents.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/timeline/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": "0644",
+      "origin": "source:davinci/timeline/__init__.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/timeline/inspect.py",
+      "size": 3974,
+      "sha256": "6db1e30da95f81e5dde84a90fb5c5f80fdecd354b45861cfdd759164e510361a",
+      "mode": "0644",
+      "origin": "source:davinci/timeline/inspect.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/davinci/timeline/timecode.py",
+      "size": 3031,
+      "sha256": "023fee9d4e8af9f2aecddccd1c5bfc2c3788dc6a40c8fef4659bc783332f1dd1",
+      "mode": "0644",
+      "origin": "source:davinci/timeline/timecode.py",
+      "class": "INCLUDE",
+      "rule": "davinci/**"
+    },
+    {
+      "path": "plugins/bold-edit/distribution-manifest.json",
+      "size": 5984,
+      "sha256": "318d3dbe308b3aff2dd03a558e181436ea87f509a5b9e1d307ef1b8d29e5e8e5",
+      "mode": "0644",
+      "origin": "source:distribution-manifest.json",
+      "class": "INCLUDE",
+      "rule": "{LICENSE,install.sh,install.cmd,INSTALL.md,DISTRIBUTION.md,README.md,RELEASE_NOTES.md,SKILL.md,THIRD_PARTY.md,package.json,bold.config.example.json,distribution-manifest.json,.gitignore}"
+    },
+    {
+      "path": "plugins/bold-edit/editorial/README.md",
+      "size": 679,
+      "sha256": "c2c87428258eee965ce3fc2644f90443c29a78e9a36e66c8152db0604e3dc2bd",
+      "mode": "0644",
+      "origin": "source:editorial/README.md",
+      "class": "INCLUDE",
+      "rule": "editorial/**"
+    },
+    {
+      "path": "plugins/bold-edit/editorial/schema/bold.editorial-plan.schema.json",
+      "size": 5163,
+      "sha256": "6b570ab6132d5715c9c64219e79ede6e90dc7bf0cc03af58d2a3215e9912b156",
+      "mode": "0644",
+      "origin": "source:editorial/schema/bold.editorial-plan.schema.json",
+      "class": "INCLUDE",
+      "rule": "editorial/**"
+    },
+    {
+      "path": "plugins/bold-edit/editorial/src/decide.mjs",
+      "size": 20845,
+      "sha256": "d43537fa7c00fc5cf406c7e0840d6c87ee4f4f3d42e90cb85a51e54a2346779d",
+      "mode": "0644",
+      "origin": "source:editorial/src/decide.mjs",
+      "class": "INCLUDE",
+      "rule": "editorial/**"
+    },
+    {
+      "path": "plugins/bold-edit/editorial/src/density.mjs",
+      "size": 5427,
+      "sha256": "db40b71aeb6121368546a73b729b97ea30cd7ee1d08a3b9f2c9974f54979492b",
+      "mode": "0644",
+      "origin": "source:editorial/src/density.mjs",
+      "class": "INCLUDE",
+      "rule": "editorial/**"
+    },
+    {
+      "path": "plugins/bold-edit/editorial/src/intent.mjs",
+      "size": 6580,
+      "sha256": "33f27a2479a10cca4574d3a6aced29d3a2a7706507e0fcdf25d22ec366907fd7",
+      "mode": "0644",
+      "origin": "source:editorial/src/intent.mjs",
+      "class": "INCLUDE",
+      "rule": "editorial/**"
+    },
+    {
+      "path": "plugins/bold-edit/editorial/src/match.mjs",
+      "size": 3934,
+      "sha256": "da237e987514ed80ffef720292aa4d89b2cd6d7bba0f77c959fb82b3dcafa7bb",
+      "mode": "0644",
+      "origin": "source:editorial/src/match.mjs",
+      "class": "INCLUDE",
+      "rule": "editorial/**"
+    },
+    {
+      "path": "plugins/bold-edit/editorial/src/plan.mjs",
+      "size": 16188,
+      "sha256": "c5ffff5e6f0032f6cbc0dd428529cb898825fcbb9e244231492d65bb591e49a6",
+      "mode": "0644",
+      "origin": "source:editorial/src/plan.mjs",
+      "class": "INCLUDE",
+      "rule": "editorial/**"
+    },
+    {
+      "path": "plugins/bold-edit/editorial/src/router.mjs",
+      "size": 8035,
+      "sha256": "278f536207d3db68c4df7bed7f10a39079ff0687dde9e0b594ebb121cebb26fc",
+      "mode": "0644",
+      "origin": "source:editorial/src/router.mjs",
+      "class": "INCLUDE",
+      "rule": "editorial/**"
+    },
+    {
+      "path": "plugins/bold-edit/editorial/src/signals.mjs",
+      "size": 8552,
+      "sha256": "aee8213d4d460fb71c7d31208fbb41d6ac94df56671a30f80173f1c7a7fd6d7d",
+      "mode": "0644",
+      "origin": "source:editorial/src/signals.mjs",
+      "class": "INCLUDE",
+      "rule": "editorial/**"
+    },
+    {
+      "path": "plugins/bold-edit/editorial/src/validate.mjs",
+      "size": 6105,
+      "sha256": "8e88da2b4b9fb2066eda0a7309b51da4986d39d4fa31b5e20db6d69a71a62541",
+      "mode": "0644",
+      "origin": "source:editorial/src/validate.mjs",
+      "class": "INCLUDE",
+      "rule": "editorial/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/README.md",
+      "size": 1616,
+      "sha256": "0507d81758ba3c5a61eb83a20c396427cfc050216ff3a05c803b04dfc1947c47",
+      "mode": "0644",
+      "origin": "source:hyperframes/README.md",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/adapter/browser.mjs",
+      "size": 3957,
+      "sha256": "a329982370d6ea85ed1013b81f3fd467be5e3644708dc419e8df2d4ede88dfab",
+      "mode": "0644",
+      "origin": "source:hyperframes/adapter/browser.mjs",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/adapter/font-gate.mjs",
+      "size": 8090,
+      "sha256": "eee0e4f31287318c48f50e36612e4ad121345e52dd27e1aeadebcb2ad6ee1049",
+      "mode": "0644",
+      "origin": "source:hyperframes/adapter/font-gate.mjs",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/adapter/job.mjs",
+      "size": 5865,
+      "sha256": "04cd216ad870318fbcabb057404f43fd415da225e0256021211f65fe306ed7f3",
+      "mode": "0644",
+      "origin": "source:hyperframes/adapter/job.mjs",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/adapter/net-guard.mjs",
+      "size": 4159,
+      "sha256": "9536d22e215b5a6aab33f6b5d3eb78841065d9e4f5ab95bf33b6d664df2b5c26",
+      "mode": "0644",
+      "origin": "source:hyperframes/adapter/net-guard.mjs",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/adapter/render.mjs",
+      "size": 10849,
+      "sha256": "47ea604fca4fb38a770b55fa20d2b8f611d96be13148f3f06e9d9eb81582713a",
+      "mode": "0644",
+      "origin": "source:hyperframes/adapter/render.mjs",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/adapter/run.mjs",
+      "size": 3907,
+      "sha256": "be496b0e55a4e906fb6d1c10d01ada0966e545c471f25d4d032610f489eba418",
+      "mode": "0644",
+      "origin": "source:hyperframes/adapter/run.mjs",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/examples/bold-geometric.spec.json",
+      "size": 2385,
+      "sha256": "5eac7ddd0298c6ee3e06a4bb4125dc00be528c0940c2874aec1d23917df4b154",
+      "mode": "0644",
+      "origin": "source:hyperframes/examples/bold-geometric.spec.json",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/examples/bold-geometric.tokens.json",
+      "size": 556,
+      "sha256": "07e521655674e8861df11dee0a7fd4779e78cc15742fe2ef0e310c3a817b7138",
+      "mode": "0644",
+      "origin": "source:hyperframes/examples/bold-geometric.tokens.json",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/examples/editorial.spec.json",
+      "size": 2286,
+      "sha256": "81456d91449cb96e03886f72feb5344fc4f37926a505ccbf8bb990ac32b9082a",
+      "mode": "0644",
+      "origin": "source:hyperframes/examples/editorial.spec.json",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/examples/editorial.tokens.json",
+      "size": 572,
+      "sha256": "41cbca63f398157c2941928cf6f126dc2ce746710a635763a9cbbf8762ba2f24",
+      "mode": "0644",
+      "origin": "source:hyperframes/examples/editorial.tokens.json",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/examples/minimal-technical.spec.json",
+      "size": 2273,
+      "sha256": "4b908f98ad0f4de342d997e9f9375db2c452515bf7f152e7109451c6176fd66c",
+      "mode": "0644",
+      "origin": "source:hyperframes/examples/minimal-technical.spec.json",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/examples/minimal-technical.tokens.json",
+      "size": 547,
+      "sha256": "7aa22743988510953321257af9c70bd2bfbd0397ee3df9930b56a0542e339cae",
+      "mode": "0644",
+      "origin": "source:hyperframes/examples/minimal-technical.tokens.json",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/package.json",
+      "size": 310,
+      "sha256": "dce27ac2ce090c0b97280d666253336a9b08495f7f8209db10cda1c471b2e24b",
+      "mode": "0644",
+      "origin": "source:hyperframes/package.json",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/schema/bold.hyperframes.spec.schema.json",
+      "size": 20644,
+      "sha256": "d3fa017abe26134d70eb30d5c8d18a22d039cfed99f0f7e827903b74146d2a76",
+      "mode": "0644",
+      "origin": "source:hyperframes/schema/bold.hyperframes.spec.schema.json",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/src/compile.mjs",
+      "size": 38274,
+      "sha256": "b6e306f7ebb40a868b1a6104ed02fb42e6db971721709d4a0e632d116a961ec7",
+      "mode": "0644",
+      "origin": "source:hyperframes/src/compile.mjs",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/src/html.mjs",
+      "size": 2108,
+      "sha256": "434bac0cabfea901e8635673def5cd64de4a98682cfb61d9d26b6c50e85bfe9e",
+      "mode": "0644",
+      "origin": "source:hyperframes/src/html.mjs",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/src/refs.mjs",
+      "size": 3684,
+      "sha256": "3021bde89d97d576022cb002c4dca2ab89941164201e1094d7840a239e6c7979",
+      "mode": "0644",
+      "origin": "source:hyperframes/src/refs.mjs",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/src/runtime.js",
+      "size": 20307,
+      "sha256": "2b36e06f2151556965f59c21111c8ff46d6e35410c4035f2bfeeffc3cf127014",
+      "mode": "0644",
+      "origin": "source:hyperframes/src/runtime.js",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/hyperframes/src/sfnt.mjs",
+      "size": 4210,
+      "sha256": "8f4c7352dc879a4afc9dc38f04b8b6f6c92f277ee43b18cca99b3d784377632e",
+      "mode": "0644",
+      "origin": "source:hyperframes/src/sfnt.mjs",
+      "class": "INCLUDE",
+      "rule": "hyperframes/**"
+    },
+    {
+      "path": "plugins/bold-edit/install.cmd",
+      "size": 265,
+      "sha256": "b59406a374badf07c7d8f709eeba8eadbe620b6b778d7eaf81860c6bb9b5799a",
+      "mode": "0644",
+      "origin": "source:install.cmd",
+      "class": "INCLUDE",
+      "rule": "{LICENSE,install.sh,install.cmd,INSTALL.md,DISTRIBUTION.md,README.md,RELEASE_NOTES.md,SKILL.md,THIRD_PARTY.md,package.json,bold.config.example.json,distribution-manifest.json,.gitignore}"
+    },
+    {
+      "path": "plugins/bold-edit/install.sh",
+      "size": 1152,
+      "sha256": "ecefeb8782f2c6f165025c8fd2413c7eb5da4033a31eae6eddfa7c0cb994a898",
+      "mode": "0755",
+      "origin": "source:install.sh",
+      "class": "INCLUDE",
+      "rule": "{LICENSE,install.sh,install.cmd,INSTALL.md,DISTRIBUTION.md,README.md,RELEASE_NOTES.md,SKILL.md,THIRD_PARTY.md,package.json,bold.config.example.json,distribution-manifest.json,.gitignore}"
+    },
+    {
+      "path": "plugins/bold-edit/install/README.md",
+      "size": 376,
+      "sha256": "8e5c01572f703aa7938a90c400111e6918f7c41564a028682c6d9ddd34756e52",
+      "mode": "0644",
+      "origin": "source:install/README.md",
+      "class": "INCLUDE",
+      "rule": "install/**"
+    },
+    {
+      "path": "plugins/bold-edit/install/dist-build.mjs",
+      "size": 12193,
+      "sha256": "96e9f6496ea675d0ee6d3fb8cd6ac9d0abb0791a3cbc188600a5388c259928e2",
+      "mode": "0644",
+      "origin": "source:install/dist-build.mjs",
+      "class": "INCLUDE",
+      "rule": "install/**"
+    },
+    {
+      "path": "plugins/bold-edit/install/dist.mjs",
+      "size": 1419,
+      "sha256": "9e5e701ac6dbf4797cd69bda74ecc9da310f65f9d515e9f90f587c0b3c5f59d6",
+      "mode": "0644",
+      "origin": "source:install/dist.mjs",
+      "class": "INCLUDE",
+      "rule": "install/**"
+    },
+    {
+      "path": "plugins/bold-edit/install/installer.mjs",
+      "size": 20477,
+      "sha256": "9041dacdf36af9cc7ea3e308b7acfb69fe8ad3c48f6f6fc690c4be962b04b40d",
+      "mode": "0755",
+      "origin": "source:install/installer.mjs",
+      "class": "INCLUDE",
+      "rule": "install/**"
+    },
+    {
+      "path": "plugins/bold-edit/install/paths.mjs",
+      "size": 4117,
+      "sha256": "c73e2ba79a1091940e0f435c3d0e8fdfa417d55788ddca174cccbb180e41e7af",
+      "mode": "0644",
+      "origin": "source:install/paths.mjs",
+      "class": "INCLUDE",
+      "rule": "install/**"
+    },
+    {
+      "path": "plugins/bold-edit/motion/README.md",
+      "size": 490,
+      "sha256": "04e0265e992676956d35ce3191f561d3606c50908a7d88e13651bac9675f4ffb",
+      "mode": "0644",
+      "origin": "source:motion/README.md",
+      "class": "INCLUDE",
+      "rule": "motion/**"
+    },
+    {
+      "path": "plugins/bold-edit/motion/patterns/README.md",
+      "size": 279,
+      "sha256": "2ceeed1527145c95e3b29819ddc2345b2a0cf7050cff9fe0f6ec4a474887d301",
+      "mode": "0644",
+      "origin": "source:motion/patterns/README.md",
+      "class": "INCLUDE",
+      "rule": "motion/**"
+    },
+    {
+      "path": "plugins/bold-edit/motion/spec/motion.spec.schema.json",
+      "size": 5820,
+      "sha256": "00d0fa5ce396e9f26655835402032397e2768ee57644780b4e8bc50676ee7939",
+      "mode": "0644",
+      "origin": "source:motion/spec/motion.spec.schema.json",
+      "class": "INCLUDE",
+      "rule": "motion/**"
+    },
+    {
+      "path": "plugins/bold-edit/motion/spec/tokens.schema.json",
+      "size": 5838,
+      "sha256": "54520c6e26c844cd22359feaadf720d91a9d4282e5abdfeaa5a735b47feb92ba",
+      "mode": "0644",
+      "origin": "source:motion/spec/tokens.schema.json",
+      "class": "INCLUDE",
+      "rule": "motion/**"
+    },
+    {
+      "path": "plugins/bold-edit/package.json",
+      "size": 573,
+      "sha256": "1c0e24677f67536c90714f8da69ddc628dbe3c3397e3dbdb8d0b0d68fe566213",
+      "mode": "0644",
+      "origin": "source:package.json",
+      "class": "INCLUDE",
+      "rule": "{LICENSE,install.sh,install.cmd,INSTALL.md,DISTRIBUTION.md,README.md,RELEASE_NOTES.md,SKILL.md,THIRD_PARTY.md,package.json,bold.config.example.json,distribution-manifest.json,.gitignore}"
+    },
+    {
+      "path": "plugins/bold-edit/references/README.md",
+      "size": 2429,
+      "sha256": "ed6227cfe83d091e248e5357e4f410770d48eee411ab1bac0195439670d910f0",
+      "mode": "0644",
+      "origin": "source:references/README.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/alpha-pipeline.md",
+      "size": 7546,
+      "sha256": "3fcff6ac0e4edab60bfba24fd044538c615b4a7015feea6bd4da4b1009767384",
+      "mode": "0644",
+      "origin": "source:references/alpha-pipeline.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/asset-index.md",
+      "size": 10243,
+      "sha256": "a61b68d1295b1b5fb3936206720cf6c1d57e88a7f403e4df6f01c90c00187b80",
+      "mode": "0644",
+      "origin": "source:references/asset-index.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/claude-code-skill.md",
+      "size": 5704,
+      "sha256": "826d4434cf2d9689910a8e509a5b8b8e9fdc80dbf339df76e6052c9e4102912f",
+      "mode": "0644",
+      "origin": "source:references/claude-code-skill.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/color-pipeline.md",
+      "size": 8877,
+      "sha256": "91983183353a171b7332b60610963da62fad697ba5930ee8e704d766b3b2488d",
+      "mode": "0644",
+      "origin": "source:references/color-pipeline.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/davinci-api-recipes.md",
+      "size": 7955,
+      "sha256": "b6ee61b2db58fd291ad07628adaa7c6210e2f6fceac9fe4439bf033942600c0e",
+      "mode": "0644",
+      "origin": "source:references/davinci-api-recipes.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/davinci-bridge.md",
+      "size": 11852,
+      "sha256": "6921edafa9b60c48edd08d998f8f40da3e89312c49341973cc9c4597b2f2c465",
+      "mode": "0644",
+      "origin": "source:references/davinci-bridge.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/davinci-safety.md",
+      "size": 14035,
+      "sha256": "b0889549da18bf16c04a363e50b3ee23c1831d5c3048469c5780ec429d506f03",
+      "mode": "0644",
+      "origin": "source:references/davinci-safety.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/decision-engine.md",
+      "size": 5325,
+      "sha256": "db581cfb1afaf3bb23334c2a1c501e46ee86413af90f78a63744bb20a4ee69d0",
+      "mode": "0644",
+      "origin": "source:references/decision-engine.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/editorial-engine.md",
+      "size": 16337,
+      "sha256": "57c2faaafac16e3650ab5e1f9f274f4d0a51112405996dc3520d70cc44d9f819",
+      "mode": "0644",
+      "origin": "source:references/editorial-engine.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/fusion.md",
+      "size": 2602,
+      "sha256": "caa1b3c017d23d3176edeffe99f8d030e0ae55ec2f1b8f518dec1072b6d1db8b",
+      "mode": "0644",
+      "origin": "source:references/fusion.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/hyperframes-capabilities.md",
+      "size": 9794,
+      "sha256": "c74d17d1e885c75df3593ce33c75a67c0560b68dd343d0c45ac8951c0839f3ed",
+      "mode": "0644",
+      "origin": "source:references/hyperframes-capabilities.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/hyperframes.md",
+      "size": 18604,
+      "sha256": "d652f4e43f19781c989b965b878a67686fd180b3ea7b3b4292aa5fd4a7b769c5",
+      "mode": "0644",
+      "origin": "source:references/hyperframes.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/lessons-learned.md",
+      "size": 11493,
+      "sha256": "4e8fc8f3935d53c84afa3300563188b65ab602e2f4a4b5659ccf9c5e7c1aeacd",
+      "mode": "0644",
+      "origin": "source:references/lessons-learned.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/marketplace.md",
+      "size": 3569,
+      "sha256": "3a1fc413c6afc0aeae5720e6c0022d9d891a0ecc61343698b7437cb0c9a56fc8",
+      "mode": "0644",
+      "origin": "source:references/marketplace.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/motion-blur.md",
+      "size": 4718,
+      "sha256": "0968a16f6a8cd58c3737d669aaeb2c172f3932ae0568af25a1aecfbdf76844d2",
+      "mode": "0644",
+      "origin": "source:references/motion-blur.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/motion-router.md",
+      "size": 5125,
+      "sha256": "647c2fcaf77df33ef10ce3111dc4c52d34dd7b487782b6888fc56fbe8758fcdc",
+      "mode": "0644",
+      "origin": "source:references/motion-router.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/motion-system.md",
+      "size": 6544,
+      "sha256": "bdf6b3a7a4a355a126eba381d44d66ed7a5fc04f07d4192e310f3d7c1950e5a4",
+      "mode": "0644",
+      "origin": "source:references/motion-system.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/packaging-and-leaks.md",
+      "size": 2833,
+      "sha256": "2f095e3769b4a06dcd5a9793117dde721c0d71cb57f1e495e9b96a0280c4fa8f",
+      "mode": "0644",
+      "origin": "source:references/packaging-and-leaks.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/plugin-packaging.md",
+      "size": 3477,
+      "sha256": "fff2387a5f88eb96cb7b052ed9361509e2f531c500e60447182c6af5d954f19c",
+      "mode": "0644",
+      "origin": "source:references/plugin-packaging.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/portability.md",
+      "size": 5788,
+      "sha256": "92d56205075633f0d644bd981089efca8cda5f15e4d82e7143b7d40a5f4488c0",
+      "mode": "0644",
+      "origin": "source:references/portability.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/project-context.md",
+      "size": 5267,
+      "sha256": "8d904e40d7dd2cf3e6f7642ced9244ac8eaab9cebab19a3674f183293ff3bcef",
+      "mode": "0644",
+      "origin": "source:references/project-context.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/qc-methods.md",
+      "size": 6078,
+      "sha256": "e6212d6f7bb23ca12a41a8f155d298a0bc7933f35d6bf74ea8da6107500045ed",
+      "mode": "0644",
+      "origin": "source:references/qc-methods.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/reference-analysis.md",
+      "size": 4547,
+      "sha256": "9ebad1d17c578577db086d8365f44f5c7f98002d6bf31da8b7db5c6d44239c66",
+      "mode": "0644",
+      "origin": "source:references/reference-analysis.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/remotion-backend.md",
+      "size": 13276,
+      "sha256": "75dc417343e969992258bcafee01f4578b830d35cc5cb8fb87403a9ec98b3079",
+      "mode": "0644",
+      "origin": "source:references/remotion-backend.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/remotion-determinism.md",
+      "size": 4769,
+      "sha256": "b8a0adde1e28a87a1086a649d26b64fb80077c51447b33b5b5780b86f6512535",
+      "mode": "0644",
+      "origin": "source:references/remotion-determinism.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/render-policy.md",
+      "size": 7008,
+      "sha256": "c4aa22b6a627869db997819d3a2255d7683f93e65102380abfd9cf37f3623163",
+      "mode": "0644",
+      "origin": "source:references/render-policy.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/setup-manager.md",
+      "size": 20969,
+      "sha256": "03fc7ca8eb728055dc5f248d4545070d109c265b8aec8ea13340bd96f352fe55",
+      "mode": "0644",
+      "origin": "source:references/setup-manager.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/sound-design.md",
+      "size": 13265,
+      "sha256": "3cbe5e3f54609a8ca893496b870ea73ba6714af3e61752ca96dd6efece4cbf96",
+      "mode": "0644",
+      "origin": "source:references/sound-design.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/transcript-engine.md",
+      "size": 9920,
+      "sha256": "0d9841fb877704e8d66fab4815ae31a34ab799c445ea35fc7495869630cc3864",
+      "mode": "0644",
+      "origin": "source:references/transcript-engine.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/transcript.md",
+      "size": 2982,
+      "sha256": "180c3c02d78ae328a26775003295858a7987d7fef98b45a62e0a9bc34838f109",
+      "mode": "0644",
+      "origin": "source:references/transcript.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/references/update.md",
+      "size": 2660,
+      "sha256": "f0558b1d8c2ea8cbe28b4972f28a4d23fee64b726a8403e05113c100e9195f9e",
+      "mode": "0644",
+      "origin": "source:references/update.md",
+      "class": "INCLUDE",
+      "rule": "references/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/README.md",
+      "size": 1282,
+      "sha256": "3f4b62358b1c4820751d27bd04fbf59eff525b7b2bb45fd371d244528c0914a3",
+      "mode": "0644",
+      "origin": "source:remotion/README.md",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/adapter/assets.mjs",
+      "size": 3131,
+      "sha256": "63369468cecf28b5bf4bee13df9c58466957d370fa46bee54eebbf7b9677198f",
+      "mode": "0644",
+      "origin": "source:remotion/adapter/assets.mjs",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/adapter/detect.mjs",
+      "size": 3027,
+      "sha256": "fba83c806ffb4256779f01fd4c7c0d88d186e10d4d29f5f7f8494df46c8b84ff",
+      "mode": "0644",
+      "origin": "source:remotion/adapter/detect.mjs",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/adapter/render-frames.mjs",
+      "size": 3722,
+      "sha256": "ff836bd19fe9cd671a1721d0c8acac0438c7e6d54026abc1d88e9d724f30e56b",
+      "mode": "0644",
+      "origin": "source:remotion/adapter/render-frames.mjs",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/examples/bold-geometric.spec.json",
+      "size": 2517,
+      "sha256": "26933cfb3fafead8221444f2c6447a70fe6c2794fdcdfd7e90fb028713cccfe3",
+      "mode": "0644",
+      "origin": "source:remotion/examples/bold-geometric.spec.json",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/examples/bold-geometric.tokens.json",
+      "size": 669,
+      "sha256": "590df856630012a74c8523f8fa6c3a3c87da7a8f3ac9003f02f181b6b0c00c19",
+      "mode": "0644",
+      "origin": "source:remotion/examples/bold-geometric.tokens.json",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/examples/demo.spec.json",
+      "size": 3891,
+      "sha256": "e18887ba041dcd9ce773202019721e55a789122f7d902f5b6788662073ea121d",
+      "mode": "0644",
+      "origin": "source:remotion/examples/demo.spec.json",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/examples/demo.tokens.json",
+      "size": 809,
+      "sha256": "1f87b6c5f579de557972b088ae9dc31a109c3f1664fa2e0b21a11a10bbbe82d7",
+      "mode": "0644",
+      "origin": "source:remotion/examples/demo.tokens.json",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/examples/editorial-clean.spec.json",
+      "size": 2416,
+      "sha256": "dd9ccdbaff24543b8474aa48407733c1e97bd3c89a5690e32b6ba3972852b943",
+      "mode": "0644",
+      "origin": "source:remotion/examples/editorial-clean.spec.json",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/examples/editorial-clean.tokens.json",
+      "size": 712,
+      "sha256": "366fa2fc9a43f5ea88dad8b8f2a7a2fcd14f6e17a21629b1fb7c69022ca7f6da",
+      "mode": "0644",
+      "origin": "source:remotion/examples/editorial-clean.tokens.json",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/examples/minimal-technical.spec.json",
+      "size": 2513,
+      "sha256": "aceb12c1481d3b47280a448652eff677765b632f19a05e4f78fabda58438bbb4",
+      "mode": "0644",
+      "origin": "source:remotion/examples/minimal-technical.spec.json",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/examples/minimal-technical.tokens.json",
+      "size": 569,
+      "sha256": "ea1fe09a687fd6ce45c28332141a5043bb633af0a16ada8d90e86ed43a3025f0",
+      "mode": "0644",
+      "origin": "source:remotion/examples/minimal-technical.tokens.json",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/examples/overlay-lower-third.spec.json",
+      "size": 1003,
+      "sha256": "b5124a76e4f0536ef1c96bf6713517be482d6b030ceace1245b8e82ff9b3a1ba",
+      "mode": "0644",
+      "origin": "source:remotion/examples/overlay-lower-third.spec.json",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/examples/overlay-lower-third.tokens.json",
+      "size": 451,
+      "sha256": "26520501d164cf6e5509e9d03c50c290109119937eea49ad6be8029f34f50bbf",
+      "mode": "0644",
+      "origin": "source:remotion/examples/overlay-lower-third.tokens.json",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/package.json",
+      "size": 452,
+      "sha256": "7d2c572666afaed537595e144f4a8559e19018c3dc07d4f17b6a05768a2fd6d3",
+      "mode": "0644",
+      "origin": "source:remotion/package.json",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/src/Root.tsx",
+      "size": 907,
+      "sha256": "8c0aaa262bd1110d82be1d92b57be38f9159c8a2542f5b5367bb89f1311ad145",
+      "mode": "0644",
+      "origin": "source:remotion/src/Root.tsx",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/src/components/SpecComposition.tsx",
+      "size": 2685,
+      "sha256": "64dd7331c86caec4afc2e5e794bb7ba99596d71e53b9e41c756529efe6fe0f5c",
+      "mode": "0644",
+      "origin": "source:remotion/src/components/SpecComposition.tsx",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/src/components/context.ts",
+      "size": 431,
+      "sha256": "ba1ba92091852a5a2df239692009c494a145955b5a6abdcdca04026f1faa5c00",
+      "mode": "0644",
+      "origin": "source:remotion/src/components/context.ts",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/src/components/patterns.tsx",
+      "size": 21611,
+      "sha256": "64423f7888b0ca51f008d1dac934923af5ff74e99bf446edef0f107c79447901",
+      "mode": "0644",
+      "origin": "source:remotion/src/components/patterns.tsx",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/src/components/primitives.tsx",
+      "size": 7463,
+      "sha256": "1af4ea232ce85d9a04fb4b699c8154cd970a3553f93d2ee5116a8e496abb0900",
+      "mode": "0644",
+      "origin": "source:remotion/src/components/primitives.tsx",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/src/core/animation.ts",
+      "size": 7049,
+      "sha256": "4d4d51d4ccc9ba3c22e58e9f105254e80ec74f7efe27d76ebd87a7ece3701162",
+      "mode": "0644",
+      "origin": "source:remotion/src/core/animation.ts",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/src/core/camera.ts",
+      "size": 5214,
+      "sha256": "e612b19350b4cada02fa7974139a4960c316e377b47e900036b2a6777164ecd5",
+      "mode": "0644",
+      "origin": "source:remotion/src/core/camera.ts",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/src/core/geometry.ts",
+      "size": 3000,
+      "sha256": "4003f85addb83b9b250af92f7eefa5bf09392b0b82db368674eaca501d23c922",
+      "mode": "0644",
+      "origin": "source:remotion/src/core/geometry.ts",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/src/core/layout.ts",
+      "size": 2794,
+      "sha256": "e3719e7629f00ac82f6204167d965503e9afeceb982290dd7dfd0a6899545660",
+      "mode": "0644",
+      "origin": "source:remotion/src/core/layout.ts",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/src/core/space.ts",
+      "size": 2170,
+      "sha256": "6ff9c1731f8f5cc29b0231ba71f7774fe9edd602dc60ddcba047432cf4d643ec",
+      "mode": "0644",
+      "origin": "source:remotion/src/core/space.ts",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/src/core/spec.ts",
+      "size": 29193,
+      "sha256": "0060eba99064d049330606057457a1ac0445b1e700cd6b50388012d54439e3de",
+      "mode": "0644",
+      "origin": "source:remotion/src/core/spec.ts",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/src/core/tokens.ts",
+      "size": 8676,
+      "sha256": "84d7717fab2a3f0b4046b3047ff2b1c6f64b1a5c11e5cacab0598b9c7fef6497",
+      "mode": "0644",
+      "origin": "source:remotion/src/core/tokens.ts",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/src/index.ts",
+      "size": 97,
+      "sha256": "36fb9035b4735d4f580881a0c263fde922b8673f7602fe1de5ccb612fff81fcb",
+      "mode": "0644",
+      "origin": "source:remotion/src/index.ts",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/remotion/tsconfig.json",
+      "size": 330,
+      "sha256": "9deb9669797911f3be988b366835bee5b5968f29078706c8fc20a22269db256f",
+      "mode": "0644",
+      "origin": "source:remotion/tsconfig.json",
+      "class": "INCLUDE",
+      "rule": "remotion/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/apply.mjs",
+      "size": 29980,
+      "sha256": "8c8e26e499cebb34ba9c18a892ef8065ce776e4272478f948d742e1ffb04d0aa",
+      "mode": "0644",
+      "origin": "source:setup/apply.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/bootstrap-lock.mjs",
+      "size": 5514,
+      "sha256": "4860811a8548952472fd38bd6fdbe3eec2b406ea0d3726ddc480ce134e1ba26e",
+      "mode": "0644",
+      "origin": "source:setup/bootstrap-lock.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/codesign.mjs",
+      "size": 22629,
+      "sha256": "0141e82e6db275c1c7eea95ba0124cac77edc2ec9d7878e7eecfc1295d1aa1ab",
+      "mode": "0644",
+      "origin": "source:setup/codesign.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/components.mjs",
+      "size": 7901,
+      "sha256": "0d79edb8ccf79c56f5fa04659d918582946f46186b6ed03878bc50eb72917c4b",
+      "mode": "0644",
+      "origin": "source:setup/components.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/consent.mjs",
+      "size": 4625,
+      "sha256": "75e2b4d672ee7109f7d28339118f567f3e38f8700aea5c97107051ee6ae492ef",
+      "mode": "0644",
+      "origin": "source:setup/consent.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/download.mjs",
+      "size": 11625,
+      "sha256": "f598c58ee3756deade2dc640712b3236b2514de8690a1f9e5f06d23159f5bdc9",
+      "mode": "0644",
+      "origin": "source:setup/download.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/engine.mjs",
+      "size": 41315,
+      "sha256": "7c7d6ec10b0416190f6138a87dda3b8c848db20953e765d6a5274f8c0456ca82",
+      "mode": "0644",
+      "origin": "source:setup/engine.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/errors.mjs",
+      "size": 258,
+      "sha256": "29512063d8a8608215721adabbf33b6553f25ce37aebd51113d25ded476fbf41",
+      "mode": "0644",
+      "origin": "source:setup/errors.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/extract.mjs",
+      "size": 20149,
+      "sha256": "3bf9f2840edefbb7be9c51a8f17389a465fc122bdf65cac29a96126a437e0faf",
+      "mode": "0644",
+      "origin": "source:setup/extract.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/hf-guard.mjs",
+      "size": 6826,
+      "sha256": "e5d23ad0f2b716c9c0e57442ade4a9023a6147a91fbd39ddb1b60150ccbbda88",
+      "mode": "0644",
+      "origin": "source:setup/hf-guard.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/inventory.mjs",
+      "size": 18423,
+      "sha256": "d5284a276c08304b38ec9ea20989c1e7248d9047fe7feacab5ee77bdbd277b21",
+      "mode": "0644",
+      "origin": "source:setup/inventory.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/lock.mjs",
+      "size": 14381,
+      "sha256": "0c41a078c52339d00a55d5f16f6d695a558762bc36aba1e0471fd384d51bbd61",
+      "mode": "0644",
+      "origin": "source:setup/lock.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/log.mjs",
+      "size": 2240,
+      "sha256": "509395230a614b6546874743de67821ce64be7250d6149e33d27a411f14122b2",
+      "mode": "0644",
+      "origin": "source:setup/log.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/measure.mjs",
+      "size": 17166,
+      "sha256": "82f286d34ff0334454bff93b6fde3bd85ca27a2471e88c0821013173e2c723cd",
+      "mode": "0644",
+      "origin": "source:setup/measure.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/npm/hyperframes/package-lock.json",
+      "size": 61490,
+      "sha256": "aa3a727fece75296d0e31c43208719af764eb0fb74c8c78053f1fa8514636f22",
+      "mode": "0644",
+      "origin": "source:setup/npm/hyperframes/package-lock.json",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/npm/hyperframes/package.json",
+      "size": 234,
+      "sha256": "89a04b32ce886f6b936f539a7deadcfbcfdfbb4e77323a7079f44c92a8757bab",
+      "mode": "0644",
+      "origin": "source:setup/npm/hyperframes/package.json",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/npm/remotion/package-lock.json",
+      "size": 91977,
+      "sha256": "5a5622b01578a6fa15ce433cf9a315fa653bd034542710641cfc038e389a5f67",
+      "mode": "0644",
+      "origin": "source:setup/npm/remotion/package-lock.json",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/npm/remotion/package.json",
+      "size": 380,
+      "sha256": "ddcecd8dd07d590c17419ec1ca44e2f507bc70f5e98a11fd057a8bb0fb2ff5a0",
+      "mode": "0644",
+      "origin": "source:setup/npm/remotion/package.json",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/plan.mjs",
+      "size": 7838,
+      "sha256": "0257ea019bef5449bc320111e8af52d33b27b5c36a30ccdd272825eda45f83c1",
+      "mode": "0644",
+      "origin": "source:setup/plan.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/platform.mjs",
+      "size": 2626,
+      "sha256": "f998c505be937358b495aa805b96c6b7a0ec28d03979413a29a3346f20c7df70",
+      "mode": "0644",
+      "origin": "source:setup/platform.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/schema/toolchain-active.schema.json",
+      "size": 4315,
+      "sha256": "707a13f804dea52c4b1af27b8406d0e68f1fb31568cb22db52815d88e2657ca3",
+      "mode": "0644",
+      "origin": "source:setup/schema/toolchain-active.schema.json",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/schema/toolchain-lock.schema.json",
+      "size": 11268,
+      "sha256": "d8b25d4848e598977b0404c05c0d5a91bbe6407eda60adb617a7597c58b9e3d2",
+      "mode": "0644",
+      "origin": "source:setup/schema/toolchain-lock.schema.json",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/schema/toolchain-receipt.schema.json",
+      "size": 8632,
+      "sha256": "817680a354f4c840f4d688cbdb63005caab6ef298a8da6c506ea7f5ef84d3d84",
+      "mode": "0644",
+      "origin": "source:setup/schema/toolchain-receipt.schema.json",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/simulate.mjs",
+      "size": 7612,
+      "sha256": "db9224ce9b18207751961cd7482df4b272b12711b1fe076ee948f030af73f954",
+      "mode": "0644",
+      "origin": "source:setup/simulate.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/smoke-sandbox.mjs",
+      "size": 10522,
+      "sha256": "734dd96d0a65fc69989b162fc0f1512c76e518f04d7101e77700df100c569c0f",
+      "mode": "0644",
+      "origin": "source:setup/smoke-sandbox.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/toolchain.lock.json",
+      "size": 53209,
+      "sha256": "1b73364dcff01e27676c25b7ef593599b0b121e25f2d8cc4a7754df10f6a27d8",
+      "mode": "0644",
+      "origin": "source:setup/toolchain.lock.json",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/setup/trust.mjs",
+      "size": 2999,
+      "sha256": "eb3c03ee0f76afbc2c6fb372d20bac22fbaf67d77f03ed67069f0f89450222e7",
+      "mode": "0644",
+      "origin": "source:setup/trust.mjs",
+      "class": "INCLUDE",
+      "rule": "setup/**"
+    },
+    {
+      "path": "plugins/bold-edit/skills/edit/SKILL.md",
+      "size": 6687,
+      "sha256": "2f2a14929bc5c4f27ff3e3ed07668ce3c57fbf7a5886f532766fc2ff3d109c45",
+      "mode": "0644",
+      "origin": "source:skills/edit/SKILL.md",
+      "class": "INCLUDE",
+      "rule": "skills/**"
+    },
+    {
+      "path": "plugins/bold-edit/skills/edit/cli.md",
+      "size": 4275,
+      "sha256": "ac34f28db0aa269ffaf90d604c2b7a1772df7cb6d8a93cd084f73787d5c9c9e6",
+      "mode": "0644",
+      "origin": "source:skills/edit/cli.md",
+      "class": "INCLUDE",
+      "rule": "skills/**"
+    },
+    {
+      "path": "plugins/bold-edit/skills/edit/safety.md",
+      "size": 4737,
+      "sha256": "63f5ec9bd65f2868576ba92adbdfb5b77a708d582db6f5f4449e6c67148e40ed",
+      "mode": "0644",
+      "origin": "source:skills/edit/safety.md",
+      "class": "INCLUDE",
+      "rule": "skills/**"
+    },
+    {
+      "path": "plugins/bold-edit/skills/edit/workflows.md",
+      "size": 4095,
+      "sha256": "01c8806373767950cc73b06284310019d21ceed49eef201efdcb0001f866623e",
+      "mode": "0644",
+      "origin": "source:skills/edit/workflows.md",
+      "class": "INCLUDE",
+      "rule": "skills/**"
+    },
+    {
+      "path": "plugins/bold-edit/templates/README.md",
+      "size": 170,
+      "sha256": "4d024d72a88d8d17ee727faf2e4430dca51b6beae8c3624be74e4f7d58b2ce07",
+      "mode": "0644",
+      "origin": "source:templates/README.md",
+      "class": "INCLUDE",
+      "rule": "templates/**"
+    },
+    {
+      "path": "plugins/bold-edit/templates/docs/OPERATIONS_LOG.template.md",
+      "size": 463,
+      "sha256": "792b1b208bf1cd0e548a5af76b8c3df13854d7be2107bc552703e630cc1f7c72",
+      "mode": "0644",
+      "origin": "source:templates/docs/OPERATIONS_LOG.template.md",
+      "class": "INCLUDE",
+      "rule": "templates/**"
+    },
+    {
+      "path": "plugins/bold-edit/templates/project/bold.project.json",
+      "size": 451,
+      "sha256": "1ed2debaf8b0f40adfa2cf44a35215f989685ed51d2f8a627b847c17439eb580",
+      "mode": "0644",
+      "origin": "source:templates/project/bold.project.json",
+      "class": "INCLUDE",
+      "rule": "templates/**"
+    },
+    {
+      "path": "plugins/bold-edit/transcript/README.md",
+      "size": 659,
+      "sha256": "3890173c12201933698914cfcdf45060216771c654117acb3b2a4f9ac6e2910b",
+      "mode": "0644",
+      "origin": "source:transcript/README.md",
+      "class": "INCLUDE",
+      "rule": "transcript/**"
+    },
+    {
+      "path": "plugins/bold-edit/transcript/schema/bold.transcript-annotations.schema.json",
+      "size": 2192,
+      "sha256": "116da937cf3fc1fa0daf7ed70af59b40cfdd9701c4187d8c1ed16e2d069d8e91",
+      "mode": "0644",
+      "origin": "source:transcript/schema/bold.transcript-annotations.schema.json",
+      "class": "INCLUDE",
+      "rule": "transcript/**"
+    },
+    {
+      "path": "plugins/bold-edit/transcript/schema/bold.transcript.schema.json",
+      "size": 4910,
+      "sha256": "c5c3d86a1de41af41f68987c613852d2de1c0e78721e5f6d192dfbd436a30f5d",
+      "mode": "0644",
+      "origin": "source:transcript/schema/bold.transcript.schema.json",
+      "class": "INCLUDE",
+      "rule": "transcript/**"
+    },
+    {
+      "path": "plugins/bold-edit/transcript/src/analyze.mjs",
+      "size": 13245,
+      "sha256": "194d39c38d16f11b656aa2986520801d6314428b244d727de5edfc0113cb140a",
+      "mode": "0644",
+      "origin": "source:transcript/src/analyze.mjs",
+      "class": "INCLUDE",
+      "rule": "transcript/**"
+    },
+    {
+      "path": "plugins/bold-edit/transcript/src/normalize.mjs",
+      "size": 6710,
+      "sha256": "118848d5b4e860ec14a637367b48acd7d061410c201c5859f5c187f18076d731",
+      "mode": "0644",
+      "origin": "source:transcript/src/normalize.mjs",
+      "class": "INCLUDE",
+      "rule": "transcript/**"
+    },
+    {
+      "path": "plugins/bold-edit/transcript/src/parsers.mjs",
+      "size": 12535,
+      "sha256": "f7f2150484740e6d62f89acf1450fd3b045bef461c4c68878103060d4df433c8",
+      "mode": "0644",
+      "origin": "source:transcript/src/parsers.mjs",
+      "class": "INCLUDE",
+      "rule": "transcript/**"
+    },
+    {
+      "path": "plugins/bold-edit/transcript/src/search.mjs",
+      "size": 3276,
+      "sha256": "0437588abb364615348ce5e172c9f97d65c1809489ff2153707e611b2a0c11f8",
+      "mode": "0644",
+      "origin": "source:transcript/src/search.mjs",
+      "class": "INCLUDE",
+      "rule": "transcript/**"
+    },
+    {
+      "path": "plugins/bold-edit/transcript/src/text.mjs",
+      "size": 1371,
+      "sha256": "a3a157807060a971e651b91e7de44bf5d3a4fbe58f5b813db6f1c180d0fde2d3",
+      "mode": "0644",
+      "origin": "source:transcript/src/text.mjs",
+      "class": "INCLUDE",
+      "rule": "transcript/**"
+    },
+    {
+      "path": "plugins/bold-edit/transcript/src/time.mjs",
+      "size": 5887,
+      "sha256": "74eb06ad27f7be6e26faedf14e2835ae28befa141b4d435db16e123cf829b1dc",
+      "mode": "0644",
+      "origin": "source:transcript/src/time.mjs",
+      "class": "INCLUDE",
+      "rule": "transcript/**"
+    }
+  ]
+}

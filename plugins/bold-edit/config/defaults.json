@@ -1,0 +1,77 @@
+{
+  "schema": "bold.defaults/1",
+  "notes": "Defaults neutros. Tokens ${VAR} são resolvidos em tempo de execução; nenhum path pessoal é gravado aqui.",
+  "common": {
+    "CACHE_DIR": null,
+    "RENDER_DIR": null,
+    "FONTS_DIR": [],
+    "tools": {
+      "NODE_PATH": "auto",
+      "PYTHON_PATH": "auto",
+      "FFMPEG_PATH": "auto",
+      "FFPROBE_PATH": "auto",
+      "HYPERFRAMES_CMD": "auto",
+      "HYPERFRAMES_VERSION": "0.8.114",
+      "REMOTION_PROJECT_DIR": null,
+      "REMOTION_VERSION": "4.0.290",
+      "WHISPER_CLI": "auto",
+      "WHISPER_MODEL": null,
+      "PYTHON_AUX_PATH": "auto",
+      "CHROME_HEADLESS_PATH": null,
+      "SFX_KIT_DIR": null,
+      "EARSHOT_DIR": null
+    },
+    "davinci": {
+      "DAVINCI_PATH": "auto",
+      "DAVINCI_SCRIPT_API": "auto",
+      "DAVINCI_SCRIPT_LIB": "auto",
+      "validated_version": "21.1"
+    },
+    "defaults": {
+      "fps": 24,
+      "resolution": { "width": 1920, "height": 1080 },
+      "safe_area": 0.1,
+      "delivery_profile": "alpha-4444-bt709"
+    },
+    "doctor": {
+      "disk_pass_gb": 50,
+      "disk_fail_gb": 15
+    },
+    "policy": {
+      "render_requires_explicit_authorization": true,
+      "export_requires_explicit_authorization": true,
+      "allow_open_page": false,
+      "delete_user_media": false,
+      "telemetry": false
+    }
+  },
+  "os": {
+    "darwin": {
+      "CACHE_DIR": "${HOME}/Library/Caches/bold",
+      "FONTS_DIR": ["${HOME}/Library/Fonts", "/Library/Fonts", "/System/Library/Fonts"],
+      "davinci": {
+        "DAVINCI_PATH": "/Applications/DaVinci Resolve/DaVinci Resolve.app",
+        "DAVINCI_SCRIPT_API": "/Library/Application Support/Blackmagic Design/DaVinci Resolve/Developer/Scripting",
+        "DAVINCI_SCRIPT_LIB": "/Applications/DaVinci Resolve/DaVinci Resolve.app/Contents/Libraries/Fusion/fusionscript.so"
+      }
+    },
+    "win32": {
+      "CACHE_DIR": "${LOCALAPPDATA}\\bold\\cache",
+      "FONTS_DIR": ["${WINDIR}\\Fonts", "${LOCALAPPDATA}\\Microsoft\\Windows\\Fonts"],
+      "davinci": {
+        "DAVINCI_PATH": "${PROGRAMFILES}\\Blackmagic Design\\DaVinci Resolve",
+        "DAVINCI_SCRIPT_API": "${PROGRAMDATA}\\Blackmagic Design\\DaVinci Resolve\\Support\\Developer\\Scripting",
+        "DAVINCI_SCRIPT_LIB": "${PROGRAMFILES}\\Blackmagic Design\\DaVinci Resolve\\fusionscript.dll"
+      }
+    },
+    "linux": {
+      "CACHE_DIR": "${HOME}/.cache/bold",
+      "FONTS_DIR": ["${HOME}/.local/share/fonts", "/usr/share/fonts"],
+      "davinci": {
+        "DAVINCI_PATH": "/opt/resolve",
+        "DAVINCI_SCRIPT_API": "/opt/resolve/Developer/Scripting",
+        "DAVINCI_SCRIPT_LIB": "/opt/resolve/libs/Fusion/fusionscript.so"
+      }
+    }
+  }
+}

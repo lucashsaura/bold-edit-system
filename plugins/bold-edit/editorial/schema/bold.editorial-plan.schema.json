@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bold.editorial-plan/1",
+  "title": "BOLD editorial plan",
+  "description": "Plano editorial (R9): DECISÕES EXPLICÁVEIS (regra + motivo + evidência), rascunho para revisão humana. Nunca executa: execution.allowed = false. Execução (motion, DaVinci, render) é outra camada, após aprovação.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "engine", "rules_version", "status", "execution", "mode", "intent", "identity", "inputs", "timeline", "signals", "density", "summary", "decisions", "suppressed", "validation"],
+  "properties": {
+    "schema": { "const": "bold.editorial-plan/1" },
+    "engine": { "type": "string" },
+    "rules_version": { "type": "string" },
+    "status": { "enum": ["DRAFT_REQUIRES_HUMAN_REVIEW", "APPROVED_BY_HUMAN", "REJECTED"] },
+    "execution": {
+      "type": "object", "additionalProperties": false, "required": ["allowed", "boundary", "writes"],
+      "properties": { "allowed": { "const": false }, "boundary": { "type": "string" }, "writes": { "type": "array", "maxItems": 0 } }
+    },
+    "mode": { "enum": ["CONSERVATIVE", "BALANCED", "EXPRESSIVE"] },
+    "intent": { "type": "object", "required": ["schema", "source", "focus", "motion_budget", "pace", "subtitles", "avoid"] },
+    "identity": { "type": "object", "required": ["present", "constraints"] },
+    "inputs": { "type": "object", "required": ["context_sha256", "transcript"] },
+    "timeline": { "type": "object", "required": ["name", "fps", "drop_frame", "origin_frame", "duration", "aspect", "orientation", "subtitles", "source"] },
+    "signals": { "type": "object", "required": ["counts", "moments"] },
+    "density": { "type": "object", "required": ["params", "visual_interventions"] },
+    "summary": { "type": "object" },
+    "decisions": { "type": "array", "items": { "$ref": "#/$defs/decision" } },
+    "suppressed": { "type": "array", "items": { "type": "object", "required": ["action", "segment_id", "start", "end", "outcome", "reason"],
+      "properties": { "outcome": { "enum": ["DROP", "MERGE", "USER_INTENT", "MODE_THRESHOLD"] } } } },
+    "validation": { "type": "object", "required": ["status", "errors", "warnings"] }
+  },
+  "$defs": {
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "transcript", "timeline", "segment_ids", "start", "end", "evidence", "signals", "decision", "visual_intent", "candidate_assets", "subtitle_interaction", "placement", "constraints", "confidence", "alternatives", "density", "approval", "route"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^d\\d{4,}$" },
+        "transcript": { "type": ["string", "null"] }, "timeline": { "type": ["string", "null"] },
+        "segment_ids": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "start": { "type": "number", "minimum": 0 }, "end": { "type": "number", "minimum": 0 },
+        "start_frame": { "type": "integer" }, "end_frame": { "type": "integer" }, "tl_in": { "type": "integer" }, "tl_out": { "type": "integer" }, "tl_in_tc": { "type": "string" }, "tl_out_tc": { "type": "string" }, "tc_origin": { "enum": ["timeline", "relative"] },
+        "evidence": { "type": "object", "required": ["transcript", "annotations", "signal_sources", "assets", "timeline_context"] },
+        "signals": { "type": "array", "items": { "type": "string" } },
+        "decision": {
+          "type": "object", "required": ["action", "family", "priority", "rule", "reason", "user_intent_effects"],
+          "properties": {
+            "action": { "enum": ["NO_ACTION", "TEXT_EMPHASIS", "TYPOGRAPHY_MOTION", "INFO_CARD", "OFFER_CARD", "CTA", "LOWER_THIRD", "BROLL", "IMAGE_INSERT", "PRODUCT_INSERT", "LOGO_BRAND", "CALLOUT", "POINTER", "TRACKED_CALLOUT", "TRANSITION_SUPPORT", "SFX_CUE", "MUSIC_CUE", "CUT_CANDIDATE"] },
+            "priority": { "enum": ["NONE", "LOW", "MEDIUM", "HIGH", "CRITICAL"] },
+            "rule": { "type": "string", "minLength": 1 }, "reason": { "type": "string", "minLength": 10 }
+          }
+        },
+        "visual_intent": { "type": ["object", "null"] },
+        "candidate_assets": { "type": ["object", "null"] },
+        "subtitle_interaction": {
+          "anyOf": [{ "type": "null" }, { "type": "object", "required": ["status", "write", "requires_approval", "reason"],
+            "properties": { "status": { "enum": ["KEEP", "CONSIDER_HIDE_DUPLICATE", "KEEP_FOR_CONTEXT"] }, "write": { "const": false }, "requires_approval": { "const": true } } }]
+        },
+        "placement": { "type": ["object", "null"] },
+        "constraints": { "type": "array", "items": { "type": "string" } },
+        "confidence": { "enum": ["high", "medium", "low"] },
+        "alternatives": { "type": "array" },
+        "density": { "type": ["object", "null"] },
+        "approval": { "type": "object", "required": ["required", "status"] },
+        "route": { "type": "object", "required": ["tool", "rule", "scores", "rationale"], "properties": { "tool": { "enum": ["HYPERFRAMES", "REMOTION", "FUSION", "DAVINCI_NATIVE", "NONE"] } } }
+      }
+    }
+  }
+}

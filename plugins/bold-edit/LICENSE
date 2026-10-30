@@ -1,0 +1,53 @@
+BOLD EDIT SYSTEM — LICENÇA DE USO PARA TESTE (BETA)
+Versão 1.0 — 2026
+
+Copyright (c) 2026 Bold Comunica (Bold Filmes). Todos os direitos reservados.
+
+O BOLD EDIT SYSTEM (o "Software") — código, documentação, Skills, templates e demais arquivos deste repositório,
+exceto os componentes de terceiros indicados no item 6 — é software proprietário da Bold Comunica ("Licenciante").
+O código ser visível publicamente não o torna software livre ou de código aberto.
+
+1. CONCESSÃO
+   O Licenciante concede a você, gratuitamente, uma licença pessoal, não exclusiva, intransferível e revogável para
+   instalar e usar o Software, inclusive em trabalhos profissionais próprios, com a finalidade de testá-lo e avaliá-lo
+   durante a fase beta.
+
+2. O QUE NÃO É PERMITIDO
+   Sem autorização prévia e por escrito do Licenciante, você não pode:
+   a) vender, revender, alugar, sublicenciar ou cobrar pelo Software ou por qualquer cópia dele;
+   b) redistribuir o Software, modificado ou não, inclusive em outros repositórios, marketplaces, pacotes ou
+      produtos, comerciais ou não;
+   c) oferecer o Software, ou serviço baseado nele, a terceiros como produto ou serviço próprio;
+   d) remover ou alterar avisos de autoria, licença ou copyright.
+   Você pode adaptar o Software para uso próprio, mas não pode distribuir essas adaptações.
+   A forma oficial de obter o Software é o marketplace público indicado em https://boldcomunica.com/bold-edit/.
+
+3. TRABALHOS PRODUZIDOS
+   Os vídeos, áudios, projetos e demais materiais que você produzir com o Software são seus. Esta licença não reivindica
+   nenhum direito sobre eles. Componentes de terceiros usados nesses materiais (por exemplo, efeitos sonoros baixados do
+   Openverse) seguem as licenças de cada um, registradas pelo Software em `sons/creditos.txt`.
+
+4. VERSÃO BETA E AUSÊNCIA DE GARANTIA
+   O Software é fornecido "COMO ESTÁ", em versão beta, sem garantias de qualquer tipo, expressas ou implícitas,
+   incluindo adequação a uma finalidade específica, funcionamento ininterrupto ou ausência de erros. Faça cópias de
+   segurança dos seus projetos antes de usá-lo.
+
+5. LIMITAÇÃO DE RESPONSABILIDADE
+   Na máxima extensão permitida pela lei aplicável, o Licenciante não se responsabiliza por danos diretos, indiretos,
+   incidentais ou consequentes, perda de dados, perda de projetos ou lucros cessantes decorrentes do uso ou da
+   impossibilidade de uso do Software.
+
+6. COMPONENTES DE TERCEIROS
+   Componentes de terceiros, referenciados ou instalados opcionalmente pelo Software (por exemplo, FFmpeg, Node.js,
+   Remotion, HyperFrames, SFX Kit, Earshot e seus modelos), não são cobertos por esta licença. Eles seguem as licenças
+   próprias, listadas em `THIRD_PARTY.md`. Nenhum desses componentes é redistribuído neste repositório.
+
+7. TÉRMINO
+   Esta licença termina automaticamente se você descumprir qualquer um dos seus termos, ou quando o Licenciante a
+   revogar, por aviso público na página oficial ou no repositório. Ao término, você deve parar de usar o Software e
+   remover suas cópias. Os itens 3 a 6 continuam valendo.
+
+8. LEI APLICÁVEL
+   Esta licença é regida pelas leis da República Federativa do Brasil.
+
+Contato para outros usos (comercial, redistribuição, parceria): https://boldcomunica.com/

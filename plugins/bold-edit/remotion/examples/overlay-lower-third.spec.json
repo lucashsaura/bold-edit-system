@@ -1,0 +1,14 @@
+{
+  "schema": "bold.motion.spec/0", "id": "overlay-lower-third", "brief": { "goal": "Overlay transparente (lower third neutro)", "kind": "lower-third", "duration_frames": 72, "fps": 24, "alpha": true },
+  "tokens": "overlay-lower-third.tokens.json", "decision": { "backend": "remotion", "rationale": "alpha sobre footage; fallback: Fusion (editável no Resolve)" },
+  "delivery": { "profile": "alpha-4444-bt709" },
+  "composition": {
+    "width": 1920, "height": 1080, "transparent": true, "safe_area": 0.1,
+    "layers": [
+      { "id": "lt", "pattern": "LOWER_THIRD", "in": 0.1, "out": 2.9, "anchor": "bottom-left",
+        "content": { "name": "Alex Example", "role": "Role · Department" },
+        "style": { "plate": "color.plate", "accent": "color.accent", "radius": "radius.card", "size_name": "type.2", "size_role": "type.0", "color": "color.ink", "color_role": "color.muted" },
+        "motion": { "reveal": "up", "enter": "motion.base", "stagger": 0.05, "exit": "motion.fast" } }
+    ]
+  }
+}

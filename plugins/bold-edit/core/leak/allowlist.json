@@ -1,0 +1,16 @@
+{
+  "schema": "bold.leak-allowlist/1",
+  "description": "Exceções explícitas e revisadas (caminho relativo exato + regra).",
+  "entries": [
+    {
+      "path": "davinci/media/__init__.py",
+      "rule": "forbidden-dir:media",
+      "reason": "R10: pacote Python davinci.media da Bridge V1 (código), não diretório de mídia"
+    },
+    {
+      "path": "davinci/media/media.py",
+      "rule": "forbidden-dir:media",
+      "reason": "R10: pacote Python davinci.media da Bridge V1 (código), não diretório de mídia"
+    }
+  ]
+}

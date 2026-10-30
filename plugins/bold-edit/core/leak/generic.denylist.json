@@ -1,0 +1,42 @@
+{
+  "schema": "bold.leak-denylist/1",
+  "description": "Denylist GENÉRICA versionada: não contém nomes de cliente. Nomes de cliente ficam em denylists LOCAIS fora do git (tests/leak-scan.local.denylist).",
+  "patterns": [
+    { "id": "home-macos", "description": "diretório pessoal macOS", "regex": "/Users/(?!Shared(?:/|\\b))[A-Za-z0-9._-]+", "flags": "g" },
+    { "id": "home-linux", "description": "diretório pessoal Linux", "regex": "/home/[a-z_][a-z0-9_-]*", "flags": "g" },
+    { "id": "home-windows", "description": "diretório pessoal Windows", "regex": "[A-Za-z]:[\\\\/]+Users[\\\\/]+[^\\\\/\\s<>\"'`%$]+", "flags": "gi" },
+    { "id": "volumes-macos", "description": "volume/disco montado (macOS)", "regex": "/Volumes/[^\\s/<>\"'`$]+", "flags": "g" },
+    { "id": "media-linux", "description": "volume montado (Linux)", "regex": "/media/[a-z_][a-z0-9_-]*/", "flags": "g" },
+    { "id": "absolute-media-root", "description": "media_root absoluto em JSON", "regex": "\"media_root\"\\s*:\\s*\\[?\\s*\"(?:/|[A-Za-z]:\\\\)", "flags": "g" },
+    { "id": "secret-aws", "description": "AWS access key", "regex": "AKIA[0-9A-Z]{16}", "flags": "g" },
+    { "id": "secret-private-key", "description": "chave privada", "regex": "-----BEGIN [A-Z ]*PRIVATE KEY-----", "flags": "g" },
+    { "id": "secret-github", "description": "token GitHub", "regex": "gh[pousr]_[A-Za-z0-9]{36,}", "flags": "g" },
+    { "id": "secret-slack", "description": "token Slack", "regex": "xox[abprs]-[A-Za-z0-9-]{10,}", "flags": "g" },
+    { "id": "secret-sk", "description": "API key estilo sk-", "regex": "\\bsk-(?:ant-|proj-)?[A-Za-z0-9_-]{20,}", "flags": "g" },
+    { "id": "secret-google", "description": "Google API key", "regex": "AIza[0-9A-Za-z_-]{35}", "flags": "g" },
+    { "id": "secret-assignment", "description": "segredo atribuído em texto", "regex": "(?:api[_-]?key|secret|password|passwd|access[_-]?token)\\s*[:=]\\s*[\"'][^\"'\\s]{12,}[\"']", "flags": "gi" }
+  ],
+  "forbidden_extensions": {
+    "video": [".mov", ".mp4", ".m4v", ".mxf", ".avi", ".mkv", ".webm", ".r3d", ".braw"],
+    "audio": [".wav", ".mp3", ".aif", ".aiff", ".m4a", ".flac"],
+    "image_media": [".exr", ".dpx", ".psd", ".heic", ".tif", ".tiff", ".png", ".jpg", ".jpeg"],
+    "font": [".otf", ".ttf", ".ttc", ".woff", ".woff2", ".dfont"],
+    "model": [".bin", ".gguf", ".ggml", ".pt", ".onnx", ".safetensors"],
+    "resolve_project_data": [".drp", ".drt", ".dra", ".db"],
+    "grade_lut": [".drx", ".cube", ".3dl"],
+    "fusion_comp": [".comp", ".setting"]
+  },
+  "forbidden_dirs": [
+    "projects",
+    "data",
+    "public",
+    "src/assets",
+    "out",
+    "renders",
+    "node_modules",
+    "media",
+    "footage",
+    "checkpoints"
+  ],
+  "max_content_bytes": 5242880
+}

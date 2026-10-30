@@ -1,0 +1,192 @@
+{
+  "schema": "bold.distribution-manifest/1",
+  "product": "BOLD EDIT SYSTEM",
+  "purpose": "Allowlist explícita da distribuição (base do build limpo da R11). Regras avaliadas em ordem; vale a PRIMEIRA que casar. Todo arquivo versionado precisa casar exatamente uma classe (testes: tests/install/portability.test.mjs e tests/install/dist.test.mjs).",
+  "classes": {
+    "INCLUDE": "entra no pacote distribuível (plugin / checkout de instalação)",
+    "DEVELOPMENT_ONLY": "fica no repositório de desenvolvimento; não vai para a distribuição",
+    "EXCLUDE": "nunca entra em lugar nenhum (dados locais, segredos, mídia, caches) — nem deveria estar versionado"
+  },
+  "rules": [
+    {
+      "class": "EXCLUDE",
+      "pattern": "**/*.local.denylist",
+      "reason": "denylist local com termos de cliente (gitignored)"
+    },
+    {
+      "class": "EXCLUDE",
+      "pattern": "**/.bold/**",
+      "reason": "dados de projeto (índices, contexto, checkpoints, logs)"
+    },
+    {
+      "class": "EXCLUDE",
+      "pattern": "**/bold.config.json",
+      "reason": "config do usuário"
+    },
+    {
+      "class": "EXCLUDE",
+      "pattern": "**/install-receipt.json",
+      "reason": "estado local do installer"
+    },
+    {
+      "class": "EXCLUDE",
+      "pattern": "**/*.{drp,drt,drx,mov,mp4,m4v,mxf,wav,mp3,aif,aiff,m4a,flac,exr,dpx}",
+      "reason": "projeto DaVinci / mídia"
+    },
+    {
+      "class": "EXCLUDE",
+      "pattern": "**/{renders,node_modules,__pycache__,logs,.cache}/**",
+      "reason": "renders, dependências instaladas, caches, logs"
+    },
+    {
+      "class": "EXCLUDE",
+      "pattern": "**/.env*",
+      "reason": "segredos"
+    },
+    {
+      "class": "EXCLUDE",
+      "pattern": "**/.DS_Store",
+      "reason": "sistema"
+    },
+    {
+      "class": "DEVELOPMENT_ONLY",
+      "pattern": "tests/**",
+      "reason": "suíte de testes e fixtures sintéticas"
+    },
+    {
+      "class": "DEVELOPMENT_ONLY",
+      "pattern": "davinci/tests/**",
+      "reason": "testes da Bridge (Resolve fake)"
+    },
+    {
+      "class": "DEVELOPMENT_ONLY",
+      "pattern": "hyperframes/spikes/**",
+      "reason": "spikes de capacidade da R6.0"
+    },
+    {
+      "class": "DEVELOPMENT_ONLY",
+      "pattern": "*_REPORT.md",
+      "reason": "relatórios históricos das rodadas"
+    },
+    {
+      "class": "DEVELOPMENT_ONLY",
+      "pattern": "*_AUDIT.md",
+      "reason": "auditorias históricas"
+    },
+    {
+      "class": "DEVELOPMENT_ONLY",
+      "pattern": "distribution/**",
+      "reason": "templates da camada de marketplace (entrada do bold dist build; não são conteúdo do plugin)"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": ".claude-plugin/**",
+      "reason": "manifest do plugin bold-edit"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "skills/**",
+      "reason": "Skill oficial bold-edit (skills/edit)"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "bin/**",
+      "reason": "CLI bold (+ shims; bin/ do plugin vai para o PATH)"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "core/**",
+      "reason": "núcleo"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "config/**",
+      "reason": "defaults e manifest de produto"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "transcript/**",
+      "reason": "Transcript Engine V1"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "asset-index/**",
+      "reason": "Asset Index V1"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "editorial/**",
+      "reason": "Editorial Engine + Motion Router V1"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "remotion/**",
+      "reason": "Remotion Core V1 (código; o projeto Remotion é dependência externa)"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "hyperframes/**",
+      "reason": "HyperFrames Core V1 (o CLI HyperFrames é dependência externa)"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "davinci/**",
+      "reason": "DaVinci Bridge V1 (Python)"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "motion/**",
+      "reason": "schemas do motion.spec"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "audio/**",
+      "reason": "sound design (R13): SFX Kit/Openverse/Earshot — só código, locks e docs; nenhuma mídia (WAV/MP3 são EXCLUDE) nem modelo"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "templates/**",
+      "reason": "templates neutros de projeto"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "references/**",
+      "reason": "knowledge base"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "install/**",
+      "reason": "installer"
+    },
+    {
+      "class": "DEVELOPMENT_ONLY",
+      "pattern": "setup/lock-gen.mjs",
+      "reason": "gerador do lock (R12.3): ferramenta do mantenedor que lê metadados na internet; não vai para o pacote"
+    },
+    {
+      "class": "DEVELOPMENT_ONLY",
+      "pattern": "setup/lock-gen-optional.mjs",
+      "reason": "gerador do lock dos opcionais (R12.4): ferramenta do mantenedor que lê metadados na internet; não vai para o pacote"
+    },
+    {
+      "class": "DEVELOPMENT_ONLY",
+      "pattern": "setup/lock-verification.mjs",
+      "reason": "preservação/invalidação da verificação real nos geradores do lock (R12.5B): só o mantenedor usa; não vai para o pacote"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "setup/**",
+      "reason": "Setup Manager (R12): catálogo, plataforma, inventário, plano, engine local, schemas e toolchain.lock (sem binários)"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "bootstrap/**",
+      "reason": "bootstraps sem Node (R12): macOS sh e Windows PowerShell; sem downloads na Fase 1"
+    },
+    {
+      "class": "INCLUDE",
+      "pattern": "{LICENSE,install.sh,install.cmd,INSTALL.md,DISTRIBUTION.md,README.md,RELEASE_NOTES.md,SKILL.md,THIRD_PARTY.md,package.json,bold.config.example.json,distribution-manifest.json,.gitignore}",
+      "reason": "raiz do pacote"
+    }
+  ]
+}

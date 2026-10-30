@@ -1,0 +1,42 @@
+{
+  "schema": "bold.motion.spec/0",
+  "id": "demo-motion-system",
+  "status": "draft",
+  "brief": { "goal": "Demo neutro: provar que primitives + tokens + spec geram motion de qualidade", "kind": "opening", "duration_frames": 120, "fps": 24, "alpha": false },
+  "reference": { "extracted_rules": {
+    "hierarchy": ["1 palavra protagonista por linha; apoio ≤ 25% da altura do título"],
+    "rhythm": ["entrada em 3 batidas (grid → imagem → título); hold ≥ 1,5 s; saída por wipe"],
+    "easing": ["chegadas com out longo; câmera em io; nada de bounce"],
+    "composition_rules": ["título na coluna 1–7; imagem à direita, sem sobrepor o título; safe area 8%"]
+  } },
+  "tokens": "demo.tokens.json",
+  "decision": { "backend": "remotion", "scores": { "COMPLEXITY": 2, "VISUAL_COMPLEXITY": 2, "REUSABILITY": 2 }, "rationale": "camadas + câmera leve + layout em grid; fallback: HyperFrames sem câmera" },
+  "delivery": { "profile": "opaque-4444-bt709" },
+  "composition": {
+    "width": 1920, "height": 1080, "seed": 11,
+    "background": { "type": "gradient", "from": "color.background", "to": "color.bg2", "angle": 160 },
+    "texture": { "grain": 0.22 },
+    "safe_area": 0.08,
+    "grid": { "columns": 12, "rows": 6, "gutter": "space.1" },
+    "camera": { "keys": [ { "at": 0, "x": -0.012, "zoom": 1.0 }, { "at": 5, "x": 0.012, "zoom": 1.06, "ease": "io" } ] },
+    "layers": [
+      { "id": "grid", "pattern": "GRID_LINES", "in": 0, "out": 4.6, "depth": 0.4, "style": { "color": "color.muted", "opacity": 0.16 }, "motion": { "enter": "motion.slow", "stagger": "1f", "exit": "motion.base" } },
+      { "id": "plate", "pattern": "IMAGE_REVEAL", "in": 0.35, "out": 4.6, "depth": 0.7, "region": { "col": 7, "row": 0, "span": 5, "rows": 6 },
+        "content": { "src": "procedural:noise", "caption": "PROCEDURAL TEXTURE · SEED 11" },
+        "style": { "from": "color.cool", "to": "color.bg2", "paper": true, "shadow": "shadow.soft", "zoom_from": 1.14, "zoom_to": 1.0, "size_caption": "type.0", "color": "color.muted" },
+        "motion": { "reveal": "up", "enter": "motion.slow", "exit": "motion.base", "ease": "out" } },
+      { "id": "ring", "pattern": "SHAPE", "in": 0.9, "out": 4.6, "depth": 0.9, "region": { "col": 10, "row": 4, "span": 2, "rows": 2 },
+        "content": { "shape": "ring" }, "style": { "color": "color.accent", "stroke_width": "stroke.base" }, "motion": { "enter": "motion.slow", "exit": "motion.fast" } },
+      { "id": "title", "pattern": "TITLE_REVEAL", "in": 0.7, "out": 4.6, "depth": 1, "region": { "col": 0, "row": 1, "span": 7, "rows": 4 }, "anchor": "left",
+        "content": { "kicker": "Primitives + tokens + spec", "title": ["MOTION", "SYSTEM"], "subtitle": "Built from rules." },
+        "style": { "font_title": "font.display", "size_title": "type.4", "size_body": "type.2", "size_kicker": "type.0", "color": "color.ink", "color_body": "color.muted", "accent": "color.accent", "rule": "left", "tracking": -0.02, "tracking_from": 0.06, "line_height": 0.92 },
+        "motion": { "split": "word", "reveal": "up", "enter": "motion.base", "stagger": 0.09, "exit": "motion.fast" } },
+      { "id": "stat", "pattern": "STAT_COUNTER", "in": 1.6, "out": 4.6, "depth": 1, "region": { "col": 0, "row": 5, "span": 3, "rows": 1 }, "anchor": "bottom-left",
+        "content": { "value": 10, "label": "COMBINABLE PATTERNS", "decimals": 0 },
+        "style": { "size_value": "type.3", "size_label": "type.0", "color": "color.ink", "color_label": "color.muted", "accent": "color.accent" },
+        "motion": { "enter": "motion.slow", "exit": "motion.fast", "reveal": "fade" } },
+      { "id": "wipe", "pattern": "SECTION_TRANSITION", "in": 4.45, "out": 5, "depth": 0, "region": "full",
+        "style": { "color": "color.background", "color_2": "color.accent" }, "motion": { "reveal": "left", "enter": 0.4, "stagger": "2f", "exit": 0.01 } }
+    ]
+  }
+}

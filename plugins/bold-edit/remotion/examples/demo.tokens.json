@@ -1,0 +1,15 @@
+{
+  "schema": "bold.tokens/0",
+  "name": "demo-neutral",
+  "color": { "background": "#0E1116", "bg2": "#18202C", "ink": "#ECEEF1", "muted": "#8C96A8", "accent": "#E8B04A", "cool": "#5B7FA6" },
+  "typography": {
+    "families": { "display": { "family": "Noto Sans", "weight": 800 }, "body": { "family": "Noto Sans", "weight": 400 } },
+    "scale": [1.7, 2.6, 3.8, 6.2, 12.5, 16]
+  },
+  "spacing": { "unit": 2 },
+  "radius": { "card": 1.2 },
+  "stroke": { "hair": 0.1, "base": 0.28, "bold": 0.6 },
+  "shadow": { "soft": { "x": 0, "y": 0.8, "blur": 2.4, "color": "#000000", "opacity": 0.45 } },
+  "texture": { "grain": 0.22, "paper_amp": 0.25, "paper_step": 0.9 },
+  "motion": { "duration": { "fast": 0.3, "base": 0.7, "slow": 1.2 }, "stagger": 0.07, "spring": { "stiffness": 140, "damping": 18, "mass": 1 } }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "bold-remotion-backend",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Backend Remotion genérico do BOLD Edit System. Remotion é DEPENDÊNCIA EXTERNA (licença PENDENTE): não é instalado nem redistribuído por esta Skill.",
+  "type": "module",
+  "peerDependencies": {
+    "remotion": "4.0.290",
+    "@remotion/bundler": "4.0.290",
+    "@remotion/renderer": "4.0.290",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
+}

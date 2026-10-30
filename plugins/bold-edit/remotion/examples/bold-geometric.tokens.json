@@ -1,0 +1,7 @@
+{
+  "schema": "bold.tokens/0", "name": "bold-geometric",
+  "color": { "background": "#1F2BD6", "ink": "#FFFFFF", "accent": "#FFD23F", "deep": "#0D1466", "soft": "#7C86FF" },
+  "typography": { "families": { "display": { "family": "Helvetica Neue", "weight": 900 }, "body": { "family": "Helvetica Neue", "weight": 500 } }, "scale": [1.8, 2.8, 4.5, 8, 15, 22] },
+  "spacing": { "unit": 2 }, "radius": { "pill": 50 }, "stroke": { "base": 0.5, "bold": 1.2 },
+  "motion": { "duration": { "fast": 0.2, "base": 0.45, "slow": 0.8 }, "stagger": 0.035, "ease": { "out": [0.16, 1, 0.3, 1], "snap": [0.85, 0, 0.15, 1] }, "spring": { "stiffness": 220, "damping": 14, "mass": 1 } }
+}

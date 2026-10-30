@@ -1,0 +1,24 @@
+{
+  "schema": "bold.motion.spec/0", "id": "hf-bold-geometric",
+  "brief": { "goal": "Abertura geométrica neutra: palavra em cascata por caractere, plano em perspectiva, etiqueta com moldura.", "kind": "opening", "duration_frames": 72, "fps": 24, "alpha": true },
+  "tokens": "bold-geometric.tokens.json",
+  "decision": { "backend": "hyperframes", "rationale": "transformação por caractere e perspectiva tipográfica" },
+  "composition": {
+    "width": 1920, "height": 1080, "seed": 303, "font_manifest": "fonts.manifest.json",
+    "grid": { "columns": 6, "rows": 6, "gutter": "space.1" },
+    "layers": [
+      { "id": "hero", "pattern": "TYPE_CASCADE", "region": { "col": 0, "row": 0, "span": 6, "rows": 3 }, "anchor": "bottom",
+        "content": { "text": "SHAPE SHIFT" }, "style": { "font": "font.display", "size": { "fit": "width", "max": "type.4" }, "tracking": -0.02 },
+        "motion": { "enter": "motion.base", "stagger": "2f", "order": "center", "from": { "y": 0.7, "scale": 0.3, "opacity": 0 }, "variation": { "rotate": 30, "x": 0.15 } } },
+      { "id": "plane", "pattern": "TYPE_PLANE", "z": 1, "region": { "col": 1, "row": 3, "span": 4, "rows": 2 }, "anchor": "center",
+        "content": { "lines": ["IN DEPTH"] }, "style": { "font": "font.display", "size": "type.3", "color": "color.plate", "plate": "color.accent", "padding": 0.25, "perspective": 90, "rotate_y": -24, "rotate_x": 6 },
+        "motion": { "delay": 0.35, "enter": "motion.slow", "from": { "rotate_y": -85, "opacity": 0, "translate_z": -20 } } },
+      { "id": "tag", "pattern": "TYPE_LOCKUP", "z": 2, "region": { "col": 0, "row": 5, "span": 3 }, "anchor": "left",
+        "content": { "lines": ["VOL. 03"] }, "style": { "font": "font.body", "size": "type.1" },
+        "motion": { "delay": 0.6, "enter": "motion.fast", "text": "fade", "shape_duration": "motion.base" },
+        "shapes": [
+          { "id": "frame", "kind": "rect", "left": { "ref": "tag.ink.left", "offset": "-0.5em" }, "right": { "ref": "tag.ink.right", "offset": "0.5em" }, "top": { "ref": "tag.ink.top", "offset": "-0.4em" }, "bottom": { "ref": "tag.ink.bottom", "offset": "0.4em" }, "fill": false, "thickness": "stroke.base", "color": "color.accent" },
+          { "id": "dot", "kind": "circle", "center": { "ref": "tag.shape.frame.end", "offset": ["0.9em", "-0.5em"] }, "r": "0.3em", "color": "color.accent" } ] }
+    ]
+  }
+}

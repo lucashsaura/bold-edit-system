@@ -1,0 +1,9 @@
+{
+  "name": "bold-managed-hyperframes",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Instalação gerenciada pelo BOLD Setup Manager (hyperframes) — não editar",
+  "dependencies": {
+    "hyperframes": "0.8.114"
+  }
+}

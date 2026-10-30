@@ -1,0 +1,483 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "bold.toolchain-lock/1 — artefatos fixados pelo mantenedor (url, sha256, tamanho, licença) por plataforma",
+  "type": "object",
+  "required": [
+    "schema",
+    "lock_status",
+    "components"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "bold.toolchain-lock/1"
+    },
+    "lock_status": {
+      "enum": [
+        "SKELETON_PHASE1",
+        "PINNED"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "generated": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "components": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-z][a-z0-9-]*$": {
+          "$ref": "#/$defs/component"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "component": {
+      "type": "object",
+      "required": [
+        "version",
+        "license",
+        "platforms"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license_notes": {
+          "type": "string"
+        },
+        "source": {
+          "type": "object"
+        },
+        "platforms": {
+          "type": "object",
+          "patternProperties": {
+            "^(darwin-arm64|darwin-x64|win32-x64)$": {
+              "$ref": "#/$defs/artifact"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "PENDING_PHASE3",
+            "PINNED",
+            "NOT_PROVIDED"
+          ]
+        },
+        "support": {
+          "enum": [
+            "SUPPORTED",
+            "EXPERIMENTAL",
+            "BEST_EFFORT"
+          ]
+        },
+        "provider": {
+          "type": "string"
+        },
+        "artifact": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "minLength": 1
+            }
+          ]
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "pattern": "^(https://|http://127\\.0\\.0\\.1[:/]|http://\\[::1\\][:/])"
+            }
+          ]
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          ]
+        },
+        "size": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "integer",
+              "minimum": 1
+            }
+          ]
+        },
+        "bins": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z][a-z0-9-]*$": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "notes": {
+          "type": "string"
+        },
+        "format": {
+          "enum": [
+            "tar.gz",
+            "zip"
+          ]
+        },
+        "strip_components": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "hosts": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9.-]+$"
+          },
+          "uniqueItems": true
+        },
+        "installed_size": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "integer",
+              "minimum": 1
+            }
+          ]
+        },
+        "layout_verified": {
+          "type": "boolean"
+        },
+        "parts": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": {
+            "$ref": "#/$defs/part"
+          }
+        },
+        "kind": {
+          "enum": [
+            "archive",
+            "npm"
+          ]
+        },
+        "paths": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z][a-z0-9-]*$": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "requires": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "uniqueItems": true
+        },
+        "post_install": {
+          "enum": [
+            "pip-offline"
+          ]
+        },
+        "license_gate": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "npm": {
+          "type": "object",
+          "required": [
+            "package_json",
+            "package_json_sha256",
+            "lockfile",
+            "lockfile_sha256",
+            "registry"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "package_json": {
+              "type": "string",
+              "pattern": "^setup/npm/[a-z0-9-]+/package\\.json$"
+            },
+            "package_json_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "lockfile": {
+              "type": "string",
+              "pattern": "^setup/npm/[a-z0-9-]+/package-lock\\.json$"
+            },
+            "lockfile_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "registry": {
+              "const": "https://registry.npmjs.org/"
+            },
+            "packages": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "tarball_bytes_estimate": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "installed_tree_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "notes": {
+              "type": "string"
+            }
+          }
+        },
+        "codesign": {
+          "$ref": "#/$defs/codesign"
+        }
+      }
+    },
+    "part": {
+      "type": "object",
+      "required": [
+        "id",
+        "url",
+        "sha256",
+        "size",
+        "format",
+        "bins"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9-]*$"
+        },
+        "artifact": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^(https://|http://127\\.0\\.0\\.1[:/]|http://\\[::1\\][:/])"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "size": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "format": {
+          "enum": [
+            "tar.gz",
+            "zip",
+            "file"
+          ]
+        },
+        "strip_components": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "installed_size": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "integer",
+              "minimum": 1
+            }
+          ]
+        },
+        "bins": {
+          "type": "object",
+          "minProperties": 0,
+          "patternProperties": {
+            "^[a-z][a-z0-9-]*$": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        },
+        "notes": {
+          "type": "string"
+        },
+        "filename": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9._+-]+$"
+        }
+      }
+    },
+    "codesign": {
+      "type": "object",
+      "required": [
+        "policy"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "policy": {
+          "enum": [
+            "REQUIRED",
+            "PENDING_MEASUREMENT",
+            "ADHOC_PINNED",
+            "NO_NATIVE",
+            "NPM_NATIVE_PINNED"
+          ]
+        },
+        "team_id": {
+          "type": "string",
+          "pattern": "^[A-Z0-9]{10}$"
+        },
+        "authority": {
+          "const": "Developer ID Application"
+        },
+        "hardened_runtime": {
+          "type": "boolean"
+        },
+        "bins": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-z][a-z0-9-]*$": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "identifier": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9._-]+$"
+                }
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "measured": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "approved": {
+          "type": "string",
+          "minLength": 1
+        },
+        "macho": {
+          "type": "object",
+          "patternProperties": {
+            "^[A-Za-z0-9._+@-]+(/[A-Za-z0-9._+@-]+)*$": {
+              "type": "object",
+              "required": [
+                "cdhash"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "cdhash": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{40}$"
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "phase": {
+                  "enum": [
+                    "extract",
+                    "post_install"
+                  ]
+                }
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "lockfile_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "native": {
+          "type": "object",
+          "patternProperties": {
+            "^node_modules/[A-Za-z0-9._@+/-]+$": {
+              "type": "object",
+              "required": [
+                "package",
+                "version",
+                "sha256",
+                "cdhash"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "package": {
+                  "type": "string",
+                  "pattern": "^(@[a-z0-9._-]+/)?[a-z0-9._-]+$"
+                },
+                "version": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "cdhash": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{40}$"
+                }
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  }
+}

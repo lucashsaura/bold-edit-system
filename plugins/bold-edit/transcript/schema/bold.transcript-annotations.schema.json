@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bold.transcript-annotations/1",
+  "title": "BOLD transcript annotations (descritivas)",
+  "description": "Camada DESCRITIVA sobre bold.transcript/1 (R8). Cada item é um CANDIDATO com evidência (trecho, start/end, regra) e confidence CATEGÓRICA da regra — nunca uma decisão editorial (R9).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "rules_version", "transcript", "nature", "vocabulary", "counts", "annotations"],
+  "properties": {
+    "schema": { "const": "bold.transcript-annotations/1" },
+    "rules_version": { "type": "string" },
+    "transcript": {
+      "type": "object", "additionalProperties": false, "required": ["sha256", "source_name", "language"],
+      "properties": { "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }, "source_name": { "type": ["string", "null"] }, "language": { "type": ["string", "null"] } }
+    },
+    "nature": { "type": "string" },
+    "vocabulary": { "type": "object", "additionalProperties": false, "required": ["products", "proper_nouns"], "properties": { "products": { "type": "integer" }, "proper_nouns": { "type": "integer" } } },
+    "counts": { "type": "object", "additionalProperties": { "type": "integer" } },
+    "annotations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "segment_id", "start", "end", "span_timing", "evidence", "rule", "confidence"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^a\\d{4,}$" },
+          "type": { "enum": ["hook_candidate", "cta_candidate", "number", "percentage", "currency", "date", "product_mention", "offer_mention", "proper_noun", "repeated_phrase", "question", "emphasis_candidate", "topic_boundary"] },
+          "segment_id": { "type": "string" },
+          "start": { "type": "number", "minimum": 0 },
+          "end": { "type": "number", "minimum": 0 },
+          "span_timing": { "enum": ["word", "segment"] },
+          "evidence": { "type": "string" },
+          "rule": { "type": "string" },
+          "confidence": { "enum": ["high", "medium", "low"] }
+        }
+      }
+    }
+  }
+}

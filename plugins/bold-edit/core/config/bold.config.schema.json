@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bold.config/1",
+  "title": "bold.config.json — configuração do usuário/máquina",
+  "description": "Fica FORA da distribuição (macOS: ~/Library/Application Support/bold/; Windows: %APPDATA%\\bold\\). Todos os campos são opcionais, exceto 'schema'. 'auto' = auto-detecção pelo doctor.",
+  "type": "object",
+  "required": ["schema"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": { "const": "bold.config/1" },
+    "BOLD_HOME": { "$ref": "#/$defs/pathOrNull" },
+    "CACHE_DIR": { "$ref": "#/$defs/pathOrNull" },
+    "RENDER_DIR": { "$ref": "#/$defs/pathOrNull" },
+    "FONTS_DIR": {
+      "anyOf": [
+        { "type": "string", "minLength": 1 },
+        { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      ]
+    },
+    "tools": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "NODE_PATH": { "$ref": "#/$defs/toolPath" },
+        "PYTHON_PATH": { "$ref": "#/$defs/toolPath" },
+        "FFMPEG_PATH": { "$ref": "#/$defs/toolPath" },
+        "FFPROBE_PATH": { "$ref": "#/$defs/toolPath" },
+        "HYPERFRAMES_CMD": { "$ref": "#/$defs/toolPath" },
+        "HYPERFRAMES_VERSION": { "$ref": "#/$defs/semver" },
+        "REMOTION_PROJECT_DIR": { "$ref": "#/$defs/pathOrNull" },
+        "REMOTION_VERSION": { "$ref": "#/$defs/semver" },
+        "WHISPER_CLI": { "$ref": "#/$defs/toolPath" },
+        "WHISPER_MODEL": { "$ref": "#/$defs/pathOrNull" },
+        "PYTHON_AUX_PATH": { "$ref": "#/$defs/toolPath" },
+        "CHROME_HEADLESS_PATH": { "$ref": "#/$defs/pathOrNull" },
+        "SFX_KIT_DIR": { "$ref": "#/$defs/pathOrNull" },
+        "EARSHOT_DIR": { "$ref": "#/$defs/pathOrNull" }
+      }
+    },
+    "davinci": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "DAVINCI_PATH": { "$ref": "#/$defs/toolPath" },
+        "DAVINCI_SCRIPT_API": { "$ref": "#/$defs/toolPath" },
+        "DAVINCI_SCRIPT_LIB": { "$ref": "#/$defs/toolPath" },
+        "validated_version": { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+){0,2}$" }
+      }
+    },
+    "defaults": { "$ref": "#/$defs/renderDefaults" },
+    "doctor": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "disk_pass_gb": { "type": "number", "minimum": 0 },
+        "disk_fail_gb": { "type": "number", "minimum": 0 }
+      }
+    },
+    "policy": { "$ref": "#/$defs/policy" }
+  },
+  "$defs": {
+    "pathOrNull": { "type": ["string", "null"], "minLength": 1 },
+    "toolPath": { "type": ["string", "null"], "minLength": 1 },
+    "semver": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+([-+][0-9A-Za-z.-]+)?$" },
+    "renderDefaults": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fps": { "type": "number", "exclusiveMinimum": 0, "maximum": 240 },
+        "resolution": {
+          "type": "object",
+          "required": ["width", "height"],
+          "additionalProperties": false,
+          "properties": {
+            "width": { "type": "integer", "minimum": 16, "maximum": 16384 },
+            "height": { "type": "integer", "minimum": 16, "maximum": 16384 }
+          }
+        },
+        "safe_area": { "type": "number", "minimum": 0, "maximum": 0.5 },
+        "delivery_profile": { "enum": ["alpha-4444-bt709", "opaque-4444-bt709", "opaque-hq-bt709"] }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "description": "Políticas só podem ser ENDURECIDAS. Tentativas de afrouxar invariantes são ignoradas e reportadas como violação.",
+      "additionalProperties": { "type": "boolean" },
+      "properties": {
+        "render_requires_explicit_authorization": { "type": "boolean" },
+        "export_requires_explicit_authorization": { "type": "boolean" },
+        "allow_open_page": { "type": "boolean" },
+        "delete_user_media": { "type": "boolean" },
+        "telemetry": { "type": "boolean" }
+      }
+    }
+  }
+}

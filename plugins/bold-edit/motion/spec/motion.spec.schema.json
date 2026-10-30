@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bold.motion.spec/0",
+  "title": "motion.spec.json — V0 (+ bloco composition renderizável: subset R5)",
+  "description": "Registra REFERENCE → RULES → DECISION de um motion. V0: estrutura mínima para validar o formato; o conteúdo será evoluído nas próximas rodadas.",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "brief"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "bold.motion.spec/0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,127}$"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "in_review",
+        "approved",
+        "superseded"
+      ]
+    },
+    "brief": {
+      "type": "object",
+      "required": [
+        "goal",
+        "kind",
+        "duration_frames",
+        "fps"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "goal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "opening",
+            "lower-third",
+            "lettering",
+            "ui",
+            "transition",
+            "map",
+            "explainer",
+            "overlay",
+            "other"
+          ]
+        },
+        "duration_frames": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "fps": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 240
+        },
+        "alpha": {
+          "type": "boolean"
+        },
+        "placement": {
+          "type": "string",
+          "description": "Onde entra (timeline/intervalo), em texto livre."
+        },
+        "approved_text": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "extracted_rules": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "visual_language": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "hierarchy": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "typography": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "grid": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "rhythm": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "behavior": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "easing": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "transitions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "image_treatment": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "composition_rules": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "tokens": {
+      "type": "string",
+      "description": "Caminho do tokens.json usado."
+    },
+    "decision": {
+      "type": "object",
+      "required": [
+        "backend"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "backend": {
+          "enum": [
+            "remotion",
+            "hyperframes",
+            "fusion",
+            "mixed",
+            "undecided"
+          ]
+        },
+        "scores": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "COMPLEXITY": {
+              "$ref": "#/$defs/score"
+            },
+            "EDITABILITY": {
+              "$ref": "#/$defs/score"
+            },
+            "ALPHA": {
+              "$ref": "#/$defs/score"
+            },
+            "REUSABILITY": {
+              "$ref": "#/$defs/score"
+            },
+            "RENDER_COST": {
+              "$ref": "#/$defs/score"
+            },
+            "RESOLVE_DEPENDENCY": {
+              "$ref": "#/$defs/score"
+            },
+            "DATA_DRIVEN": {
+              "$ref": "#/$defs/score"
+            },
+            "VISUAL_COMPLEXITY": {
+              "$ref": "#/$defs/score"
+            }
+          }
+        },
+        "rationale": {
+          "type": "string"
+        }
+      }
+    },
+    "delivery": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "profile": {
+          "enum": [
+            "alpha-4444-bt709",
+            "opaque-4444-bt709",
+            "opaque-hq-bt709"
+          ]
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 16
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 16
+        }
+      }
+    },
+    "composition": {
+      "type": "object",
+      "description": "Descrição renderizável (subset R5). Validada estritamente por remotion/src/core/spec.ts: qualquer propriedade fora do subset → FAIL. Ver references/remotion-backend.md."
+    }
+  },
+  "$defs": {
+    "score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3
+    }
+  }
+}

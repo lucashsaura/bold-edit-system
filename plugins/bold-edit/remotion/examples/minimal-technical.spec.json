@@ -1,0 +1,25 @@
+{
+  "schema": "bold.motion.spec/0", "id": "minimal-technical", "brief": { "goal": "C — minimal technical", "kind": "map", "duration_frames": 96, "fps": 24 },
+  "tokens": "minimal-technical.tokens.json", "decision": { "backend": "remotion", "rationale": "dados: rota, marcadores, callout; fallback: nenhum" },
+  "composition": {
+    "width": 1920, "height": 1080, "seed": 5, "background": { "type": "solid", "color": "color.background" }, "safe_area": 0.06,
+    "grid": { "columns": 16, "rows": 9, "gutter": "space.0.5" },
+    "camera": { "keys": [ { "at": 0, "x": 0.01, "y": 0.005, "zoom": 1.03 }, { "at": 4, "x": -0.01, "y": 0, "zoom": 1.0, "ease": "io" } ] },
+    "layers": [
+      { "id": "grid", "pattern": "GRID_LINES", "in": 0, "out": 4, "depth": 0.3, "style": { "color": "color.muted", "opacity": 0.35 }, "motion": { "enter": "motion.base", "stagger": "1f", "exit": "motion.fast" } },
+      { "id": "route", "pattern": "MAP_PATH", "in": 0.2, "out": 4, "depth": 0.8, "region": { "col": 3, "row": 1, "span": 12, "rows": 7 },
+        "content": { "points": [[0.02, 0.85], [0.22, 0.6], [0.4, 0.68], [0.58, 0.32], [0.8, 0.4], [0.97, 0.08]],
+          "markers": [ { "at": 0, "label": "N.01" }, { "at": 3, "label": "N.04" }, { "at": 5, "label": "N.06" } ] },
+        "style": { "color": "color.accent", "width": "stroke.base", "dash": true, "marker": "color.accent", "size_label": "type.0", "label_color": "color.ink", "font": "font.body" },
+        "motion": { "enter": "motion.slow", "exit": "motion.fast", "ease": "io" } },
+      { "id": "note", "pattern": "CALLOUT", "in": 1.4, "out": 4, "depth": 0.8, "region": { "col": 9, "row": 6, "span": 5, "rows": 2 }, "anchor": "left",
+        "content": { "text": "latency 12 ms · stable", "target": [0.66, 0.36] },
+        "style": { "size": "type.1", "color": "color.ink", "accent": "color.accent", "plate": "color.plate", "radius": "radius.card" },
+        "motion": { "reveal": "left", "enter": "motion.base", "exit": "motion.fast" } },
+      { "id": "id", "pattern": "LOWER_THIRD", "in": 0.6, "out": 4, "region": { "col": 0, "row": 7, "span": 6, "rows": 2 }, "anchor": "bottom-left",
+        "content": { "name": "SYSTEM / ROUTE 06", "role": "6 nodes · deterministic · seed 5" },
+        "style": { "size_name": "type.2", "size_role": "type.0", "color": "color.ink", "color_role": "color.muted", "accent": "color.accent", "tracking": 0.08 },
+        "motion": { "reveal": "up", "enter": "motion.base", "stagger": 0.06, "exit": "motion.fast" } }
+    ]
+  }
+}

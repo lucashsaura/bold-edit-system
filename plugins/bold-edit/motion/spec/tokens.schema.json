@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bold.tokens/0",
+  "title": "tokens.json — V0 (R5: + stroke, shadow, texture, motion)",
+  "description": "Linguagem visual de um projeto (cor, tipografia, espaçamento, easing, tempo). Vive no projeto, nunca na Skill. Fontes são referenciadas por nome de arquivo e resolvidas via FONTS_DIR. Tamanhos em u (1u = 1% do menor lado do quadro). Tempos de motion em segundos.",
+  "type": "object",
+  "required": [
+    "schema",
+    "name"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "bold.tokens/0"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "color": {
+      "type": "object",
+      "patternProperties": {
+        "^[A-Za-z][A-Za-z0-9_-]*$": {
+          "type": "string",
+          "pattern": "^#([0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "typography": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "families": {
+          "type": "object",
+          "patternProperties": {
+            "^[A-Za-z][A-Za-z0-9_-]*$": {
+              "type": "object",
+              "required": [
+                "family"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "family": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "weight": {
+                  "type": [
+                    "string",
+                    "number"
+                  ]
+                },
+                "file": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "scale": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        }
+      }
+    },
+    "spacing": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "unit": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "radius": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0
+      }
+    },
+    "easing": {
+      "type": "object",
+      "description": "Vocabulário pequeno de easings: nome → cubic-bezier [x1,y1,x2,y2].",
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 4,
+        "maxItems": 4,
+        "items": {
+          "type": "number"
+        }
+      }
+    },
+    "timing": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "fps": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "durations_frames": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "safe_area": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "number",
+          "minimum": 0
+        },
+        "y": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "stroke": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0
+      },
+      "description": "Espessuras em u (ex.: hair, base, bold)."
+    },
+    "shadow": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          },
+          "blur": {
+            "type": "number",
+            "minimum": 0
+          },
+          "color": {
+            "type": "string",
+            "pattern": "^#([0-9A-Fa-f]{6})$"
+          },
+          "opacity": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      }
+    },
+    "texture": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "grain": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "paper_amp": {
+          "type": "number",
+          "minimum": 0
+        },
+        "paper_step": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "duration": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0
+          },
+          "description": "Segundos (ex.: fast, base, slow)."
+        },
+        "delay": {
+          "type": "number",
+          "minimum": 0
+        },
+        "stagger": {
+          "type": "number",
+          "minimum": 0
+        },
+        "ease": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "spring": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "stiffness": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "damping": {
+              "type": "number",
+              "minimum": 0
+            },
+            "mass": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          }
+        },
+        "overshoot": {
+          "type": "number",
+          "minimum": 0
+        },
+        "blur": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

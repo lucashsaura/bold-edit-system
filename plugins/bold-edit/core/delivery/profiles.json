@@ -1,0 +1,53 @@
+{
+  "schema": "bold.delivery.profiles/1",
+  "description": "Perfis de entrega versionados. A codificação final é sempre controlada pelo BOLD (sequência de imagens → ffmpeg com matriz e tags BT.709 explícitas).",
+  "profiles": {
+    "ALPHA_4444_BT709": {
+      "version": 1,
+      "label": "ProRes 4444 · alpha straight · BT.709 limited",
+      "container": "mov",
+      "codec_name": "prores",
+      "encoder": "prores_ks",
+      "encoder_profile": "4444",
+      "expect_profile": "4444",
+      "expect_codec_tag": "ap4h",
+      "pix_fmt": "yuva444p12le",
+      "alpha": true,
+      "alpha_mode": "straight",
+      "alpha_bits": 16,
+      "vendor": "apl0",
+      "color": { "primaries": "bt709", "transfer": "bt709", "space": "bt709", "range": "tv" },
+      "allow_audio": false
+    },
+    "OPAQUE_4444_BT709": {
+      "version": 1,
+      "label": "ProRes 4444 · opaco · BT.709 limited",
+      "container": "mov",
+      "codec_name": "prores",
+      "encoder": "prores_ks",
+      "encoder_profile": "4444",
+      "expect_profile": "4444",
+      "expect_codec_tag": "ap4h",
+      "pix_fmt": "yuv444p12le",
+      "alpha": false,
+      "vendor": "apl0",
+      "color": { "primaries": "bt709", "transfer": "bt709", "space": "bt709", "range": "tv" },
+      "allow_audio": false
+    },
+    "OPAQUE_HQ_BT709": {
+      "version": 1,
+      "label": "ProRes 422 HQ · opaco · BT.709 limited",
+      "container": "mov",
+      "codec_name": "prores",
+      "encoder": "prores_ks",
+      "encoder_profile": "3",
+      "expect_profile": "HQ",
+      "expect_codec_tag": "apch",
+      "pix_fmt": "yuv422p10le",
+      "alpha": false,
+      "vendor": "apl0",
+      "color": { "primaries": "bt709", "transfer": "bt709", "space": "bt709", "range": "tv" },
+      "allow_audio": false
+    }
+  }
+}

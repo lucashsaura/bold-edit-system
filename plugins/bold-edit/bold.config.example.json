@@ -1,0 +1,30 @@
+{
+  "schema": "bold.config/1",
+  "CACHE_DIR": null,
+  "RENDER_DIR": null,
+  "FONTS_DIR": [],
+  "tools": {
+    "NODE_PATH": "auto",
+    "PYTHON_PATH": "auto",
+    "FFMPEG_PATH": "auto",
+    "FFPROBE_PATH": "auto",
+    "HYPERFRAMES_CMD": "auto",
+    "HYPERFRAMES_VERSION": "0.8.114",
+    "REMOTION_PROJECT_DIR": null,
+    "REMOTION_VERSION": "4.0.290",
+    "WHISPER_CLI": "auto",
+    "WHISPER_MODEL": null
+  },
+  "davinci": {
+    "DAVINCI_PATH": "auto",
+    "DAVINCI_SCRIPT_API": "auto",
+    "DAVINCI_SCRIPT_LIB": "auto",
+    "validated_version": "21.1"
+  },
+  "defaults": {
+    "fps": 24,
+    "resolution": { "width": 1920, "height": 1080 },
+    "safe_area": 0.1,
+    "delivery_profile": "alpha-4444-bt709"
+  }
+}

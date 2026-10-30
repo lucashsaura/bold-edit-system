@@ -1,0 +1,21 @@
+#!/bin/sh
+# BOLD EDIT SYSTEM — shim POSIX da CLI (bin/ do plugin e uso direto do checkout).
+# Resolve o próprio diretório seguindo symlinks; nada de caminho fixo de máquina.
+# Node: BOLD_NODE_PATH > toolchain gerenciado (<toolchain>/node.path, R12) > `node` do PATH. Nunca altera o PATH global.
+s="$0"
+while [ -h "$s" ]; do
+  d=$(cd -P "$(dirname "$s")" && pwd)
+  s=$(readlink "$s")
+  case "$s" in /*) ;; *) s="$d/$s" ;; esac
+done
+d=$(cd -P "$(dirname "$s")" && pwd)
+n="${BOLD_NODE_PATH:-}"
+if [ -z "$n" ]; then
+  if [ -n "${BOLD_TOOLCHAIN_DIR:-}" ]; then t="$BOLD_TOOLCHAIN_DIR"
+  elif [ "$(uname -s)" = "Darwin" ]; then t="$HOME/Library/Application Support/bold/toolchain"
+  else t="${XDG_DATA_HOME:-$HOME/.local/share}/bold/toolchain"; fi
+  if [ -r "$t/node.path" ]; then IFS= read -r n < "$t/node.path" || true; [ -x "$n" ] || n=""; fi
+fi
+[ -n "$n" ] || n=node
+command -v "$n" >/dev/null 2>&1 || { echo "bold: Node.js >= 20 não encontrado (instale o Node, defina BOLD_NODE_PATH ou rode bootstrap/bootstrap.sh para ver o plano)" >&2; exit 5; }
+exec "$n" "$d/bold.mjs" "$@"

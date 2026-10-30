@@ -1,0 +1,22 @@
+{
+  "name": "bold-edit-system",
+  "owner": {
+    "name": "Bold Comunica"
+  },
+  "description": "Marketplace público do BOLD EDIT SYSTEM (Bold Filmes): motion para vídeo, sound design e assistência ao DaVinci Resolve.",
+  "plugins": [
+    {
+      "name": "bold-edit",
+      "source": "./plugins/bold-edit",
+      "description": "BOLD EDIT SYSTEM: motion for video, integrated sound design (SFX Kit, Openverse, optional Earshot), transcripts, editorial plans and DaVinci Resolve assistance via the bold CLI. Render/export and DaVinci writes always require explicit human authorization.",
+      "category": "video",
+      "tags": [
+        "video",
+        "motion-design",
+        "sound-design",
+        "davinci-resolve",
+        "editing"
+      ]
+    }
+  ]
+}

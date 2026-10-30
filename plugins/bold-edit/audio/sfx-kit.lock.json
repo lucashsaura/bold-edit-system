@@ -1,0 +1,22 @@
+{
+  "schema": "bold.audio-library-lock/1",
+  "id": "sfx-kit",
+  "name": "SFX Kit",
+  "version": "1.0.0",
+  "license": "CC0-1.0",
+  "license_note": "CC0 1.0: domínio público; crédito não exigido (registrado internamente em sons/origens.jsonl)",
+  "repo": "https://github.com/wyzowl/sfx-kit",
+  "release_tag": "v1.0.0",
+  "release_tag_commit": "71815349a59fd9aa157fd61fedb2ae8482c96f39",
+  "artifact": {
+    "url": "https://github.com/wyzowl/sfx-kit/releases/download/v1.0.0/sfx-kit-1.0.0.zip",
+    "format": "zip",
+    "sha256": "a6c5c665dd95b25c4b155160a118723386f5487094790f32d1aaee367018bf10",
+    "size": 55452435,
+    "root": "sfx-kit-1.0.0",
+    "hosts": ["github.com", "release-assets.githubusercontent.com", "objects.githubusercontent.com"],
+    "digest_source": "GitHub release asset digest (API), conferido no download de 2026-10-28"
+  },
+  "installed": { "dir": "sfx-kit-1.0.0", "files": 327, "bytes": 68544350, "sounds": 320, "categories": 28, "format": "wav pcm_s24le 48000 Hz" },
+  "distribution": "NÃO redistribuído no pacote do BOLD: baixado do upstream na máquina do usuário, com confirmação"
+}

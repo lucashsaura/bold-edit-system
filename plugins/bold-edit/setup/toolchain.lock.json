@@ -1,0 +1,1221 @@
+{
+  "schema": "bold.toolchain-lock/1",
+  "lock_status": "PINNED",
+  "notes": "Lock gerado por setup/lock-gen.mjs a partir de METADADOS oficiais (nenhum binário baixado). sha256 fixado e REVISADO pelo mantenedor (TOFU via HTTPS); assinatura GPG do Node NÃO verificada. Layout interno dos arquivos e assinaturas de código confirmados só na Fase 5 (E2E isolado). Chrome headless e whisper.cpp seguem pendentes (Fase 4).",
+  "generated": {
+    "at": "2026-10-15T02:16:27.423Z",
+    "tool": "setup/lock-gen.mjs",
+    "method": "metadados públicos oficiais (GET de listas/JSON + HEAD); nenhum binário baixado",
+    "trust": {
+      "model": "TOFU do mantenedor",
+      "sha256": "lido por HTTPS das listas oficiais (SHASUMS256.txt · *.sha256 do Riedl · digest da API do GitHub conferido com checksums.sha256)",
+      "gpg": "não verificado",
+      "review": "revisado pelo mantenedor no GATE da R12.3"
+    },
+    "sources": [
+      {
+        "component": "node",
+        "version": "24.22.0",
+        "release_date": "2026-10-14",
+        "lts": "Krypton",
+        "security_release": false,
+        "index": "https://nodejs.org/dist/index.json",
+        "checksums": "https://nodejs.org/dist/v24.22.0/SHASUMS256.txt",
+        "checksums_sha256": "8912ada1431af8390bb3e30328d30bca701b59c7a6d5396b491293515c092c46",
+        "signature": {
+          "detached": "https://nodejs.org/dist/v24.22.0/SHASUMS256.txt.sig",
+          "clearsigned": "https://nodejs.org/dist/v24.22.0/SHASUMS256.txt.asc",
+          "available": true,
+          "verified": false,
+          "note": "assinatura GPG NÃO verificada (sem gpg; decisão R12.3) — confiança: TOFU do mantenedor via HTTPS"
+        }
+      },
+      {
+        "component": "ffmpeg",
+        "platform": "darwin-arm64",
+        "provider": "Martin Riedl",
+        "release": "9.0.2",
+        "build_timestamp": 1789931890,
+        "page": "https://ffmpeg.martin-riedl.de/",
+        "checksums": [
+          "https://ffmpeg.martin-riedl.de/download/macos/arm64/1789931890_9.0.2/ffmpeg.zip.sha256",
+          "https://ffmpeg.martin-riedl.de/download/macos/arm64/1789931890_9.0.2/ffprobe.zip.sha256"
+        ],
+        "build_info": "https://ffmpeg.martin-riedl.de/download/macos/arm64/1789931890_9.0.2/versions.txt",
+        "license_from_configure": "GPL-3.0-or-later",
+        "prores_ks": true,
+        "signed_claim": true
+      },
+      {
+        "component": "ffmpeg",
+        "platform": "win32-x64",
+        "provider": "BtbN/FFmpeg-Builds",
+        "tag": "autobuild-2026-09-30-13-08",
+        "published_at": "2026-09-30T13:09:24Z",
+        "asset": "ffmpeg-n9.0.2-17-g2a571b6068-win64-lgpl-9.0.zip",
+        "api": "https://api.github.com/repos/BtbN/FFmpeg-Builds/releases?per_page=100",
+        "digest_source": "GitHub API asset.digest",
+        "cross_check": "https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-09-30-13-08/checksums.sha256",
+        "redirect_hosts": [
+          "github.com",
+          "release-assets.githubusercontent.com"
+        ]
+      }
+    ],
+    "optional": {
+      "at": "2026-10-15T02:44:27.147Z",
+      "tool": "setup/lock-gen-optional.mjs",
+      "method": "metadados públicos (APIs GitHub/PyPI/Hugging Face/npm + HEAD); nenhum binário, wheel, modelo ou tarball baixado",
+      "sources": [
+        {
+          "component": "pillow",
+          "pbs_release": "20261013",
+          "python_series": "3.12",
+          "pillow": "12.3.0",
+          "pbs_checksums": "https://github.com/astral-sh/python-build-standalone/releases/download/20261013/SHA256SUMS",
+          "pypi": "https://pypi.org/pypi/pillow/json",
+          "darwin-arm64": {
+            "python": "cpython-3.12.15+20261013-aarch64-apple-darwin-install_only.tar.gz",
+            "wheel": "pillow-12.3.0-cp312-cp312-macosx_11_0_arm64.whl",
+            "redirect_hosts": [
+              "github.com",
+              "release-assets.githubusercontent.com"
+            ]
+          },
+          "darwin-x64": {
+            "python": "cpython-3.12.15+20261013-x86_64-apple-darwin-install_only.tar.gz",
+            "wheel": "pillow-12.3.0-cp312-cp312-macosx_10_13_x86_64.whl",
+            "redirect_hosts": [
+              "github.com",
+              "release-assets.githubusercontent.com"
+            ]
+          },
+          "win32-x64": {
+            "python": "cpython-3.12.15+20261013-x86_64-pc-windows-msvc-install_only.tar.gz",
+            "wheel": "pillow-12.3.0-cp312-cp312-win_amd64.whl",
+            "redirect_hosts": [
+              "github.com",
+              "release-assets.githubusercontent.com"
+            ]
+          }
+        },
+        {
+          "component": "whisper-cli",
+          "tag": "b4938",
+          "published_at": "2026-08-20T11:33:19Z",
+          "asset": "whisper-bin-x64.zip",
+          "digest_source": "GitHub API asset.digest",
+          "redirect_hosts": [
+            "github.com",
+            "release-assets.githubusercontent.com"
+          ]
+        },
+        {
+          "component": "whisper-model",
+          "repo": "ggerganov/whisper.cpp",
+          "commit": "5359861c739e955e79d9a303bcbc70fb988958b1",
+          "license": "MIT",
+          "base": {
+            "file": "ggml-base.bin",
+            "size": 147951465,
+            "etag_matches_lfs_oid": true,
+            "redirect_hosts": [
+              "huggingface.co",
+              "us.aws.cdn.hf.co"
+            ]
+          },
+          "small": {
+            "file": "ggml-small.bin",
+            "size": 487601967,
+            "etag_matches_lfs_oid": true,
+            "redirect_hosts": [
+              "huggingface.co",
+              "us.aws.cdn.hf.co"
+            ]
+          },
+          "medium": {
+            "file": "ggml-medium.bin",
+            "size": 1533763059,
+            "etag_matches_lfs_oid": true,
+            "redirect_hosts": [
+              "huggingface.co",
+              "us.aws.cdn.hf.co"
+            ]
+          }
+        },
+        {
+          "component": "hyperframes",
+          "method": "npm install --package-lock-only --ignore-scripts (cache/config isolados; nenhum tarball)",
+          "registry": "https://registry.npmjs.org/",
+          "packages": 123,
+          "lockfile_sha256": "aa3a727fece75296d0e31c43208719af764eb0fb74c8c78053f1fa8514636f22"
+        },
+        {
+          "component": "remotion",
+          "method": "npm install --package-lock-only --ignore-scripts (cache/config isolados; nenhum tarball)",
+          "registry": "https://registry.npmjs.org/",
+          "packages": 203,
+          "lockfile_sha256": "5a5622b01578a6fa15ce433cf9a315fa653bd034542710641cfc038e389a5f67"
+        }
+      ]
+    }
+  },
+  "components": {
+    "node": {
+      "version": "24.22.0",
+      "license": "MIT",
+      "source": {
+        "kind": "official",
+        "site": "https://nodejs.org/dist/",
+        "checksums": "SHASUMS256.txt",
+        "signature": "SHASUMS256.txt.sig/.asc (disponível; NÃO verificada)"
+      },
+      "platforms": {
+        "darwin-arm64": {
+          "status": "PINNED",
+          "support": "SUPPORTED",
+          "provider": "nodejs.org (oficial)",
+          "artifact": "node-v24.22.0-darwin-arm64.tar.gz",
+          "url": "https://nodejs.org/dist/v24.22.0/node-v24.22.0-darwin-arm64.tar.gz",
+          "sha256": "6a9724d9b50a5f22b4816cded441b5a8d9ddae546191a5e5b7efa5a5e2ee26d5",
+          "size": 53049576,
+          "bins": {
+            "node": "bin/node"
+          },
+          "format": "tar.gz",
+          "strip_components": 1,
+          "hosts": [
+            "nodejs.org"
+          ],
+          "installed_size": 197365224,
+          "layout_verified": true,
+          "codesign": {
+            "policy": "REQUIRED",
+            "team_id": "HX7739G8FX",
+            "authority": "Developer ID Application",
+            "hardened_runtime": true,
+            "bins": {
+              "node": {
+                "identifier": "node"
+              }
+            },
+            "measured": "R12.5A (2026-10-15): Node.js Foundation; codesign --verify --strict OK"
+          }
+        },
+        "darwin-x64": {
+          "status": "PINNED",
+          "support": "EXPERIMENTAL",
+          "provider": "nodejs.org (oficial)",
+          "artifact": "node-v24.22.0-darwin-x64.tar.gz",
+          "url": "https://nodejs.org/dist/v24.22.0/node-v24.22.0-darwin-x64.tar.gz",
+          "sha256": "495e3f273c645f3c4677d438304cdfc701729ea5dec5728f5c8e76a2dece4b91",
+          "size": 54356645,
+          "bins": {
+            "node": "bin/node"
+          },
+          "format": "tar.gz",
+          "strip_components": 1,
+          "hosts": [
+            "nodejs.org"
+          ],
+          "installed_size": null,
+          "layout_verified": false,
+          "codesign": {
+            "policy": "PENDING_MEASUREMENT",
+            "notes": "EXPERIMENTAL: assinatura do artefato x64 não medida em máquina real — instalação gerenciada indisponível até GATE"
+          }
+        },
+        "win32-x64": {
+          "status": "PINNED",
+          "support": "EXPERIMENTAL",
+          "provider": "nodejs.org (oficial)",
+          "artifact": "node-v24.22.0-win-x64.zip",
+          "url": "https://nodejs.org/dist/v24.22.0/node-v24.22.0-win-x64.zip",
+          "sha256": "f9683a19877e12a9b167305c8db71040d812876359de21f0d2e97c3f321f80c3",
+          "size": 37733703,
+          "bins": {
+            "node": "node.exe"
+          },
+          "format": "zip",
+          "strip_components": 1,
+          "hosts": [
+            "nodejs.org"
+          ],
+          "installed_size": null,
+          "layout_verified": false
+        }
+      }
+    },
+    "ffmpeg": {
+      "version": "9.0.2",
+      "license": "macOS arm64: GPL-3.0-or-later (Riedl, --enable-gpl --enable-version3) · Windows x64: LGPL-2.1-or-later (BtbN lgpl)",
+      "license_notes": "Download direto do upstream na máquina do usuário; o BOLD não redistribui nem espelha binários (evita obrigações de oferta de fonte da GPL). prores_ks presente (verificado no codecs.txt do Riedl; nativo/LGPL no FFmpeg).",
+      "source": {
+        "kind": "verified-third-party",
+        "darwin_arm64": "https://ffmpeg.martin-riedl.de/",
+        "win32_x64": "https://github.com/BtbN/FFmpeg-Builds/releases"
+      },
+      "platforms": {
+        "darwin-arm64": {
+          "status": "PINNED",
+          "support": "SUPPORTED",
+          "provider": "Martin Riedl (ffmpeg.martin-riedl.de) — release 9.0.2, zip assinado (declarado pelo site)",
+          "hosts": [
+            "ffmpeg.martin-riedl.de"
+          ],
+          "parts": [
+            {
+              "id": "ffmpeg",
+              "artifact": "ffmpeg.zip",
+              "url": "https://ffmpeg.martin-riedl.de/download/macos/arm64/1789931890_9.0.2/ffmpeg.zip",
+              "sha256": "c8ed4c4e6978a03c485edbfe4e0a5dc2380f8a30bba5150531b31b094492d924",
+              "size": 28395699,
+              "format": "zip",
+              "strip_components": 0,
+              "installed_size": 66332880,
+              "bins": {
+                "ffmpeg": "ffmpeg"
+              },
+              "notes": "checksum: https://ffmpeg.martin-riedl.de/download/macos/arm64/1789931890_9.0.2/ffmpeg.zip.sha256"
+            },
+            {
+              "id": "ffprobe",
+              "artifact": "ffprobe.zip",
+              "url": "https://ffmpeg.martin-riedl.de/download/macos/arm64/1789931890_9.0.2/ffprobe.zip",
+              "sha256": "fcbe839537485eaee7a7a8bc5cbc0f90d53617e80943e8a5b2e31cb851197ea6",
+              "size": 28317701,
+              "format": "zip",
+              "strip_components": 0,
+              "installed_size": 66158064,
+              "bins": {
+                "ffprobe": "ffprobe"
+              },
+              "notes": "checksum: https://ffmpeg.martin-riedl.de/download/macos/arm64/1789931890_9.0.2/ffprobe.zip.sha256"
+            }
+          ],
+          "layout_verified": true,
+          "notes": "componente composto: ffmpeg.zip e ffprobe.zip verificados individualmente; layout (binário na raiz do zip) CONFIRMADO na R12.5A (2026-10-15; árvore f10e4bd0…, Developer ID KU3N25YGLU, prores_ks 4444/4444xq)",
+          "codesign": {
+            "policy": "REQUIRED",
+            "team_id": "KU3N25YGLU",
+            "authority": "Developer ID Application",
+            "hardened_runtime": true,
+            "bins": {
+              "ffmpeg": {
+                "identifier": "ffmpeg"
+              },
+              "ffprobe": {
+                "identifier": "ffprobe"
+              }
+            },
+            "measured": "R12.5A (2026-10-15): Martin Riedl; codesign --verify --strict OK"
+          }
+        },
+        "darwin-x64": {
+          "status": "NOT_PROVIDED",
+          "notes": "somente detecção de ffmpeg/ffprobe existentes nesta versão (decisão R12.3)"
+        },
+        "win32-x64": {
+          "status": "PINNED",
+          "support": "EXPERIMENTAL",
+          "provider": "BtbN/FFmpeg-Builds autobuild-2026-09-30-13-08 (build mensal retida) — lgpl",
+          "hosts": [
+            "github.com",
+            "release-assets.githubusercontent.com"
+          ],
+          "layout_verified": false,
+          "parts": [
+            {
+              "id": "ffmpeg-ffprobe",
+              "artifact": "ffmpeg-n9.0.2-17-g2a571b6068-win64-lgpl-9.0.zip",
+              "url": "https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-09-30-13-08/ffmpeg-n9.0.2-17-g2a571b6068-win64-lgpl-9.0.zip",
+              "sha256": "6b264b9e6019103f601d98c292bd332fd87acf1c5e941ddff4fb71760fe63432",
+              "size": 171535354,
+              "format": "zip",
+              "strip_components": 1,
+              "installed_size": null,
+              "bins": {
+                "ffmpeg": "bin/ffmpeg.exe",
+                "ffprobe": "bin/ffprobe.exe"
+              },
+              "notes": "um zip com os dois binários; cada binário é validado individualmente no teste leve"
+            }
+          ],
+          "notes": "componente composto (1 artefato, 2 binários); layout interno (pasta raiz + bin/) a confirmar na Fase 5 · versão 9.0.2"
+        }
+      }
+    },
+    "chrome-headless-shell": {
+      "version": "a fixar na Fase 4",
+      "license": "termos do Google (Chrome for Testing)",
+      "license_notes": "O Chrome for Testing não publica sha256: o mantenedor fixa o hash (exige autorização para baixar o artefato uma vez). Nunca baixado sem hash fixado.",
+      "source": {
+        "kind": "official",
+        "site": "https://googlechromelabs.github.io/chrome-for-testing/"
+      },
+      "platforms": {
+        "darwin-arm64": {
+          "status": "NOT_PROVIDED",
+          "notes": "download ADIADO (R12.4): só detecção/configuração — tools.CHROME_HEADLESS_PATH"
+        },
+        "darwin-x64": {
+          "status": "NOT_PROVIDED",
+          "notes": "download ADIADO (R12.4): só detecção/configuração — tools.CHROME_HEADLESS_PATH"
+        },
+        "win32-x64": {
+          "status": "NOT_PROVIDED",
+          "notes": "download ADIADO (R12.4): só detecção/configuração — tools.CHROME_HEADLESS_PATH"
+        }
+      }
+    },
+    "whisper-cli": {
+      "version": "b4938",
+      "license": "MIT",
+      "source": {
+        "kind": "official",
+        "site": "https://github.com/ggml-org/whisper.cpp/releases"
+      },
+      "platforms": {
+        "darwin-arm64": {
+          "status": "NOT_PROVIDED",
+          "notes": "sem binário oficial de CLI para macOS: só detecção"
+        },
+        "darwin-x64": {
+          "status": "NOT_PROVIDED",
+          "notes": "sem binário oficial de CLI para macOS: só detecção"
+        },
+        "win32-x64": {
+          "status": "PINNED",
+          "support": "EXPERIMENTAL",
+          "provider": "ggml-org/whisper.cpp b4938",
+          "hosts": [
+            "github.com",
+            "release-assets.githubusercontent.com"
+          ],
+          "layout_verified": false,
+          "parts": [
+            {
+              "id": "whisper-cli",
+              "artifact": "whisper-bin-x64.zip",
+              "url": "https://github.com/ggml-org/whisper.cpp/releases/download/b4938/whisper-bin-x64.zip",
+              "sha256": "c2a4b60edb11f7e11a9191ffb50929535527d4d91c9903dbe3e554583bbbc63d",
+              "size": 8361840,
+              "format": "zip",
+              "strip_components": 0,
+              "installed_size": null,
+              "bins": {
+                "whisper-cli": "Release/whisper-cli.exe"
+              },
+              "notes": "layout (Release/whisper-cli.exe) PROVISÓRIO — confirmar na Fase 5"
+            }
+          ],
+          "notes": "Windows x64 EXPERIMENTAL; macOS: só detecção"
+        }
+      }
+    },
+    "pillow": {
+      "version": "py3.12.15-pillow12.3.0",
+      "license": "Python: PSF-2.0 (projeto python-build-standalone: MPL-2.0) · Pillow: MIT-CMU",
+      "source": {
+        "kind": "official",
+        "python": "https://github.com/astral-sh/python-build-standalone/releases",
+        "pillow": "https://pypi.org/project/pillow/"
+      },
+      "platforms": {
+        "darwin-arm64": {
+          "status": "PINNED",
+          "support": "SUPPORTED",
+          "provider": "python-build-standalone 20261013 (Astral) + Pillow 12.3.0 (PyPI)",
+          "hosts": [
+            "github.com",
+            "release-assets.githubusercontent.com",
+            "files.pythonhosted.org"
+          ],
+          "post_install": "pip-offline",
+          "layout_verified": true,
+          "paths": {},
+          "notes": "composto: Python isolado (install_only) + wheel do Pillow instalado com pip OFFLINE (--no-index --require-hashes) no staging",
+          "parts": [
+            {
+              "id": "python",
+              "artifact": "cpython-3.12.15+20261013-aarch64-apple-darwin-install_only.tar.gz",
+              "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261013/cpython-3.12.15%2B20261013-aarch64-apple-darwin-install_only.tar.gz",
+              "sha256": "ba32036ad8f4c434d97a1ee7feef8b7edc0fac16777639b97e39c74a108e4440",
+              "size": 25180390,
+              "format": "tar.gz",
+              "strip_components": 1,
+              "installed_size": 89102966,
+              "bins": {
+                "python-aux": "bin/python3"
+              },
+              "notes": "SHA256SUMS 20261013 = digest da API"
+            },
+            {
+              "id": "pillow-wheel",
+              "artifact": "pillow-12.3.0-cp312-cp312-macosx_11_0_arm64.whl",
+              "url": "https://files.pythonhosted.org/packages/d8/66/9a386a92561f402389a4fc70c18838bf6d35eb5eb5c6850b4b2dc64f5048/pillow-12.3.0-cp312-cp312-macosx_11_0_arm64.whl",
+              "sha256": "ffd0c5368496f41b0944be820fcb7a838aa6e623d250b01acf2643939c3f99d7",
+              "size": 4780323,
+              "format": "file",
+              "filename": "pillow-12.3.0-cp312-cp312-macosx_11_0_arm64.whl",
+              "bins": {},
+              "notes": "sha256 do PyPI"
+            }
+          ],
+          "codesign": {
+            "policy": "ADHOC_PINNED",
+            "approved": "R12.5C1B — GATE aprovado em 2026-10-15 (37 CDHash medidos na R12.5C1, 2026-10-15)",
+            "macho": {
+              "python/bin/python3.12": {
+                "cdhash": "b41955d816728b55379ac2970d448e048d49e1b5",
+                "sha256": "aed8ed802d0387d6831dead5885840e4e2ff3a7984dd7297e9a5f4466e9cda1d",
+                "phase": "extract"
+              },
+              "python/lib/itcl4.3.8/libitcl4.3.8.dylib": {
+                "cdhash": "373dc48a95e362f0564be133acfc62ff87ddd9ea",
+                "sha256": "745991ba710092cb1e11ca83b5df0cbfd933fb280741e1fab1ea3e54a149839a",
+                "phase": "extract"
+              },
+              "python/lib/itcl4.3.8/libtcl9itcl4.3.8.dylib": {
+                "cdhash": "1226812b973154b17b2752523dbc2cfceb2ade4a",
+                "sha256": "7d2e29960e17b34646c922436bf2cbd0cd1815b134abc173f18510572807eca8",
+                "phase": "extract"
+              },
+              "python/lib/libpython3.12.dylib": {
+                "cdhash": "c1be4f79729b040435c8728c260ae28b8869308a",
+                "sha256": "ac2885dde0996f2ec73e265dc8c0d4e120c249f1bade575ba32adac8ddde1c6e",
+                "phase": "extract"
+              },
+              "python/lib/libtcl9.0.dylib": {
+                "cdhash": "e476f1c8ffd8ca4bc9b1ca1b502d6f9f2da1aa64",
+                "sha256": "262b63021a14ce5fc2a58e38adbfecf537ddc3493c4777eeffa110d6fd09fa2c",
+                "phase": "extract"
+              },
+              "python/lib/libtcl9tk9.0.dylib": {
+                "cdhash": "dc95f81066b8a4f10e8c20407ed87479afb62e04",
+                "sha256": "96fddbe72eb4349e63429126d1a0e6bd717e204bb1d2cdb93511f6895b638e39",
+                "phase": "extract"
+              },
+              "python/lib/python3.12/lib-dynload/_crypt.cpython-312-darwin.so": {
+                "cdhash": "20cc2057c374320ddf26c9e3bf9a523a73a430b0",
+                "sha256": "945c52db64b68dbaee61279c75ecc294635328a18e667157e3fa7f32d0f6c50c",
+                "phase": "extract"
+              },
+              "python/lib/python3.12/lib-dynload/_dbm.cpython-312-darwin.so": {
+                "cdhash": "faae05e84a78ddd12c89604485863e05f2d2c648",
+                "sha256": "4118b06a167e7faa7cf8b245fcb50bbac9118dea0fd14b7d89c039217a945072",
+                "phase": "extract"
+              },
+              "python/lib/python3.12/lib-dynload/_tkinter.cpython-312-darwin.so": {
+                "cdhash": "4fb1596efb51add47dee4f4a327ef22bcabb2a63",
+                "sha256": "e097e7519efac25e53822b7831043f137d68346e50437577b3f76defedefabdc",
+                "phase": "extract"
+              },
+              "python/lib/thread3.0.6/libtcl9thread3.0.6.dylib": {
+                "cdhash": "26596b1d697ec4ad39102f2c550632f7d6a1377c",
+                "sha256": "fbc16c954f018035810d796d7e7bedf52fe331c5c3be801270f1d952c73dcebe",
+                "phase": "extract"
+              },
+              "python/lib/thread3.0.6/libthread3.0.6.dylib": {
+                "cdhash": "31205e6c2cb749f24a9d263f6d5ecf7f0a0c0b9d",
+                "sha256": "46d815934ed26747fda4b85e21b8888015d519160a86ac627416bd39d19dd15d",
+                "phase": "extract"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libXau.6.dylib": {
+                "cdhash": "0617a6af5ec219ffa8eb56e2f09bb6286aab7dbe",
+                "sha256": "002a604dc76919d6606c610be703a6547d78dd0f401639c9e95e5a79227190bf",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libavif.16.4.2.dylib": {
+                "cdhash": "5c8f8d0c6d8b9ea53206aa77eed03103173fd149",
+                "sha256": "ee0124cb07fb6419ed743cf9658b25211f7cc87d9081ad3e9416100db02c3c09",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libbrotlicommon.1.2.0.dylib": {
+                "cdhash": "7bdb4ef04b12fe35d7ab7a82842f9796d24ca856",
+                "sha256": "3f4843c17f3cccc986279a4c9ac8a11dc3077c412fd856d1bad8231bf027a25f",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libbrotlidec.1.2.0.dylib": {
+                "cdhash": "07290f5eb0dca7ed3a4b7de0de5162c1bd28074a",
+                "sha256": "351fa4a2f4faed4147dfead81a8b0f5500ada31db64f74c8368bc1ab894f0dd1",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libfreetype.6.dylib": {
+                "cdhash": "1721e94b5402cd64f2c53f46de4d6c348838fee2",
+                "sha256": "996f9be86f5cee9a44924dba75e3db7ad8a1e83ec1695505c60d314f269b6109",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libharfbuzz.0.dylib": {
+                "cdhash": "e8a6608c23afca5a88536eb4545be43dfcc4966e",
+                "sha256": "7e6800c210dcc2b6faa1e05ef42d1d4fdd0bb0dc88cd4640c7cd86ac715c51fd",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libjpeg.62.4.0.dylib": {
+                "cdhash": "09957a2a6a64fab77c8519d16994ad0f63dd3ac2",
+                "sha256": "cf7c4e5c2d2c007fc51afcb95b649415cfe0bc4d7137ace897a6eff6550fa967",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/liblcms2.2.dylib": {
+                "cdhash": "30a2920297db1108dd9ba1b7600ba51fa6a5ca6c",
+                "sha256": "6c472f0956c937e85747a4f7c5987dec7c54a6c807006f50fe2e1df1e82ec5e5",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/liblzma.5.dylib": {
+                "cdhash": "01618d90ec980a7f5063d4732b3cca99bbe922b0",
+                "sha256": "a978dfb290d948f53867b6e3915fff71800062c770f176419391ccc95defd53b",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libopenjp2.2.5.4.dylib": {
+                "cdhash": "f7b5a6dfb9b19566b19a3d3baab59c084d7135b7",
+                "sha256": "ad0cb293fe3da9efcd8e3c5128c37e012d5abc88289f43c2721020e9cf408bdd",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libpng16.16.dylib": {
+                "cdhash": "1d27a416de8a2998122223c62fa62fc50048ccf7",
+                "sha256": "92d120e199c0981bc26d71af66450cb1fc4f0764ce3ceb18369881e6e1c5861c",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libsharpyuv.0.dylib": {
+                "cdhash": "3201f6ecfa64833b3cc042fb63dacab4c6079958",
+                "sha256": "6b2d464413fc35783c79936f1e6be631585448a37765cf79c238be2ea5e5505b",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libtiff.6.dylib": {
+                "cdhash": "9ffc3e894ac6813a6b9c4f2708d5ef92552d71c6",
+                "sha256": "e8988717b7470394a47d5ccd343130796b24ee70b6d885d3818e0e0b53238be1",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libwebp.7.dylib": {
+                "cdhash": "db633987a9cf92946798b721105905d146585abb",
+                "sha256": "0a2ba0179e6bcc1bccc1a88c38b7d8efd0302d45a1bfc1eb4cf1f1f03ede73f0",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libwebpdemux.2.dylib": {
+                "cdhash": "29e0a48b91ad7732b1ca31b3ca1b5197c2a6fc2d",
+                "sha256": "f5ec6b6750ee91ff032ba62b18afc5f37c7bc842bfc9b2d325df41bc656ea066",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libwebpmux.3.dylib": {
+                "cdhash": "56c3f05350d92783a198abbffc1cb753492d82e4",
+                "sha256": "f9c291035190c3af29494ce9fb62987c25ee78c4365c92c323ccc5ec8740143d",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libxcb.1.1.0.dylib": {
+                "cdhash": "56ce35bcf385e6dd7682b4bf0b22d167f039251e",
+                "sha256": "d7929b6650537224be0161cee998a0bf44f6d05b547ca86cbfbf6e93368726fd",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/.dylibs/libz.1.3.1.zlib-ng.dylib": {
+                "cdhash": "c2a79e65d88f12271d40763a5cfe3aadb49ecbf2",
+                "sha256": "39ffbe6a87460a579cf414c3ee668e449b32c2cdc2cc0b64921d53fd59cb56ed",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/_avif.cpython-312-darwin.so": {
+                "cdhash": "7b33016aa2ebd5e107fa35440b793d50fd77a8b0",
+                "sha256": "6e014a729a8127062ae9f88729a22ec38aa47e1033cc9033c77802a21cbe6178",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/_imaging.cpython-312-darwin.so": {
+                "cdhash": "2bf7034e22702eecc97b4a293bf8b7169eb3d3bb",
+                "sha256": "ee754300d3bda6413b80ddabe3a7ed7b419e1b0468bf2830e2b19fe68f14be42",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/_imagingcms.cpython-312-darwin.so": {
+                "cdhash": "c58a512a6a77ca5028b0fe67922db7c418c4fed2",
+                "sha256": "292f96c5464a5607e2674dae85d9739436c9f22b17590625f7d674ddcff59849",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/_imagingft.cpython-312-darwin.so": {
+                "cdhash": "3ee7d70d17d4fdc6318e7ccbe99ae95a4c7a4b9e",
+                "sha256": "dde5db0339f044b53f15abc9deb1093021cd59787b58b073cb90a4bdb8a3d31c",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/_imagingmath.cpython-312-darwin.so": {
+                "cdhash": "0e8c91dfff4b872346c2f57f88bb3f0075af35e6",
+                "sha256": "2e3922ab8e63b3260996a3c676431396d85b1ad5adb0aba4607a443d77818448",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/_imagingmorph.cpython-312-darwin.so": {
+                "cdhash": "c081a1a504f02d6402fb3e0d972592e6499f8598",
+                "sha256": "24d8534d10301f367d37b99352e410ae266258e9f149dd5da30e7b5de194ad19",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/_imagingtk.cpython-312-darwin.so": {
+                "cdhash": "55c5ac2d29a96347f7ae8331e79a37baec6382fd",
+                "sha256": "9e889cbafba6ddc60872d2307de7d73fca1e4867267dabdc8503e2aa4ece4ba1",
+                "phase": "post_install"
+              },
+              "python/lib/python3.12/site-packages/PIL/_webp.cpython-312-darwin.so": {
+                "cdhash": "55e7f503cf362cd82f012b1fd8dde0eb5db57fc8",
+                "sha256": "cbc1d7bcf28753fc8a4c3bc220e50ffcc56328b6c9199194e96dea6089525c35",
+                "phase": "post_install"
+              }
+            }
+          }
+        },
+        "darwin-x64": {
+          "status": "PINNED",
+          "support": "EXPERIMENTAL",
+          "provider": "python-build-standalone 20261013 (Astral) + Pillow 12.3.0 (PyPI)",
+          "hosts": [
+            "github.com",
+            "release-assets.githubusercontent.com",
+            "files.pythonhosted.org"
+          ],
+          "post_install": "pip-offline",
+          "layout_verified": false,
+          "paths": {},
+          "notes": "composto: Python isolado (install_only) + wheel do Pillow instalado com pip OFFLINE (--no-index --require-hashes) no staging",
+          "parts": [
+            {
+              "id": "python",
+              "artifact": "cpython-3.12.15+20261013-x86_64-apple-darwin-install_only.tar.gz",
+              "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261013/cpython-3.12.15%2B20261013-x86_64-apple-darwin-install_only.tar.gz",
+              "sha256": "9686ddd8639b855905447ea4a16eb54a804a9ef12afbe7c9ecb1412d9c1fbc98",
+              "size": 24892063,
+              "format": "tar.gz",
+              "strip_components": 1,
+              "installed_size": null,
+              "bins": {
+                "python-aux": "bin/python3"
+              },
+              "notes": "SHA256SUMS 20261013 = digest da API"
+            },
+            {
+              "id": "pillow-wheel",
+              "artifact": "pillow-12.3.0-cp312-cp312-macosx_10_13_x86_64.whl",
+              "url": "https://files.pythonhosted.org/packages/37/bf/fb3ebff8ddcb76aac5a01389251bbbb9519922a9b520d8247c1ca864a25d/pillow-12.3.0-cp312-cp312-macosx_10_13_x86_64.whl",
+              "sha256": "ba09209fbe443b4acccebe845d8a138b89a8f4fbaeedd44953490b5315d5e965",
+              "size": 5345969,
+              "format": "file",
+              "filename": "pillow-12.3.0-cp312-cp312-macosx_10_13_x86_64.whl",
+              "bins": {},
+              "notes": "sha256 do PyPI"
+            }
+          ],
+          "codesign": {
+            "policy": "PENDING_MEASUREMENT",
+            "notes": "Python auxiliar (python-build-standalone): assinatura não medida — instalação gerenciada indisponível até GATE"
+          }
+        },
+        "win32-x64": {
+          "status": "PINNED",
+          "support": "EXPERIMENTAL",
+          "provider": "python-build-standalone 20261013 (Astral) + Pillow 12.3.0 (PyPI)",
+          "hosts": [
+            "github.com",
+            "release-assets.githubusercontent.com",
+            "files.pythonhosted.org"
+          ],
+          "post_install": "pip-offline",
+          "layout_verified": false,
+          "paths": {},
+          "notes": "composto: Python isolado (install_only) + wheel do Pillow instalado com pip OFFLINE (--no-index --require-hashes) no staging",
+          "parts": [
+            {
+              "id": "python",
+              "artifact": "cpython-3.12.15+20261013-x86_64-pc-windows-msvc-install_only.tar.gz",
+              "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261013/cpython-3.12.15%2B20261013-x86_64-pc-windows-msvc-install_only.tar.gz",
+              "sha256": "bbc902d4d187ac4914915bf538196a064b49109a33a104965b5164ced5b80a1e",
+              "size": 46390009,
+              "format": "tar.gz",
+              "strip_components": 1,
+              "installed_size": null,
+              "bins": {
+                "python-aux": "python.exe"
+              },
+              "notes": "SHA256SUMS 20261013 = digest da API"
+            },
+            {
+              "id": "pillow-wheel",
+              "artifact": "pillow-12.3.0-cp312-cp312-win_amd64.whl",
+              "url": "https://files.pythonhosted.org/packages/45/89/da2f7971a317f83d807fdd4065c0af40208e59e692cc43d315a71a0e96d1/pillow-12.3.0-cp312-cp312-win_amd64.whl",
+              "sha256": "a2b55dd6b2a4c4b7d87ffa56bdb33fdc5fdb9a462173861a7bc097f17d91cb09",
+              "size": 7227137,
+              "format": "file",
+              "filename": "pillow-12.3.0-cp312-cp312-win_amd64.whl",
+              "bins": {},
+              "notes": "sha256 do PyPI"
+            }
+          ]
+        }
+      }
+    },
+    "whisper-model-base": {
+      "version": "5359861c739e",
+      "license": "MIT",
+      "source": {
+        "kind": "official",
+        "site": "https://huggingface.co/ggerganov/whisper.cpp"
+      },
+      "platforms": {
+        "darwin-arm64": {
+          "status": "PINNED",
+          "support": "SUPPORTED",
+          "provider": "Hugging Face ggerganov/whisper.cpp@5359861c739e",
+          "hosts": [
+            "huggingface.co",
+            "us.aws.cdn.hf.co"
+          ],
+          "layout_verified": true,
+          "paths": {
+            "whisper-model": "base/ggml-base.bin"
+          },
+          "notes": "modelo base; sha256 = lfs.oid; fixado por commit",
+          "parts": [
+            {
+              "id": "base",
+              "artifact": "ggml-base.bin",
+              "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-base.bin",
+              "sha256": "60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe",
+              "size": 147951465,
+              "format": "file",
+              "filename": "ggml-base.bin",
+              "bins": {}
+            }
+          ]
+        },
+        "darwin-x64": {
+          "status": "PINNED",
+          "support": "SUPPORTED",
+          "provider": "Hugging Face ggerganov/whisper.cpp@5359861c739e",
+          "hosts": [
+            "huggingface.co",
+            "us.aws.cdn.hf.co"
+          ],
+          "layout_verified": true,
+          "paths": {
+            "whisper-model": "base/ggml-base.bin"
+          },
+          "notes": "modelo base; sha256 = lfs.oid; fixado por commit",
+          "parts": [
+            {
+              "id": "base",
+              "artifact": "ggml-base.bin",
+              "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-base.bin",
+              "sha256": "60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe",
+              "size": 147951465,
+              "format": "file",
+              "filename": "ggml-base.bin",
+              "bins": {}
+            }
+          ]
+        },
+        "win32-x64": {
+          "status": "PINNED",
+          "support": "SUPPORTED",
+          "provider": "Hugging Face ggerganov/whisper.cpp@5359861c739e",
+          "hosts": [
+            "huggingface.co",
+            "us.aws.cdn.hf.co"
+          ],
+          "layout_verified": true,
+          "paths": {
+            "whisper-model": "base/ggml-base.bin"
+          },
+          "notes": "modelo base; sha256 = lfs.oid; fixado por commit",
+          "parts": [
+            {
+              "id": "base",
+              "artifact": "ggml-base.bin",
+              "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-base.bin",
+              "sha256": "60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe",
+              "size": 147951465,
+              "format": "file",
+              "filename": "ggml-base.bin",
+              "bins": {}
+            }
+          ]
+        }
+      }
+    },
+    "whisper-model-small": {
+      "version": "5359861c739e",
+      "license": "MIT",
+      "source": {
+        "kind": "official",
+        "site": "https://huggingface.co/ggerganov/whisper.cpp"
+      },
+      "platforms": {
+        "darwin-arm64": {
+          "status": "PINNED",
+          "support": "SUPPORTED",
+          "provider": "Hugging Face ggerganov/whisper.cpp@5359861c739e",
+          "hosts": [
+            "huggingface.co",
+            "us.aws.cdn.hf.co"
+          ],
+          "layout_verified": true,
+          "paths": {
+            "whisper-model": "small/ggml-small.bin"
+          },
+          "notes": "modelo small; sha256 = lfs.oid; fixado por commit",
+          "parts": [
+            {
+              "id": "small",
+              "artifact": "ggml-small.bin",
+              "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-small.bin",
+              "sha256": "1be3a9b2063867b937e64e2ec7483364a79917e157fa98c5d94b5c1fffea987b",
+              "size": 487601967,
+              "format": "file",
+              "filename": "ggml-small.bin",
+              "bins": {}
+            }
+          ]
+        },
+        "darwin-x64": {
+          "status": "PINNED",
+          "support": "SUPPORTED",
+          "provider": "Hugging Face ggerganov/whisper.cpp@5359861c739e",
+          "hosts": [
+            "huggingface.co",
+            "us.aws.cdn.hf.co"
+          ],
+          "layout_verified": true,
+          "paths": {
+            "whisper-model": "small/ggml-small.bin"
+          },
+          "notes": "modelo small; sha256 = lfs.oid; fixado por commit",
+          "parts": [
+            {
+              "id": "small",
+              "artifact": "ggml-small.bin",
+              "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-small.bin",
+              "sha256": "1be3a9b2063867b937e64e2ec7483364a79917e157fa98c5d94b5c1fffea987b",
+              "size": 487601967,
+              "format": "file",
+              "filename": "ggml-small.bin",
+              "bins": {}
+            }
+          ]
+        },
+        "win32-x64": {
+          "status": "PINNED",
+          "support": "SUPPORTED",
+          "provider": "Hugging Face ggerganov/whisper.cpp@5359861c739e",
+          "hosts": [
+            "huggingface.co",
+            "us.aws.cdn.hf.co"
+          ],
+          "layout_verified": true,
+          "paths": {
+            "whisper-model": "small/ggml-small.bin"
+          },
+          "notes": "modelo small; sha256 = lfs.oid; fixado por commit",
+          "parts": [
+            {
+              "id": "small",
+              "artifact": "ggml-small.bin",
+              "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-small.bin",
+              "sha256": "1be3a9b2063867b937e64e2ec7483364a79917e157fa98c5d94b5c1fffea987b",
+              "size": 487601967,
+              "format": "file",
+              "filename": "ggml-small.bin",
+              "bins": {}
+            }
+          ]
+        }
+      }
+    },
+    "whisper-model-medium": {
+      "version": "5359861c739e",
+      "license": "MIT",
+      "source": {
+        "kind": "official",
+        "site": "https://huggingface.co/ggerganov/whisper.cpp"
+      },
+      "platforms": {
+        "darwin-arm64": {
+          "status": "PINNED",
+          "support": "SUPPORTED",
+          "provider": "Hugging Face ggerganov/whisper.cpp@5359861c739e",
+          "hosts": [
+            "huggingface.co",
+            "us.aws.cdn.hf.co"
+          ],
+          "layout_verified": true,
+          "paths": {
+            "whisper-model": "medium/ggml-medium.bin"
+          },
+          "notes": "modelo medium (AVANÇADO); sha256 = lfs.oid; fixado por commit",
+          "parts": [
+            {
+              "id": "medium",
+              "artifact": "ggml-medium.bin",
+              "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-medium.bin",
+              "sha256": "6c14d5adee5f86394037b4e4e8b59f1673b6cee10e3cf0b11bbdbee79c156208",
+              "size": 1533763059,
+              "format": "file",
+              "filename": "ggml-medium.bin",
+              "bins": {}
+            }
+          ]
+        },
+        "darwin-x64": {
+          "status": "PINNED",
+          "support": "SUPPORTED",
+          "provider": "Hugging Face ggerganov/whisper.cpp@5359861c739e",
+          "hosts": [
+            "huggingface.co",
+            "us.aws.cdn.hf.co"
+          ],
+          "layout_verified": true,
+          "paths": {
+            "whisper-model": "medium/ggml-medium.bin"
+          },
+          "notes": "modelo medium (AVANÇADO); sha256 = lfs.oid; fixado por commit",
+          "parts": [
+            {
+              "id": "medium",
+              "artifact": "ggml-medium.bin",
+              "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-medium.bin",
+              "sha256": "6c14d5adee5f86394037b4e4e8b59f1673b6cee10e3cf0b11bbdbee79c156208",
+              "size": 1533763059,
+              "format": "file",
+              "filename": "ggml-medium.bin",
+              "bins": {}
+            }
+          ]
+        },
+        "win32-x64": {
+          "status": "PINNED",
+          "support": "SUPPORTED",
+          "provider": "Hugging Face ggerganov/whisper.cpp@5359861c739e",
+          "hosts": [
+            "huggingface.co",
+            "us.aws.cdn.hf.co"
+          ],
+          "layout_verified": true,
+          "paths": {
+            "whisper-model": "medium/ggml-medium.bin"
+          },
+          "notes": "modelo medium (AVANÇADO); sha256 = lfs.oid; fixado por commit",
+          "parts": [
+            {
+              "id": "medium",
+              "artifact": "ggml-medium.bin",
+              "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-medium.bin",
+              "sha256": "6c14d5adee5f86394037b4e4e8b59f1673b6cee10e3cf0b11bbdbee79c156208",
+              "size": 1533763059,
+              "format": "file",
+              "filename": "ggml-medium.bin",
+              "bins": {}
+            }
+          ]
+        }
+      }
+    },
+    "hyperframes": {
+      "version": "0.8.114",
+      "license": "Apache-2.0 (dependências: licenças por pacote no relatório do GATE)",
+      "source": {
+        "kind": "npm",
+        "registry": "https://registry.npmjs.org/"
+      },
+      "platforms": {
+        "darwin-arm64": {
+          "status": "PINNED",
+          "support": "SUPPORTED",
+          "kind": "npm",
+          "provider": "registro npm (123 pacotes no lockfile)",
+          "hosts": [
+            "registry.npmjs.org"
+          ],
+          "npm": {
+            "package_json": "setup/npm/hyperframes/package.json",
+            "package_json_sha256": "89a04b32ce886f6b936f539a7deadcfbcfdfbb4e77323a7079f44c92a8757bab",
+            "lockfile": "setup/npm/hyperframes/package-lock.json",
+            "lockfile_sha256": "aa3a727fece75296d0e31c43208719af764eb0fb74c8c78053f1fa8514636f22",
+            "registry": "https://registry.npmjs.org/",
+            "packages": 123,
+            "tarball_bytes_estimate": 122366414,
+            "installed_tree_sha256": "18d60a7e4895e5c2810a8b17cb20cf0cc70b275242ea79ccf4778009d8d5e08a"
+          },
+          "bins": {
+            "hyperframes": "node_modules/.bin/hyperframes"
+          },
+          "paths": {
+            "hyperframes-node-modules": "node_modules"
+          },
+          "layout_verified": false,
+          "notes": "npm ci --ignore-scripts com lockfile fixado; tamanho = soma de dist.unpackedSize dos pacotes desta plataforma",
+          "codesign": {
+            "policy": "NPM_NATIVE_PINNED",
+            "approved": "GATE R12.5C3b (medição 2026-10-15) · autorização pontual C3c-A/B 2026-10-17 — NÃO commitado",
+            "lockfile_sha256": "aa3a727fece75296d0e31c43208719af764eb0fb74c8c78053f1fa8514636f22",
+            "native": {
+              "node_modules/@esbuild/darwin-arm64/bin/esbuild": {
+                "package": "@esbuild/darwin-arm64",
+                "version": "0.25.12",
+                "sha256": "3e030ee2aa86ad3c33e5e95ae0e53bb03de40e0da35c9b1180a67de4a497cae5",
+                "cdhash": "1c04c68581465d6d2fcfbf05cb3ca96972f84b93"
+              },
+              "node_modules/@img/sharp-darwin-arm64/lib/sharp-darwin-arm64-0.35.5.node": {
+                "package": "@img/sharp-darwin-arm64",
+                "version": "0.35.5",
+                "sha256": "791921f975371be33aed727e06283282cc001c960792eb52505b579fdaaf1b55",
+                "cdhash": "8ac091897f690a672d0e835f530bc65dc99e0fbc"
+              },
+              "node_modules/@img/sharp-libvips-darwin-arm64/lib/libvips-cpp.8.18.7.dylib": {
+                "package": "@img/sharp-libvips-darwin-arm64",
+                "version": "1.3.4",
+                "sha256": "c1a5b5633b21aeb8a229abf7d062e07e4d778c0b44ed43cd1f93362bda58c322",
+                "cdhash": "f7c71b40af36d16bf55df9062dd4de05ed24e5e8"
+              }
+            }
+          }
+        },
+        "darwin-x64": {
+          "status": "PINNED",
+          "support": "EXPERIMENTAL",
+          "kind": "npm",
+          "provider": "registro npm (123 pacotes no lockfile)",
+          "hosts": [
+            "registry.npmjs.org"
+          ],
+          "npm": {
+            "package_json": "setup/npm/hyperframes/package.json",
+            "package_json_sha256": "89a04b32ce886f6b936f539a7deadcfbcfdfbb4e77323a7079f44c92a8757bab",
+            "lockfile": "setup/npm/hyperframes/package-lock.json",
+            "lockfile_sha256": "aa3a727fece75296d0e31c43208719af764eb0fb74c8c78053f1fa8514636f22",
+            "registry": "https://registry.npmjs.org/",
+            "packages": 123,
+            "tarball_bytes_estimate": 125155771
+          },
+          "bins": {
+            "hyperframes": "node_modules/.bin/hyperframes"
+          },
+          "paths": {
+            "hyperframes-node-modules": "node_modules"
+          },
+          "layout_verified": false,
+          "notes": "npm ci --ignore-scripts com lockfile fixado; tamanho = soma de dist.unpackedSize dos pacotes desta plataforma",
+          "codesign": {
+            "policy": "PENDING_MEASUREMENT",
+            "notes": "binários nativos do npm (ex.: esbuild, sharp/libvips, compositor) não medidos — não instalável até `bold setup measure` + GATE (R12.5C3a)"
+          }
+        },
+        "win32-x64": {
+          "status": "PINNED",
+          "support": "EXPERIMENTAL",
+          "kind": "npm",
+          "provider": "registro npm (123 pacotes no lockfile)",
+          "hosts": [
+            "registry.npmjs.org"
+          ],
+          "npm": {
+            "package_json": "setup/npm/hyperframes/package.json",
+            "package_json_sha256": "89a04b32ce886f6b936f539a7deadcfbcfdfbb4e77323a7079f44c92a8757bab",
+            "lockfile": "setup/npm/hyperframes/package-lock.json",
+            "lockfile_sha256": "aa3a727fece75296d0e31c43208719af764eb0fb74c8c78053f1fa8514636f22",
+            "registry": "https://registry.npmjs.org/",
+            "packages": 123,
+            "tarball_bytes_estimate": 124325560
+          },
+          "bins": {
+            "hyperframes": "node_modules/.bin/hyperframes.cmd"
+          },
+          "paths": {
+            "hyperframes-node-modules": "node_modules"
+          },
+          "layout_verified": false,
+          "notes": "npm ci --ignore-scripts com lockfile fixado; tamanho = soma de dist.unpackedSize dos pacotes desta plataforma"
+        }
+      }
+    },
+    "remotion": {
+      "version": "4.0.290",
+      "license": "Remotion License — Company License para empresas com 4+ pessoas (dependências: ver relatório)",
+      "source": {
+        "kind": "npm",
+        "registry": "https://registry.npmjs.org/"
+      },
+      "platforms": {
+        "darwin-arm64": {
+          "status": "PINNED",
+          "support": "SUPPORTED",
+          "kind": "npm",
+          "provider": "registro npm (203 pacotes no lockfile)",
+          "hosts": [
+            "registry.npmjs.org"
+          ],
+          "npm": {
+            "package_json": "setup/npm/remotion/package.json",
+            "package_json_sha256": "ddcecd8dd07d590c17419ec1ca44e2f507bc70f5e98a11fd057a8bb0fb2ff5a0",
+            "lockfile": "setup/npm/remotion/package-lock.json",
+            "lockfile_sha256": "5a5622b01578a6fa15ce433cf9a315fa653bd034542710641cfc038e389a5f67",
+            "registry": "https://registry.npmjs.org/",
+            "packages": 203,
+            "tarball_bytes_estimate": 69276597
+          },
+          "bins": {},
+          "paths": {
+            "remotion-project": "."
+          },
+          "layout_verified": false,
+          "license_gate": "remotion",
+          "notes": "npm ci --ignore-scripts com lockfile fixado; tamanho = soma de dist.unpackedSize dos pacotes desta plataforma; chrome-headless-shell do Remotion NÃO incluído (adiado)",
+          "codesign": {
+            "policy": "PENDING_MEASUREMENT",
+            "notes": "binários nativos do npm (ex.: esbuild, sharp/libvips, compositor) não medidos — não instalável até `bold setup measure` + GATE (R12.5C3a)"
+          }
+        },
+        "darwin-x64": {
+          "status": "PINNED",
+          "support": "EXPERIMENTAL",
+          "kind": "npm",
+          "provider": "registro npm (203 pacotes no lockfile)",
+          "hosts": [
+            "registry.npmjs.org"
+          ],
+          "npm": {
+            "package_json": "setup/npm/remotion/package.json",
+            "package_json_sha256": "ddcecd8dd07d590c17419ec1ca44e2f507bc70f5e98a11fd057a8bb0fb2ff5a0",
+            "lockfile": "setup/npm/remotion/package-lock.json",
+            "lockfile_sha256": "5a5622b01578a6fa15ce433cf9a315fa653bd034542710641cfc038e389a5f67",
+            "registry": "https://registry.npmjs.org/",
+            "packages": 203,
+            "tarball_bytes_estimate": 78805667
+          },
+          "bins": {},
+          "paths": {
+            "remotion-project": "."
+          },
+          "layout_verified": false,
+          "license_gate": "remotion",
+          "notes": "npm ci --ignore-scripts com lockfile fixado; tamanho = soma de dist.unpackedSize dos pacotes desta plataforma; chrome-headless-shell do Remotion NÃO incluído (adiado)",
+          "codesign": {
+            "policy": "PENDING_MEASUREMENT",
+            "notes": "binários nativos do npm (ex.: esbuild, sharp/libvips, compositor) não medidos — não instalável até `bold setup measure` + GATE (R12.5C3a)"
+          }
+        },
+        "win32-x64": {
+          "status": "PINNED",
+          "support": "EXPERIMENTAL",
+          "kind": "npm",
+          "provider": "registro npm (203 pacotes no lockfile)",
+          "hosts": [
+            "registry.npmjs.org"
+          ],
+          "npm": {
+            "package_json": "setup/npm/remotion/package.json",
+            "package_json_sha256": "ddcecd8dd07d590c17419ec1ca44e2f507bc70f5e98a11fd057a8bb0fb2ff5a0",
+            "lockfile": "setup/npm/remotion/package-lock.json",
+            "lockfile_sha256": "5a5622b01578a6fa15ce433cf9a315fa653bd034542710641cfc038e389a5f67",
+            "registry": "https://registry.npmjs.org/",
+            "packages": 203,
+            "tarball_bytes_estimate": 104355209
+          },
+          "bins": {},
+          "paths": {
+            "remotion-project": "."
+          },
+          "layout_verified": false,
+          "license_gate": "remotion",
+          "notes": "npm ci --ignore-scripts com lockfile fixado; tamanho = soma de dist.unpackedSize dos pacotes desta plataforma; chrome-headless-shell do Remotion NÃO incluído (adiado)"
+        }
+      }
+    }
+  }
+}

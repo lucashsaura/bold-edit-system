@@ -1,0 +1,11 @@
+{
+  "name": "bold-edit",
+  "displayName": "BOLD Edit System",
+  "version": "0.8.0-beta.1",
+  "description": "Motion design for video and DaVinci Resolve editing assistance: transcript, asset index, project context, editorial plans, motion routing and sound design (SFX synced to motion, levels under voice and music, license tracking) via the bold CLI. Render/export and DaVinci writes always require explicit human authorization.",
+  "author": { "name": "Bold Comunica" },
+  "homepage": "https://boldcomunica.com/bold-edit/",
+  "repository": "https://github.com/lucashsaura/bold-edit-system",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": ["video", "motion-design", "davinci-resolve", "editing", "transcript", "remotion", "hyperframes", "sound-design", "sfx"]
+}

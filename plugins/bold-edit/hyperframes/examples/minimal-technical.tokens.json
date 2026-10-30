@@ -1,0 +1,7 @@
+{
+  "schema": "bold.tokens/0", "name": "hf-minimal-technical",
+  "color": { "ink": "#D9DDE3", "accent": "#4CC9F0", "muted": "#5E6570" },
+  "typography": { "families": { "display": { "family": "Tech Mono", "weight": 500 }, "body": { "family": "Tech Mono", "weight": 400 } }, "scale": [1.4, 1.9, 2.6, 4, 6] },
+  "spacing": { "unit": 1.4 }, "stroke": { "hair": 0.08, "base": 0.12, "bold": 0.24 },
+  "motion": { "duration": { "fast": 0.25, "base": 0.6, "slow": 1.6 }, "stagger": 0.09, "ease": { "out": [0.25, 1, 0.5, 1], "in": [0.5, 0, 0.75, 0] } }
+}
